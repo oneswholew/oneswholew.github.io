@@ -1,0 +1,102 @@
+body {
+    font-family: Microsoft YaHei;
+    margin: 20px;
+    background-image: url('img/bkg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 中间半透明白色背景 */
+.main-container {
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* 可以根据需要调整宽度 */
+    max-width: 1200px; /* 最大宽度 */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 50px;
+    line-height: 0;
+    letter-spacing: 10px;
+}
+
+h2 {
+    color: #333;
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+    line-height: 1.5;
+    letter-spacing: 3px;
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.category {
+    width: 20%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 200px; /* 调整框的高度，可根据需要修改 */
+    overflow-y: auto; /* 如果内容超出高度，显示滚动条 */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.div {
+    line-height: 10px;
+}
+
+html {
+    zoom: 1.25;
+}
+
+.loader {
+    border: 2px solid #f3f3f3; /* Light grey */
+    border-top: 2px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
