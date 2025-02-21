@@ -49,8 +49,9 @@ h3 {
     border: 1px solid black;
     padding: 10px;
     box-sizing: border-box;
-    height: auto;
-    overflow: visible;
+    height: 200px; /* 固定小框高度 */
+    overflow-y: auto; /* 纵向内容超出时显示滚动条 */
+    overflow-x: hidden; /* 隐藏横向滚动条 */
 }
 
 /* 确保每行第一个元素有左边框 */
@@ -120,7 +121,9 @@ a:hover {
 }
 
 .div {
-    line-height: 10px;
+	border: none;
+    height: 3px;
+	background:black;
 }
 
 html {
@@ -145,5 +148,35 @@ html {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.fixed-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 白色透明背景 */
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 50px; /* 椭圆形效果 */
+    text-decoration: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.button-img {
+    width: 20px; /* 图片宽度 */
+    height: 20px; /* 图片高度 */
+    margin-right: 10px; /* 图片和文字间距 */
+}
+
+.fixed-button:hover {
+    background-color: rgba(230, 230, 230, 0.8);
+}
+
+@media screen {
+    html {
+        zoom: 1.1; /* 这里设置缩放比例为90% */
     }
 }
