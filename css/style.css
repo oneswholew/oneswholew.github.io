@@ -12,11 +12,11 @@ body {
 
 /* 中间半透明白色背景 */
 .main-container {
-    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
-    width: 80%; /* 可以根据需要调整宽度 */
-    max-width: 1200px; /* 最大宽度 */
+    width: 80%;
+    max-width: 1200px;
 }
 
 h1 {
@@ -45,13 +45,60 @@ h3 {
 }
 
 .category {
-    width: 20%;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+    width: calc(20% - 1px);
+    border: 1px solid black;
     padding: 10px;
     box-sizing: border-box;
-    height: 200px; /* 调整框的高度，可根据需要修改 */
-    overflow-y: auto; /* 如果内容超出高度，显示滚动条 */
+    height: auto;
+    overflow: visible;
+}
+
+/* 确保每行第一个元素有左边框 */
+.category:nth-child(5n + 1) {
+    border-left: 1px solid black;
+}
+
+/* 去除除第一行外所有框的上边框 */
+.category:nth-child(n + 6) {
+    border-top: none;
+}
+
+/* 确保底部边框正常显示 */
+.category:last-child,
+.category:nth-last-child(2),
+.category:nth-last-child(3),
+.category:nth-last-child(4),
+.category:nth-last-child(5) {
+    border-bottom: 1px solid black;
+}
+
+/* 新增的大框样式 */
+.large-box {
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 20px; /* 与上面的小框保持一定间距 */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 新增：让大框内元素水平居中 */
+    text-align: center; /* 新增：让大框内文本水平居中 */
+}
+
+.large-box h2 {
+    margin: 0 0 15px 0; /* 修改：添加底部间距 */
+}
+
+.large-box ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* 新增：让链接横排 */
+    flex-wrap: wrap; /* 新增：允许链接换行 */
+    justify-content: center; /* 新增：让链接水平居中 */
+}
+
+.large-box ul li {
+    margin: 5px; /* 修改：调整链接间距 */
 }
 
 ul {
@@ -81,8 +128,8 @@ html {
 }
 
 .loader {
-    border: 2px solid #f3f3f3; /* Light grey */
-    border-top: 2px solid #3498db; /* Blue */
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
     border-radius: 50%;
     width: 16px;
     height: 16px;
