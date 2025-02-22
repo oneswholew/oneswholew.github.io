@@ -1,7 +1,7 @@
 body {
     font-family: Microsoft YaHei;
     margin: 20px;
-    background-image: url('img/bkg.jpeg');
+    background-image: url('https://tu.ltyuanfang.cn/api/fengjing.php');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -35,7 +35,7 @@ h3 {
     text-align: center;
     color: #333;
     line-height: 1.5;
-    letter-spacing: 3px;
+    letter-spacing: 10px;
 }
 
 .category-container {
@@ -177,6 +177,177 @@ html {
 
 @media screen {
     html {
-        zoom: 1.1; /* 这里设置缩放比例为90% */
+        zoom: 1.1; /* 这里设置缩放比例为110% */
     }
+}
+
+.maker {
+	text-align: center; /* 使文本水平居中 */
+    position: absolute; 
+    bottom: -135px; /* 定位到页面底部 */
+    left: 50%; /* 定位到水平方向中间位置的左边缘 */
+    transform: translateX(-50%); /* 水平方向上居中 */
+    animation: rainbow 5s linear infinite;
+    font-size: 18px;
+}
+
+.maker2 {
+    animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+    14% {
+        color: orange;
+    }
+    28% {
+        color: yellow;
+    }
+    42% {
+        color: green;
+    }
+    57% {
+        color: blue;
+    }
+    71% {
+        color: indigo;
+    }
+    85% {
+        color: violet;
+    }
+    100% {
+        color: red;
+    }
+}
+
+/* 为超链接设置基本样式 */
+li a {
+    display: inline-block;
+    transition: all 0.3s ease; /* 添加过渡效果，使变化更平滑 */
+    padding: 5px; /* 内边距，为背景留出空间 */
+}
+
+/* 鼠标悬停时的样式 */
+li a:hover {
+    transform: scale(1.1); /* 放大 10% */
+    background-color: #ccc; /* 背景变为灰色 */
+}
+
+.fixed-button {
+    /* 为按钮添加过渡效果，让变化更平滑 */
+    transition: transform 0.3s ease; 
+}
+
+.fixed-button:hover {
+    /* 鼠标悬停时，将按钮整体放大 1.1 倍 */
+    transform: scale(1.1); 
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* 统一按钮样式 */
+#announcementBtn {
+    /* 保持原有定位 */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    
+    /* 修改1：统一字号 */
+    font-size: 15px; /* 从14px改为15px */
+
+    /* 修改2：去除所有边框 */
+    border: none !important; 
+    outline: none !important;
+    box-shadow: none !important;
+
+    /* 原有其他样式保持不动 */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+
+/* 悬停效果保持同步 */
+#announcementBtn:hover {
+    transform: scale(1.1);
+    background-color: rgba(230, 230, 230, 0.8);
+    text-decoration: none;
+}
+
+/* 添加公告图标（可选） */
+#announcementBtn::before {
+    content: '📢';
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* 弹窗基础样式 */
+#announcementPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1002;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    pointer-events: none; /* 初始不可交互 */
+    opacity: 0; /* 初始透明 */
+}
+
+#announcementPopup.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: auto; /* 激活后可交互 */
+    opacity: 1; /* 显示背景 */
+}
+
+.popup-content {
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#announcementPopup.active .popup-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* 确保关闭按钮可点击 */
+.closePopup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1003; /* 确保在最上层 */
+    color: #666;
+    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    padding: 0;
+    line-height: 1;
+}
+
+/* 移除可能遮挡点击的区域 */
+.popup-content {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 20px;
 }
