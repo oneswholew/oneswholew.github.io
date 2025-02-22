@@ -351,3 +351,32 @@ a:hover {
     max-width: 600px;
     margin: 20px;
 }
+
+.noticeimp{
+	color:red;
+	font-style:italic;
+	font-weight:bold;
+}
+
+.issue {
+	text-align: center; /* 使文本水平居中 */
+    position: absolute; 
+    bottom: 900px; /* 定位到页面底部 */
+    left: 50%; /* 定位到水平方向中间位置的左边缘 */
+    transform: translateX(-50%); /* 水平方向上居中 */
+    font-size: 18px;
+	color:black;
+	animation: blackwhite 5s linear infinite;
+}
+@keyframes blackwhite {
+    0% {
+        color: black;
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: black;
+    }
+}
+
