@@ -127,7 +127,7 @@ a:hover {
 }
 
 html {
-    zoom: 0.9;
+    zoom: 1;
 }
 
 .loader {
@@ -175,16 +175,12 @@ html {
     background-color: rgba(230, 230, 230, 0.8);
 }
 
-@media screen {
-    html {
-        zoom: 1.1; /* 这里设置缩放比例为110% */
-    }
-}
+
 
 .maker {
 	text-align: center; /* 使文本水平居中 */
     position: absolute; 
-    bottom: -135px; /* 定位到页面底部 */
+    bottom:-238px; /* 定位到页面底部 */
     left: 50%; /* 定位到水平方向中间位置的左边缘 */
     transform: translateX(-50%); /* 水平方向上居中 */
     animation: rainbow 5s linear infinite;
@@ -361,12 +357,13 @@ a:hover {
 .issue {
 	text-align: center; /* 使文本水平居中 */
     position: absolute; 
-    bottom: 900px; /* 定位到页面底部 */
+    top:0; /* 定位到页面底部 */
     left: 50%; /* 定位到水平方向中间位置的左边缘 */
     transform: translateX(-50%); /* 水平方向上居中 */
     font-size: 18px;
 	color:black;
 	animation: blackwhite 5s linear infinite;
+	z-index: 100;
 }
 @keyframes blackwhite {
     0% {
