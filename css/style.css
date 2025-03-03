@@ -1,3 +1,6 @@
+*{
+	font-family: 微软雅黑;
+}
 body {
     font-family: Microsoft YaHei;
     margin: 20px;
@@ -127,7 +130,7 @@ a:hover {
 }
 
 html {
-    zoom: 1;
+    zoom: 0.95;
 }
 
 .loader {
