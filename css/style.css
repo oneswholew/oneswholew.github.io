@@ -1,12 +1,14 @@
 *{
 	font-family: 微软雅黑;
+	font-weight: 600;
 }
 body {
     font-family: Microsoft YaHei;
     margin: 20px;
     background-image: url('https://tu.ltyuanfang.cn/api/fengjing.php');
-    background-size: cover;
+    background-size: cover; /* 让背景图片覆盖整个元素 */
     background-repeat: no-repeat;
+    background-attachment: fixed; /* 固定背景，使其不随页面滚动而移动 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +132,7 @@ a:hover {
 }
 
 html {
-    zoom: 0.95;
+    zoom: 105%;
 }
 
 .loader {
@@ -180,46 +182,7 @@ html {
 
 
 
-.maker {
-	text-align: center; /* 使文本水平居中 */
-    position: absolute; 
-    bottom:-238px; /* 定位到页面底部 */
-    left: 50%; /* 定位到水平方向中间位置的左边缘 */
-    transform: translateX(-50%); /* 水平方向上居中 */
-    animation: rainbow 5s linear infinite;
-    font-size: 18px;
-}
 
-.maker2 {
-    animation: rainbow 5s linear infinite;
-}
-
-@keyframes rainbow {
-    0% {
-        color: red;
-    }
-    14% {
-        color: orange;
-    }
-    28% {
-        color: yellow;
-    }
-    42% {
-        color: green;
-    }
-    57% {
-        color: blue;
-    }
-    71% {
-        color: indigo;
-    }
-    85% {
-        color: violet;
-    }
-    100% {
-        color: red;
-    }
-}
 
 /* 为超链接设置基本样式 */
 li a {
@@ -232,6 +195,7 @@ li a {
 li a:hover {
     transform: scale(1.1); /* 放大 10% */
     background-color: #ccc; /* 背景变为灰色 */
+	border-radius: 5px; /* 添加圆角矩形效果，可根据需要调整圆角半径 */
 }
 
 .fixed-button {
@@ -360,8 +324,8 @@ a:hover {
 .issue {
 	text-align: center; /* 使文本水平居中 */
     position: absolute; 
-    top:0; /* 定位到页面底部 */
-    left: 50%; /* 定位到水平方向中间位置的左边缘 */
+    top:3%; /* 定位到页面底部 */
+    left: 60%; /* 定位到水平方向中间位置的左边缘 */
     transform: translateX(-50%); /* 水平方向上居中 */
     font-size: 18px;
 	color:black;
@@ -372,11 +336,56 @@ a:hover {
     0% {
         color: black;
     }
+	25% {
+	    color: grey;
+	}
     50% {
         color: white;
     }
+	75% {
+	    color: grey;
+	}
     100% {
         color: black;
     }
 }
+.maker {
+	text-align: center; /* 使文本水平居中 */
+    position: absolute; 
+    top:3%; /* 定位到页面底部 */
+    left: 40%; /* 定位到水平方向中间位置的左边缘 */
+    transform: translateX(-50%); /* 水平方向上居中 */
+    animation: rainbow 5s linear infinite;
+    font-size: 18px;
+}
 
+.maker2 {
+    animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+    14% {
+        color: orange;
+    }
+    28% {
+        color: yellow;
+    }
+    42% {
+        color: green;
+    }
+    57% {
+        color: blue;
+    }
+    71% {
+        color: indigo;
+    }
+    85% {
+        color: violet;
+    }
+    100% {
+        color: red;
+    }
+}
