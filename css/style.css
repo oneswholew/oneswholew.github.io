@@ -1,21 +1,28 @@
-*{
-	font-family: 微软雅黑;
-	font-weight: 600;
+/* 通用样式 */
+* {
+    font-family: "微软雅黑";
+    font-weight: 600;
+    color;
 }
+
+html {
+    zoom: 105%;
+}
+
 body {
     font-family: Microsoft YaHei;
     margin: 20px;
     background-image: url('https://tu.ltyuanfang.cn/api/fengjing.php');
-    background-size: cover; /* 让背景图片覆盖整个元素 */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* 固定背景，使其不随页面滚动而移动 */
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-/* 中间半透明白色背景 */
+/* 主容器样式 */
 .main-container {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -24,6 +31,7 @@ body {
     max-width: 1200px;
 }
 
+/* 标题样式 */
 h1 {
     text-align: center;
     color: #333;
@@ -43,6 +51,12 @@ h3 {
     letter-spacing: 10px;
 }
 
+h4 {
+    color: #666;
+    line-height: 0%;
+}
+
+/* 分类容器样式 */
 .category-container {
     display: flex;
     flex-wrap: wrap;
@@ -54,22 +68,19 @@ h3 {
     border: 1px solid black;
     padding: 10px;
     box-sizing: border-box;
-    height: 200px; /* 固定小框高度 */
-    overflow-y: auto; /* 纵向内容超出时显示滚动条 */
-    overflow-x: hidden; /* 隐藏横向滚动条 */
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-/* 确保每行第一个元素有左边框 */
 .category:nth-child(5n + 1) {
     border-left: 1px solid black;
-}
+} 
 
-/* 去除除第一行外所有框的上边框 */
 .category:nth-child(n + 6) {
     border-top: none;
 }
 
-/* 确保底部边框正常显示 */
 .category:last-child,
 .category:nth-last-child(2),
 .category:nth-last-child(3),
@@ -78,35 +89,55 @@ h3 {
     border-bottom: 1px solid black;
 }
 
-/* 新增的大框样式 */
+/* 大框样式 */
 .large-box {
     width: 100%;
     border: 1px solid black;
-    margin-top: 20px; /* 与上面的小框保持一定间距 */
+    margin-top: 20px;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 新增：让大框内元素水平居中 */
-    text-align: center; /* 新增：让大框内文本水平居中 */
+    align-items: center;
+    text-align: center;
 }
 
 .large-box h2 {
-    margin: 0 0 15px 0; /* 修改：添加底部间距 */
+    margin: 0 0 15px 0;
 }
 
 .large-box ul {
     list-style-type: none;
     padding: 0;
-    display: flex; /* 新增：让链接横排 */
-    flex-wrap: wrap; /* 新增：允许链接换行 */
-    justify-content: center; /* 新增：让链接水平居中 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.large-box ul h4 {
+    width: 100%;
+    margin-top: 50px;
+    /* 清除浮动，确保标题独占一行 */
+    clear: both; 
+}
+
+.large-box ul h4::after {
+    content: "";
+    display: block;
+    /* 可根据需要调整分隔线的样式 */
+    margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .large-box ul li {
-    margin: 5px; /* 修改：调整链接间距 */
+    margin: 5px;
 }
 
+.large-box h4{
+	font-size: 20px;
+}
+
+/* 列表样式 */
 ul {
     list-style-type: none;
     padding: 0;
@@ -116,6 +147,7 @@ li {
     margin-bottom: 10px;
 }
 
+/* 链接样式 */
 a {
     color: #007BFF;
     text-decoration: none;
@@ -125,16 +157,30 @@ a:hover {
     text-decoration: underline;
 }
 
+li a {
+    display: inline-block;
+    transition: all 0.3s ease;
+    padding: 5px;
+}
+
+li a:hover {
+    transform: scale(1.1);
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* 分割线样式 */
 .div {
-	border: none;
+    border: none;
     height: 3px;
-	background:black;
+    background: black;
 }
 
-html {
-    zoom: 105%;
-}
-
+/* 加载动画样式 */
 .loader {
     border: 2px solid #f3f3f3;
     border-top: 2px solid #3498db;
@@ -156,77 +202,11 @@ html {
     }
 }
 
+/* 固定按钮样式 */
 .fixed-button {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* 白色透明背景 */
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 50px; /* 椭圆形效果 */
-    text-decoration: none;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-}
-
-.button-img {
-    width: 20px; /* 图片宽度 */
-    height: 20px; /* 图片高度 */
-    margin-right: 10px; /* 图片和文字间距 */
-}
-
-.fixed-button:hover {
-    background-color: rgba(230, 230, 230, 0.8);
-}
-
-
-
-
-
-/* 为超链接设置基本样式 */
-li a {
-    display: inline-block;
-    transition: all 0.3s ease; /* 添加过渡效果，使变化更平滑 */
-    padding: 5px; /* 内边距，为背景留出空间 */
-}
-
-/* 鼠标悬停时的样式 */
-li a:hover {
-    transform: scale(1.1); /* 放大 10% */
-    background-color: #ccc; /* 背景变为灰色 */
-	border-radius: 5px; /* 添加圆角矩形效果，可根据需要调整圆角半径 */
-}
-.fixed-button {
-    /* 为按钮添加过渡效果，让变化更平滑 */
-    transition: transform 0.3s ease; 
-}
-
-.fixed-button:hover {
-    /* 鼠标悬停时，将按钮整体放大 1.1 倍 */
-    transform: scale(1.1); 
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-/* 统一按钮样式 */
-#announcementBtn {
-    /* 保持原有定位 */
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    
-    /* 修改1：统一字号 */
-    font-size: 15px; /* 从14px改为15px */
-
-    /* 修改2：去除所有边框 */
-    border: none !important; 
-    outline: none !important;
-    box-shadow: none !important;
-
-    /* 原有其他样式保持不动 */
     background-color: rgba(255, 255, 255, 0.8);
     color: #333;
     padding: 10px 20px;
@@ -238,15 +218,43 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
+.fixed-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(230, 230, 230, 0.8);
+}
 
-/* 悬停效果保持同步 */
+.button-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* 公告按钮样式 */
+#announcementBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 15px;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
 #announcementBtn:hover {
     transform: scale(1.1);
     background-color: rgba(230, 230, 230, 0.8);
     text-decoration: none;
 }
 
-/* 添加公告图标（可选） */
 #announcementBtn::before {
     content: '📢';
     display: inline-block;
@@ -256,104 +264,112 @@ a:hover {
 
 /* 弹窗基础样式 */
 #announcementPopup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1002;
-    background-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.3s ease;
-    pointer-events: none; /* 初始不可交互 */
-    opacity: 0; /* 初始透明 */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1002;
+	background-color: rgba(0, 0, 0, 0);
+	transition: background-color 0.3s ease;
+	pointer-events: none;
+	/* 初始不可交互 */
+	opacity: 0;
+	/* 初始透明 */
 }
 
 #announcementPopup.active {
-    background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: auto; /* 激活后可交互 */
-    opacity: 1; /* 显示背景 */
+	background-color: rgba(0, 0, 0, 0.5);
+	pointer-events: auto;
+	/* 激活后可交互 */
+	opacity: 1;
+	/* 显示背景 */
 }
 
 .popup-content {
-    transform: scale(0.7);
-    opacity: 0;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	transform: scale(0.7);
+	opacity: 0;
+	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 #announcementPopup.active .popup-content {
-    transform: scale(1);
-    opacity: 1;
+	transform: scale(1);
+	opacity: 1;
 }
 
 /* 确保关闭按钮可点击 */
 .closePopup {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 1003; /* 确保在最上层 */
-    color: #666;
-    transition: all 0.3s ease;
-    background: transparent;
-    border: none;
-    padding: 0;
-    line-height: 1;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 28px;
+	cursor: pointer;
+	z-index: 1003;
+	/* 确保在最上层 */
+	color: #666;
+	transition: all 0.3s ease;
+	background: transparent;
+	border: none;
+	padding: 0;
+	line-height: 1;
 }
 
 /* 移除可能遮挡点击的区域 */
 .popup-content {
-    position: relative;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: 20px;
+	position: relative;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 30px;
+	border-radius: 15px;
+	max-width: 600px;
+	margin: 20px;
 }
 
-.noticeimp{
-	color:red;
-	font-style:italic;
-	font-weight:bold;
+/* 特殊文本样式 */
+.noticeimp {
+    color: red;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .issue {
-	text-align: center; /* 使文本水平居中 */
-    position: absolute; 
-    top:3%; /* 定位到页面底部 */
-    left: 60%; /* 定位到水平方向中间位置的左边缘 */
-    transform: translateX(-50%); /* 水平方向上居中 */
+    text-align: center;
+    position: absolute;
+    top: 3%;
+    left: 60%;
+    transform: translateX(-50%);
     font-size: 18px;
-	color:black;
-	animation: blackwhite 5s linear infinite;
-	z-index: 100;
+    color: black;
+    animation: blackwhite 5s linear infinite;
+    z-index: 100;
 }
+
 @keyframes blackwhite {
     0% {
         color: black;
     }
-	25% {
-	    color: grey;
-	}
+    25% {
+        color: grey;
+    }
     50% {
         color: white;
     }
-	75% {
-	    color: grey;
-	}
+    75% {
+        color: grey;
+    }
     100% {
         color: black;
     }
 }
+
 .maker {
-	text-align: center; /* 使文本水平居中 */
-    position: absolute; 
-    top:3%; /* 定位到页面底部 */
-    left: 40%; /* 定位到水平方向中间位置的左边缘 */
-    transform: translateX(-50%); /* 水平方向上居中 */
+    text-align: center;
+    position: absolute;
+    top: 3%;
+    left: 40%;
+    transform: translateX(-50%);
     animation: rainbow 5s linear infinite;
     font-size: 18px;
 }
@@ -387,4 +403,37 @@ a:hover {
     100% {
         color: red;
     }
+}
+
+/* 图片样式 */
+.h11img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 70px;
+    left: 390px;
+}
+
+.h112img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 70px;
+    left: 675px;
+}
+
+.h12img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 110px;
+    left: 390px;
+}
+
+.h122img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 110px;
+    left: -395px;
 }
