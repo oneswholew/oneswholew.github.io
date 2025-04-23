@@ -2,10 +2,11 @@
 * {
 	font-family: "微软雅黑";
 	font-weight: 600;
+	color;
 }
 
 html {
-	zoom: 110%;
+	zoom: 105j%;
 }
 
 body {
@@ -327,37 +328,27 @@ a:hover {
 	margin: 20px;
 }
 
-/* 图片样式 */
-.h11img {
-	width: 60px;
-	height: 60px;
-	position: relative;
-	top: 70px;
-	left: 390px;
+/* === 新增标题组样式 === */
+.title-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* 控制图片与文字间距 */
+  margin: 40px 0;
 }
 
-.h112img {
-	width: 60px;
-	height: 60px;
-	position: relative;
-	top: 70px;
-	left: 675px;
+.title-icon {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
 }
 
-.h12img {
-	width: 60px;
-	height: 60px;
-	position: relative;
-	top: 110px;
-	left: 390px;
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
-.h122img {
-	width: 60px;
-	height: 60px;
-	position: relative;
-	top: 110px;
-	left: -395px;
+.title-text {
+  text-align: center;
 }
 
 .maker {
