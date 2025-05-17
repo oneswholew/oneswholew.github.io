@@ -70,7 +70,7 @@ h5 {
 
 .category {
 	width: calc(20% - 1px);
-	border: 1px solid black;
+	border: 3px solid #919191;
 	padding: 10px;
 	box-sizing: border-box;
 	height: 200px;
@@ -79,7 +79,7 @@ h5 {
 }
 
 .category:nth-child(5n + 1) {
-	border-left: 1px solid black;
+	border-left: 3px solid #919191;
 }
 
 .category:nth-child(n + 6) {
@@ -91,13 +91,14 @@ h5 {
 .category:nth-last-child(3),
 .category:nth-last-child(4),
 .category:nth-last-child(5) {
-	border-bottom: 1px solid black;
+	border-bottom: 3px solid #919191;
 }
 
 /* 大框样式 */
 .large-box {
 	width: 100%;
-	border: 1px solid black;
+	border: 3px solid #919191;
+	border-radius: 10px;
 	margin-top: 20px;
 	padding: 20px;
 	box-sizing: border-box;
@@ -124,6 +125,7 @@ h5 {
 	margin-top: 20px;
 	/* 清除浮动，确保标题独占一行 */
 	clear: both;
+	color: #393939;
 }
 
 .large-box ul h5 {
@@ -456,10 +458,12 @@ a:hover {
 table {
 	width: 100%;
 	border: 2px solid black;
+	border-radius: 5px;
 }
 
 td {
 	border: 2px solid black;
+	border-radius: 5px;
 }
 
 .errcon {
