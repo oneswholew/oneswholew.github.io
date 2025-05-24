@@ -2,7 +2,9 @@
 * {
 	font-family: "微软雅黑";
 	font-weight: 600;
-	color;
+	/* margin: 0; */
+	/* padding: 0; */
+	/* 有空修边距好了... */
 }
 
 html {
@@ -49,15 +51,24 @@ h3 {
 	color: #333;
 	line-height: 1.5;
 	letter-spacing: 10px;
+	/* margin: 30px; */
+	/* 有空修边距好了... */
 }
 
 h4 {
 	color: #555;
 	line-height: 0%;
+	/* margin: 30px 30px 0 0; */
+	/* 有空修边距好了... */
 }
 
 h5 {
 	color: #777;
+	line-height: 0%;
+}
+
+h6 {
+	color: #890000;
 	line-height: 0%;
 }
 
@@ -135,6 +146,15 @@ h5 {
 	clear: both;
 	font-weight: bold;
 	font-size: 16px;
+}
+
+.large-box ul h6 {
+	width: 100%;
+	margin-top: 20px;
+	/* 清除浮动，确保标题独占一行 */
+	clear: both;
+	font-weight: bold;
+	font-size: 14px;
 }
 
 .large-box ul h4::after {
@@ -346,25 +366,26 @@ a:hover {
 
 /* === 新增标题组样式 === */
 .title-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px; /* 控制图片与文字间距 */
-  margin: 40px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	/* 控制图片与文字间距 */
+	margin: 40px 0;
 }
 
 .title-icon {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s ease;
+	width: 60px;
+	height: 60px;
+	transition: transform 0.3s ease;
 }
 
 .title-icon:hover {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .title-text {
-  text-align: center;
+	text-align: center;
 }
 
 .maker {
@@ -437,22 +458,59 @@ a:hover {
 }
 
 @keyframes blackwhite {
-  0% { color: #000; }
-  25% { color: #606060; }
-  50% { color: #a0a0a0; }
-  75% { color: #606060; }
-  100% { color: #000; }
+	0% {
+		color: #000;
+	}
+
+	25% {
+		color: #606060;
+	}
+
+	50% {
+		color: #a0a0a0;
+	}
+
+	75% {
+		color: #606060;
+	}
+
+	100% {
+		color: #000;
+	}
 }
 
 @keyframes rainbow {
-  0% { color: hsl(0, 100%, 50%); }
-  16% { color: hsl(30, 100%, 50%); }
-  32% { color: hsl(60, 100%, 50%); }
-  48% { color: hsl(120, 100%, 50%); }
-  64% { color: hsl(200, 100%, 50%); }
-  80% { color: hsl(240, 100%, 50%); }
-  96% { color: hsl(270, 100%, 50%); }
-  100% { color: hsl(0, 100%, 50%); }
+	0% {
+		color: hsl(0, 100%, 50%);
+	}
+
+	16% {
+		color: hsl(30, 100%, 50%);
+	}
+
+	32% {
+		color: hsl(60, 100%, 50%);
+	}
+
+	48% {
+		color: hsl(120, 100%, 50%);
+	}
+
+	64% {
+		color: hsl(200, 100%, 50%);
+	}
+
+	80% {
+		color: hsl(240, 100%, 50%);
+	}
+
+	96% {
+		color: hsl(270, 100%, 50%);
+	}
+
+	100% {
+		color: hsl(0, 100%, 50%);
+	}
 }
 
 table {
@@ -470,11 +528,11 @@ td {
 	color: darkred;
 }
 
-.announcement-tip{
+.announcement-tip {
 	color: #777;
 	margin-bottom: 0;
 }
 
-.announcement-text p font{
+.announcement-text p font {
 	text-indent: 0;
 }
