@@ -44,13 +44,12 @@ body {
 h1 {
 	text-align: center;
 	color: #333;
-	font-size: 50px;
 	line-height: 1.5;
 	/* 修复原line-height:0导致文字重叠 */
 	letter-spacing: 10px;
 	margin: 30px 0;
 	/* 上下合理间距 */
-	font-size: 24px;
+	font-size: 50px;
 }
 
 h2 {
@@ -308,9 +307,9 @@ li a:hover {
 	top: 20px;
 	left: 20px;
 	font-size: 15px;
-	border: none !important;
-	outline: none !important;
-	box-shadow: none !important;
+	border: none;
+	outline: none;
+	box-shadow: none;
 	background-color: rgba(255, 255, 255, 0.8);
 	color: #333;
 	padding: 10px 20px;
@@ -690,10 +689,6 @@ table.domain .errcon {
 /* 统一h5和h6的基础样式，让居中后视觉一致 */
 .inner-small-box h5,
 .inner-small-box h6 {
-
-	/* 强制h5/h6脱离ul的布局影响，以小框为基准居中 */
-	.inner-small-box h5,
-	.inner-small-box h6 {
 		text-align: center;
 		/* 文字水平居中 */
 		width: 100%;
@@ -707,7 +702,7 @@ table.domain .errcon {
 		padding: 0;
 		/* 清空默认内边距 */
 	}
-}
+
 
 .middle-rect-box h4 {
 	margin: 0 0 10px 0;
@@ -734,4 +729,322 @@ table.domain .errcon {
 	transform: scale(1.1);
 	background-color: #c1c1c1;
 	border-radius: 5px;
+}
+
+.osww-title-h1{
+	margin: 30px 0 0 0;
+}
+
+.osww-title-h3{
+	margin: 0px;
+}
+
+/* 手机适配测试 */
+/* ========== 手机专用适配层 ========== */
+/* 当屏幕宽度小于等于 768px 时生效 */
+@media only screen and (max-width: 768px) {
+
+	/* ---------- 全局重置：拍扁所有弹性布局 ---------- */
+	body {
+		margin: 0;
+		display: block;
+		min-height: 100vh;
+		background: #e8f5e9;
+		/* 极简灰白色，类似苹果风格 */
+	}
+
+	/* 主容器：撑满屏幕 */
+	.main-container {
+		width: 100%;
+		max-width: 100%;
+		padding: 15px;
+		margin: 0;
+	}
+
+	/* ---------- 强制所有flex/grid元素变成块级 ---------- */
+	.category-container,
+	.large-box ul,
+	.middle-rect-box,
+	[class*="flex"],
+	[class*="grid"] {
+		display: block;
+	}
+
+	/* ---------- 分类盒子：从5列变1列 ---------- */
+	.category {
+		width: 100%;
+		/* 每个占满一行 */
+		height: auto;
+		/* 高度自适应 */
+		max-height: 250px;
+		/* 但给个最大高度，内容多了可滚动 */
+		margin: 10px 0;
+		/* 上下间距 */
+		border: 3px solid #919191;
+		/* 保留原有边框风格 */
+	}
+
+	/* 修正分类盒子的边框重叠问题 */
+	.category:nth-child(n) {
+		border-left: 3px solid #919191;
+		border-bottom: 3px solid #919191;
+		border-top: 3px solid #919191;
+		border-right: 3px solid #919191;
+	}
+
+	/* ---------- 标题文字缩小 ---------- */
+	h1 {
+		font-size: 28px;
+		/* 从50px/24px混乱中统一 */
+		letter-spacing: 5px;
+		/* 减小字间距 */
+		margin: 15px 0;
+	}
+
+	h2 {
+		font-size: 22px;
+		margin: 10px 0;
+	}
+
+	h3 {
+		font-size: 20px;
+		letter-spacing: 5px;
+		margin: 15px 0;
+	}
+
+	h4 {
+		font-size: 18px;
+	}
+
+	h5,
+	h6 {
+		font-size: 16px;
+	}
+
+	/* ---------- 标题组：图标和文字垂直堆叠 ---------- */
+	.title-group {
+		flex-direction: column;
+		/* 垂直排列 */
+		gap: 10px;
+		margin: 20px 0;
+	}
+
+	.title-icon {
+		width: 50px;
+		height: 50px;
+	}
+
+	/* ---------- 悬浮定位元素处理 ---------- */
+	/* 顶部三个悬浮文字：改成静态块级，避免重叠 */
+	.maker,
+	.github,
+	.issue {
+		position: static;
+		/* 取消绝对定位 */
+		transform: none;
+		display: inline-block;
+		/* 改成inline-block让它们排成一行 */
+		text-align: center;
+		margin: 5px;
+		/* 统一外边距 */
+		width: auto;
+		/* 宽度自适应内容 */
+		padding: 5px 10px;
+		/* 稍微缩小内边距 */
+		animation: none;
+		background-color: rgba(255, 255, 255, 0.5);
+		/* 加个半透明背景，更清晰 */
+		border-radius: 20px;
+		/* 圆角背景 */
+	}
+
+	/* 让它们排成一行（可选，如果三个能放下） */
+	/* 如果想排成一行，取消下面注释 */
+	/*
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .maker, .github, .issue {
+        display: inline-block;
+        width: auto;
+    }
+    */
+
+	/* ---------- 固定按钮调整 ---------- */
+	.fixed-button {
+		top: 10px;
+		right: 10px;
+		padding: 8px 12px;
+		/* 稍微缩小 */
+		font-size: 14px;
+	}
+
+	#announcementBtn {
+		top: 10px;
+		right: 10px;
+		left: auto;
+		padding: 8px 12px;
+		font-size: 14px;
+	}
+
+	/* 防止两个固定按钮在左上/右上打架 */
+	@media (max-width: 480px) {
+		.fixed-button {
+			top: 60px;
+			/* 在小屏上把右边的按钮往下挪 */
+		}
+	}
+
+	/* ---------- 弹窗适配 ---------- */
+	.popup-content {
+		width: 90%;
+		max-width: 90%;
+		padding: 20px;
+		margin: 10px;
+		max-height: 80vh;
+		/* 限制最大高度 */
+		overflow-y: auto;
+		/* 内容多了可滚动 */
+	}
+
+	.closePopup {
+		top: 10px;
+		right: 15px;
+		font-size: 32px;
+		/* 加大关闭按钮，手指好点 */
+	}
+
+	/* ---------- 中层长方形框和内层小框适配 ---------- */
+	.middle-rect-box {
+		padding: 10px;
+		gap: 0;
+		/* 取消gap，靠margin */
+	}
+
+	.inner-small-box {
+		min-width: 100%;
+		/* 每个小框占满 */
+		max-height: 300px;
+		/* 稍微降低最大高度 */
+		margin: 10px 0;
+		/* 上下间距 */
+	}
+
+	/* 内层标题居中修正 */
+	.inner-small-box h5,
+	.inner-small-box h6 {
+		text-align: center;
+		width: 100%;
+		margin: 10px 0;
+	}
+
+	/* ---------- 表格适配 ---------- */
+	table {
+		display: block;
+		/* 块级化 */
+		overflow-x: auto;
+		/* 可横向滚动 */
+		-webkit-overflow-scrolling: touch;
+		border: 3px solid #141414;
+		/* 保留边框 */
+	}
+
+	table.domain th,
+	table.domain td {
+		white-space: nowrap;
+		/* 不换行，配合滚动 */
+		padding: 6px;
+		/* 稍微缩小内边距 */
+	}
+
+	/* ---------- 列表项适配 ---------- */
+	li {
+		margin-bottom: 12px;
+		/* 增大行高，手指好点 */
+	}
+
+	li a {
+		display: block;
+		/* 链接块级化，整块可点 */
+		padding: 10px;
+		/* 增大点击区域 */
+		font-size: 16px;
+	}
+
+	/* hover效果在手机上改为active */
+	li a:hover {
+		transform: none;
+		/* 手机hover无效，禁用 */
+	}
+
+	li a:active {
+		transform: scale(1.05);
+		/* 点击时有轻微反馈 */
+		background-color: #c1c1c1;
+		border-radius: 5px;
+	}
+
+	/* ---------- 分割线 ---------- */
+	.div {
+		margin: 15px 0;
+		height: 2px;
+		/* 稍微细一点 */
+	}
+
+	/* ---------- 隐藏某些可能干扰的元素 ---------- */
+	/* 如果你的HTML里有些桌面版才有的元素想隐藏，可以加类似下面这样 */
+	/*
+    .desktop-only-element {
+        display: none;
+    }
+    */
+
+	/* ---------- 加载动画微调 ---------- */
+	.loader {
+		width: 14px;
+		height: 14px;
+	}
+
+	/* ---------- 修复body背景可能造成的性能问题 ---------- */
+	body {
+		background-attachment: scroll;
+		/* 修复ios fixed背景闪烁 */
+	}
+}
+
+/* ========== 超小屏（480px以下）额外优化 ========== */
+@media only screen and (max-width: 480px) {
+	h1 {
+		font-size: 24px;
+		letter-spacing: 3px;
+	}
+
+	h3 {
+		font-size: 18px;
+		letter-spacing: 3px;
+	}
+
+	.title-icon {
+		width: 40px;
+		height: 40px;
+	}
+
+	.fixed-button {
+		padding: 6px 10px;
+		font-size: 12px;
+	}
+
+	#announcementBtn {
+		padding: 6px 10px;
+		font-size: 12px;
+	}
+
+	.button-img {
+		width: 16px;
+		height: 16px;
+		margin-right: 5px;
+	}
 }
