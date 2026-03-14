@@ -15,15 +15,17 @@
 		<title>一页定址 One Site Whole Web</title>
 		<link rel="stylesheet" href="css/style.css">
 		<!-- 修正图标类型 -->
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-		<link rel="icon" href="css/img/icon.png" type="image/x-icon">
+		<!-- <link rel="icon" href="css/img/icon.png" type="image/x-icon"> -->
+		<link rel="icon" href="css/img/icon.png" type="image/png">
 	</head>
 
 	<body>
-		<a href="https://muyouhhh.github.io" target="_blank" class="maker">By Muyouhhh @2026</a>
-		<a href="https://github.com/oneswholew/oneswholew.github.io" target="_blank" class="github">在 GitHub 上查看这个项目</a>
-		<a href="https://github.com/oneswholew/oneswholew.github.io/issues/new" target="_blank"
+		<a href="https://muyouhhh.github.io" target="_blank" rel="noopener" class="maker">By Muyouhhh @2026</a>
+		<a href="https://github.com/oneswholew/oneswholew.github.io" target="_blank" rel="noopener" class="github">在
+			GitHub 上查看这个项目</a>
+		<a href="https://github.com/oneswholew/oneswholew.github.io/issues/new" target="_blank" rel="noopener"
 			class="issue">提交反馈/添加网站</a>
+		<button id="backgroundBtn" class="background-toggle" title="只看背景">🌄</button>
 		<div class="main-container">
 			<button id="announcementBtn">查看公告</button>
 			<div id="announcementPopup">
@@ -32,7 +34,8 @@
 					<h2>重要公告</h2>
 					<div class="announcement-text">
 						<p>本网站始终致力于持续更新,为提供丰富且实用的内容,旨在带来更优质的使用体验。若在使用过程中发现任何问题,或有相关网站添加,欢迎通过<a
-								href="https://github.com/oneswholew/oneswholew.github.io/issues/new" target="_blank">
+								href="https://github.com/oneswholew/oneswholew.github.io/issues/new" target="_blank"
+								rel="noopener">
 								Github </a>与本人联系,本人将及时予以处理,包括对相关内容进行修正或删除。</p>
 						<p>
 							在此特别声明,本网站<span class="red">所有链接均源自网络</span>。提供的部分网站需登录,
@@ -45,11 +48,11 @@
 							<span class="blue">带有「*」标记的网站代表此网站需要"科学"上网</span></br>
 							<span class="blue">带有「-」标记的网站，表示该网站需要"较为优质的网络环境"，或因网络问题"有时无法正常访问"</span></br>
 							<span class="blue">带有「/」标记的网站，表示该网站可以访问，但有时 / 经常出现功能异常或无法访问，多为网站自身问题。</span></br>
-							<span class="darkblue">把鼠标指针放到部分标题上可以获取提示</span>
+							<span class="darkblue">把鼠标指针放到部分元素上可以获取提示</span>
 						</p>
 						<p>感谢各位一直以来对本网站的支持与信任！</p>
-						<p>上次更新日期: 2026 / 2 / 28</p>
-						<p>最新更新日期: 2026 / 3 / 9</p>
+						<p>上个版本号: 2026.3.11</p>
+						<p>最新版本号: 2026.3.12</p>
 						<div>
 							<table class="domain">
 								<tr>
@@ -59,26 +62,31 @@
 									<td>原因</td>
 								</tr>
 								<tr>
-									<td><a href="https://oneswholew.github.io" target="_blank">oneswholew.github.io</a>
+									<td><a href="https://oneswholew.github.io" target="_blank"
+											rel="noopener">oneswholew.github.io</a>
 									</td>
 									<td>Github</td>
 									<td class="errcon">有时可用/不可用</td>
 									<td>URL过滤</td>
 								</tr>
 								<tr>
-									<td><a href="https://osww.vercel.app" target="_blank">osww.vercel.app</a></td>
+									<td><a href="https://osww.vercel.app" target="_blank"
+											rel="noopener">osww.vercel.app</a></td>
 									<td>Vercel</td>
 									<td class="errcon">不可用</td>
 									<td>网络环境较差</td>
 								</tr>
 								<tr>
-									<td><a href="https://osww.netlify.app" target="_blank">osww.netlify.app</a></td>
+									<td><a href="https://osww.netlify.app" target="_blank"
+											rel="noopener">osww.netlify.app</a></td>
 									<td>Netlify</td>
 									<td class="errcon">有时可用/不可用</td>
 									<td>URL过滤</td>
 								</tr>
 								<tr>
-									<td><a href="http://118.178.99.148" target="_blank">[限时体验]阿里云服务器</a></td>
+									<td>
+										<p>[限时体验]阿里云服务器</p>
+									</td>
 									<td>阿里云</td>
 									<td class="errcon">不可用</td>
 									<td>已到期</td>
@@ -89,13 +97,13 @@
 				</div>
 			</div>
 			<div class="title-group">
-				<img src="css/img/icon.png" class="title-icon" title="=A=">
+				<img src="css/img/icon.png" class="title-icon" title="=A=" loading="lazy" >
 				<div class="title-text">
 					<h1 class="osww-title-h1">一 页 定 址</h1>
 					<h3 class="osww-title-h3">One Site , Whole Web</h3>
 					<h4 class="announcement-tip">(建议使用前先阅读公告)</h4>
 				</div>
-				<img src="css/img/icon.png" class="title-icon" title="=w=">
+				<img src="css/img/icon.png" class="title-icon" title="=w=" loading="lazy" >
 			</div>
 			<hr class="div">
 			<div class="large-box-up">
@@ -105,26 +113,29 @@
 						<h2>AI类🤖</h2>
 						<ul>
 							<h4>工具类🧰</h4>
-							<li><a href="https://www.doubao.com/chat/" target="_blank">豆包</a></li>
-							<li><a href="https://www.deepseek.com/" target="_blank">DeepSeek</a></li>
-							<li><a href="https://tongyi.aliyun.com/qianwen/" target="_blank">通义千问</a></li>
-							<li><a href="https://miaobi.baidu.com/" target="_blank">百度AI创作平台</a></li>
-							<li><a href="https://jimeng.jianying.com/ai-tool/home/?" target="_blank">即梦AI</a></li>
-							<li><a href="https://lmstudio.ai/" target="_blank">本地AI部署器</a></li>
-							<li><a href="https://www.tinywowcn.com/" target="_blank">轻量AI工具集合</a></li>
-							<li><a href="https://gamma.app/zh-cn" target="_blank">-AI生成文档-</a></li>
-							<li><a href="https://goblin.tools/" target="_blank">AI规划类工具</a></li>
-							<li><a href="https://pingti.app/" target="_blank">AI找平替</a></li>
-							<li><a href="https://www.smartmap.space/" target="_blank">AI地图规划</a></li>
-							<li><a href="https://colormatch.polarr.com/" target="_blank">AI参考调色</a></li>
-							<li><a href="https://suno.com/" target="_blank">*Suno*</a></li>
-							<li><a href="https://rosebud.ai/" target="_blank">AI写游戏</a></li>
-							<li><a href="https://dreaminterpreter.ai/" target="_blank">AI解梦</a></li>
-							<li><a href="https://pingli.app/" target="_blank">/AI评理/ </a></li>
+							<li><a href="https://www.doubao.com/chat/" target="_blank" rel="noopener">豆包</a></li>
+							<li><a href="https://www.deepseek.com/" target="_blank" rel="noopener">DeepSeek</a></li>
+							<li><a href="https://tongyi.aliyun.com/qianwen/" target="_blank" rel="noopener">通义千问</a>
+							</li>
+							<li><a href="https://yiyan.baidu.com/" target="_blank" rel="noopener">文心一言</a></li>
+							<li><a href="https://miaobi.baidu.com/" target="_blank" rel="noopener">百度AI创作平台</a></li>
+							<li><a href="https://jimeng.jianying.com/ai-tool/home/?" target="_blank"
+									rel="noopener">即梦AI</a></li>
+							<li><a href="https://lmstudio.ai/" target="_blank" rel="noopener">本地AI部署器</a></li>
+							<li><a href="https://www.tinywowcn.com/" target="_blank" rel="noopener">轻量AI工具集合</a></li>
+							<li><a href="https://gamma.app/zh-cn" target="_blank" rel="noopener">-AI生成文档-</a></li>
+							<li><a href="https://goblin.tools/" target="_blank" rel="noopener">AI规划类工具</a></li>
+							<li><a href="https://pingti.app/" target="_blank" rel="noopener">AI找平替</a></li>
+							<li><a href="https://www.smartmap.space/" target="_blank" rel="noopener">AI地图规划</a></li>
+							<li><a href="https://colormatch.polarr.com/" target="_blank" rel="noopener">AI参考调色</a></li>
+							<li><a href="https://suno.com/" target="_blank" rel="noopener">*Suno*</a></li>
+							<li><a href="https://rosebud.ai/" target="_blank" rel="noopener">AI写游戏</a></li>
+							<li><a href="https://dreaminterpreter.ai/" target="_blank" rel="noopener">AI解梦</a></li>
+							<li><a href="https://pingli.app/" target="_blank" rel="noopener">/AI评理/ </a></li>
 							<!-- <h4>娱乐类🎯</h4> -->
-							<!-- 					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li> -->
+							<!-- 					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 					<!-- 知识类网站 -->
@@ -132,29 +143,33 @@
 						<h2>️知识类📚</h2>
 						<ul>
 							<h4>考试/课程类📜</h4>
-							<li><a href="https://www.chaoxing.com/" target="_blank">超星</a></li>
-							<li><a href="https://www.neea.edu.cn/" target="_blank">中国教育考试网</a></li>
+							<li><a href="https://www.chaoxing.com/" target="_blank" rel="noopener">超星</a></li>
+							<li><a href="https://www.neea.edu.cn/" target="_blank" rel="noopener">中国教育考试网</a></li>
 							<h4>学习类📖</h4>
-							<li><a href="https://julebu.co/" target="_blank">句乐部-学单词</a></li>
-							<li><a href="https://www.lingohut.com/" target="_blank">免费学外语</a></li>
+							<li><a href="https://julebu.co/" target="_blank" rel="noopener">句乐部-学单词</a></li>
+							<li><a href="https://www.lingohut.com/" target="_blank" rel="noopener">免费学外语</a></li>
 							<li><a href="https://www.edclub.com/zh/library/%E4%B9%A0%E5%AD%97%E4%B8%9B%E6%9E%97"
-									target="_blank">习字丛林(练打字)</a></li>
-							<li><a href="http://sql.easycode.top/#/learn" target="_blank">在线SQL学习</a></li>
-							<li><a href="https://www.w3school.com.cn/h.asp" target="_blank">W3school</a></li>
-							<h4>知识类📚</h4>
-							<li><a href="https://baike.baidu.com/" target="_blank">百度百科</a></li>
-							<li><a href="https://baike.so.com/" target="_blank">360百科</a></li>
-							<li><a href="https://www.zhihu.com/" target="_blank">知乎</a></li>
-							<li><a href="https://zh.wikipedia.org/" target="_blank">-中文维基百科-</a></li>
-							<h4>常识类📃</h4>
-							<li><a href="https://yyjingyan.com/" target="_blank">-有用经验-</a></li>
-							<li><a href="https://www.lishichelun.com/tool" target="_blank">历史车轮</a></li>
-							<li><a href="https://app.keeptrack.space/" target="_blank">地球周围的卫星</a>
-							<li><a href="https://river-runner-global.samlearner.com/" target="_blank">全球河流追踪</a>
-							<li><a href="https://dinosaurpictures.org/ancient-earth#750" target="_blank">XX年前的地球</a>
+									target="_blank" rel="noopener">习字丛林(练打字)</a></li>
+							<li><a href="http://sql.easycode.top/#/learn" target="_blank" rel="noopener">在线SQL学习</a>
 							</li>
-							<!-- 					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li> -->
+							<li><a href="https://www.w3school.com.cn/h.asp" target="_blank" rel="noopener">W3school</a>
+							</li>
+							<h4>知识类📚</h4>
+							<li><a href="https://baike.baidu.com/" target="_blank" rel="noopener">百度百科</a></li>
+							<li><a href="https://baike.so.com/" target="_blank" rel="noopener">360百科</a></li>
+							<li><a href="https://www.zhihu.com/" target="_blank" rel="noopener">知乎</a></li>
+							<li><a href="https://zh.wikipedia.org/" target="_blank" rel="noopener">-中文维基百科-</a></li>
+							<h4>常识类📃</h4>
+							<li><a href="https://yyjingyan.com/" target="_blank" rel="noopener">-有用经验-</a></li>
+							<li><a href="https://www.lishichelun.com/tool" target="_blank" rel="noopener">历史车轮</a></li>
+							<li><a href="https://app.keeptrack.space/" target="_blank" rel="noopener">地球周围的卫星</a>
+							<li><a href="https://river-runner-global.samlearner.com/" target="_blank"
+									rel="noopener">全球河流追踪</a>
+							<li><a href="https://dinosaurpictures.org/ancient-earth#750" target="_blank"
+									rel="noopener">XX年前的地球</a>
+							</li>
+							<!-- 					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 					<!-- 学习工具类 -->
@@ -162,24 +177,29 @@
 						<h2 title="学习工具">学具类📕</h2>
 						<ul>
 							<h4>中文文科类📘</h4>
-							<li><a href="https://www.qqxiuzi.cn/zh/daoxu/" target="_blank">文字倒序</a></li>
+							<li><a href="https://www.qqxiuzi.cn/zh/daoxu/" target="_blank" rel="noopener">文字倒序</a></li>
 							<li><a href="https://modelscope.cn/studios/chostem/ancient_Chinese_text_generator"
-									target="_blank">现代文转古文</a></li>
-							<li><a href="https://zh.azrhymes.com/" target="_blank">押韵词典</a></li>
+									target="_blank" rel="noopener">现代文转古文</a></li>
+							<li><a href="https://zh.azrhymes.com/" target="_blank" rel="noopener">押韵词典</a></li>
 							<h4>外语文科类📙</h4>
-							<li><a href="https://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
-							<li><a href="https://dict.youdao.com/" target="_blank">有道词典</a></li>
-							<li><a href="https://dictionary.cambridge.org/" target="_blank">剑桥词典</a></li>
-							<li><a href="https://find-words.com/zh-CN" target="_blank">英语单词查找器</a></li>
+							<li><a href="https://fanyi.baidu.com/" target="_blank" rel="noopener">百度翻译</a></li>
+							<li><a href="https://dict.youdao.com/" target="_blank" rel="noopener">有道词典</a></li>
+							<li><a href="https://dictionary.cambridge.org/" target="_blank" rel="noopener">剑桥词典</a></li>
+							<li><a href="https://find-words.com/zh-CN" target="_blank" rel="noopener">英语单词查找器</a></li>
 							<h4>数学类📗</h4>
-							<li><a href="http://cal.apple886.com/index2.htm" target="_blank">在线科学计算器</a></li>
-							<li><a href="https://fly63.com/tool/area/" target="_blank">在线面积计算器</a></li>
-							<li><a href="https://www.geogebra.org/graphing?lang=zh_CN" target="_blank">在线形状计算器</a></li>
-							<li><a href="https://www.desmos.com/?lang=zh-CN" target="_blank">数学工具组</a></li>
+							<li><a href="http://cal.apple886.com/index2.htm" target="_blank" rel="noopener">在线科学计算器</a>
+							</li>
+							<li><a href="https://fly63.com/tool/area/" target="_blank" rel="noopener">在线面积计算器</a></li>
+							<li><a href="https://www.geogebra.org/graphing?lang=zh_CN" target="_blank"
+									rel="noopener">在线形状计算器</a></li>
+							<li><a href="https://www.desmos.com/?lang=zh-CN" target="_blank" rel="noopener">数学工具组</a>
+							</li>
 							<h4>计算机类💻</h4>
-							<li><a href="https://www.sojson.com/hexconvert/2to10.html" target="_blank">各进制转换</a></li>
-							<li><a href="http://easycode.top/" target="_blank">生成二叉树</a></li>
-							<li><a href="http://easycode.top/huffman.html" target="_blank">生成哈夫曼树</a></li>
+							<li><a href="https://www.sojson.com/hexconvert/2to10.html" target="_blank"
+									rel="noopener">各进制转换</a></li>
+							<li><a href="http://easycode.top/" target="_blank" rel="noopener">生成二叉树</a></li>
+							<li><a href="http://easycode.top/huffman.html" target="_blank" rel="noopener">生成哈夫曼树</a>
+							</li>
 						</ul>
 					</div>
 					<!-- 图片工具类 -->
@@ -187,21 +207,25 @@
 						<h2>图片类🖼️</h2>
 						<ul>
 							<h4>修改类✂️</h4>
-							<li><a href="https://www.gaitubao.com/" target="_blank">在线改图片尺寸</a></li>
-							<li><a href="https://convertio.co/" target="_blank">在线改图片格式</a></li>
-							<li><a href="https://ps.uutool.cn/" target="_blank">在线简易PS</a></li>
-							<li><a href="https://remove.photos/zh-cn/" target="_blank">智能修改图片大全</a></li>
-							<li><a href="https://www.jyshare.com/more/svgeditor/" target="_blank">在线编辑SVG</a></li>
-							<li><a href="https://myvoiceyourface.com/" target="_blank">照片人脸替换视频人脸</a></li>
-							<li><a href="https://www.autohanding.com/" target="_blank">文字转手写体</a></li>
+							<li><a href="https://www.gaitubao.com/" target="_blank" rel="noopener">在线改图片尺寸</a></li>
+							<li><a href="https://convertio.co/" target="_blank" rel="noopener">在线改图片格式</a></li>
+							<li><a href="https://ps.uutool.cn/" target="_blank" rel="noopener">在线简易PS</a></li>
+							<li><a href="https://remove.photos/zh-cn/" target="_blank" rel="noopener">智能修改图片大全</a></li>
+							<li><a href="https://www.jyshare.com/more/svgeditor/" target="_blank"
+									rel="noopener">在线编辑SVG</a></li>
+							<li><a href="https://myvoiceyourface.com/" target="_blank" rel="noopener">照片替换视频人脸</a>
+							</li>
+							<li><a href="https://www.autohanding.com/" target="_blank" rel="noopener">文字转手写体</a></li>
 
 							<h4>生成类📋️</h4>
-							<li><a href="https://tu.ltyuanfang.cn/api/fengjing.php" target="_blank">随机壁纸(本站背景)</a></li>
-							<li><a href="https://plxel.com/" target="_blank">图片转像素图</a></li>
-							<li><a href="https://photofunia.com/categories/all_effects#google_vignette"
-									target="_blank">制作有趣图片</a></li>
-							<li><a href="http://jiqie.zhenbi.com/g/m14.htm" target="_blank">在线制作闪字</a></li>
-							<li><a href="https://www.memegenerator.top/" target="_blank">Meme制作器</a></li>
+							<li><a href="https://tu.ltyuanfang.cn/api/fengjing.php" target="_blank"
+									rel="noopener">随机壁纸(本站背景)</a></li>
+							<li><a href="https://plxel.com/" target="_blank" rel="noopener">图片转像素图</a></li>
+							<li><a href="https://photofunia.com/categories/all_effects#google_vignette" target="_blank"
+									rel="noopener">制作有趣图片</a></li>
+							<li><a href="http://jiqie.zhenbi.com/g/m14.htm" target="_blank" rel="noopener">在线制作闪字</a>
+							</li>
+							<li><a href="https://www.memegenerator.top/" target="_blank" rel="noopener">Meme制作器</a></li>
 						</ul>
 					</div>
 					<!-- 杂项工具类 -->
@@ -209,41 +233,46 @@
 						<h2>杂项类🛠️</h2>
 						<ul>
 							<!-- 第一类：生活高频刚需 -->
-							<li><a href="https://map.baidu.com/" target="_blank">百度地图</a></li>
-							<li><a href="https://tianqi.so.com/" target="_blank">全国天气</a></li>
+							<li><a href="https://map.baidu.com/" target="_blank" rel="noopener">百度地图</a></li>
+							<li><a href="https://tianqi.so.com/" target="_blank" rel="noopener">全国天气</a></li>
 							<!-- 第二类：办公/学习实用工具 -->
-							<li><a href="https://web.baimiaoapp.com/image-to-excel" target="_blank">图片转表格</a></li>
-							<li><a href="https://cn.anotepad.com/" target="_blank">在线记事本</a></li>
-							<li><a href="https://wuzhi.me/" target="_blank">吾志-写日记</a></li>
-							<li><a href="https://hotkeycheatsheet.com/zh" target="_blank">快捷键大全</a></li>
-							<li><a href="https://bjtimes.cc/tools/calsw.html" target="_blank">时间相关工具</a></li>
-							<li><a href="https://www.wjx.cn/" target="_blank">问卷星</a></li>
+							<li><a href="https://web.baimiaoapp.com/image-to-excel" target="_blank"
+									rel="noopener">图片转表格</a></li>
+							<li><a href="https://cn.anotepad.com/" target="_blank" rel="noopener">在线记事本</a></li>
+							<li><a href="https://wuzhi.me/" target="_blank" rel="noopener">吾志-写日记</a></li>
+							<li><a href="https://hotkeycheatsheet.com/zh" target="_blank" rel="noopener">快捷键备忘录</a></li>
+							<li><a href="https://bjtimes.cc/tools/calsw.html" target="_blank" rel="noopener">时间相关工具</a>
+							</li>
+							<li><a href="https://www.wjx.cn/" target="_blank" rel="noopener">问卷星</a></li>
 							<!-- 第三类：综合工具合集（优先级：通用→小众） -->
-							<li><a href="https://uutool.cn/" target="_blank">UU在线工具箱</a></li>
-							<li><a href="https://www.zxgj.cn/" target="_blank">在线工具+测试大全</a></li>
+							<li><a href="https://uutool.cn/" target="_blank" rel="noopener">UU在线工具箱</a></li>
+							<li><a href="https://www.zxgj.cn/" target="_blank" rel="noopener">在线工具+测试大全</a></li>
 							<!-- 第四类：功能型小众工具 -->
-							<li><a href="http://24mail.chacuo.net/" target="_blank">临时邮箱</a></li>
-							<li><a href="https://age.cuoruan.com/" target="_blank">年龄计算器</a></li>
-							<li><a href="https://wordtojpeg.com/zh/" target="_blank">Word to Jpg</a></li>
-							<li><a href="https://www.bejson.com/enc/morse/" target="_blank">摩斯密码加密解密</a></li>
-							<li><a href="https://www.lrccon.com/convert?lang=zh-hans" target="_blank">歌词字幕转换</a></li>
+							<li><a href="http://24mail.chacuo.net/" target="_blank" rel="noopener">临时邮箱</a></li>
+							<li><a href="https://age.cuoruan.com/" target="_blank" rel="noopener">年龄计算器</a></li>
+							<li><a href="https://wordtojpeg.com/zh/" target="_blank" rel="noopener">Word to Jpg</a></li>
+							<li><a href="https://www.bejson.com/enc/morse/" target="_blank" rel="noopener">摩斯密码加密解密</a>
+							</li>
+							<li><a href="https://www.lrccon.com/convert?lang=zh-hans" target="_blank"
+									rel="noopener">歌词字幕转换</a></li>
 							<!-- 第五类：趣味工具（放最后） -->
-							<li><a href="https://uutool.cn/coin/" target="_blank">在线抛硬币</a></li>
+							<li><a href="https://uutool.cn/coin/" target="_blank" rel="noopener">在线抛硬币</a></li>
 						</ul>
 					</div>
 					<!-- 搜索类网站 -->
 					<div class="category">
 						<h2>搜索类🔍️</h2>
 						<ul>
-							<li><a href="https://www.baidu.com/" target="_blank">百度</a></li>
-							<li><a href="https://www.bing.com/" target="_blank">Bing 必应</a></li>
-							<li><a href="https://www.baidu.com/gaoji/advanced.html" target="_blank">百度高级搜索</a></li>
-							<li><a href="https://www.yandex.com/" target="_blank">Yandex</a></li>
-							<!-- 					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li> -->
+							<li><a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a></li>
+							<li><a href="https://www.bing.com/" target="_blank" rel="noopener">Bing 必应</a></li>
+							<li><a href="https://www.baidu.com/gaoji/advanced.html" target="_blank"
+									rel="noopener">百度高级搜索</a></li>
+							<li><a href="https://www.yandex.com/" target="_blank" rel="noopener">Yandex</a></li>
+							<!-- 					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 					<!-- 影音类网站 -->
@@ -251,28 +280,28 @@
 						<h2>影音类🎥</h2>
 						<ul>
 							<h4>视频类📹</h4>
-							<li><a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a></li>
-							<li><a href="https://www.douyin.com/" target="_blank">抖音</a></li>
-							<li><a href="https://kuaishou.cn/" target="_blank">快手</a></li>
-							<li><a href="https://www.iqiyi.com/" target="_blank">爱奇艺</a></li>
-							<li><a href="https://www.ixigua.com/" target="_blank">西瓜视频</a></li>
-							<li><a href="https://v.qq.com/" target="_blank">腾讯视频</a></li>
-							<li><a href="https://www.youku.com/" target="_blank">优酷</a></li>
-							<li><a href="https://haokan.baidu.com/" target="_blank">好看视频</a></li>
+							<li><a href="https://www.bilibili.com/" target="_blank" rel="noopener">哔哩哔哩</a></li>
+							<li><a href="https://www.douyin.com/" target="_blank" rel="noopener">抖音</a></li>
+							<li><a href="https://kuaishou.cn/" target="_blank" rel="noopener">快手</a></li>
+							<li><a href="https://www.iqiyi.com/" target="_blank" rel="noopener">爱奇艺</a></li>
+							<li><a href="https://www.ixigua.com/" target="_blank" rel="noopener">西瓜视频</a></li>
+							<li><a href="https://v.qq.com/" target="_blank" rel="noopener">腾讯视频</a></li>
+							<li><a href="https://www.youku.com/" target="_blank" rel="noopener">优酷</a></li>
+							<li><a href="https://haokan.baidu.com/" target="_blank" rel="noopener">好看视频</a></li>
 							<h4>电视类📺</h4>
 							<li><a href="https://tv.cctv.com/index.shtml?spm=C28340.PoakR0uYBKgp.E9Z1drS1RHfE.1"
-									target="_blank">CCTV官网</a></li>
-							<li><a href="http://www.docuchina.cn/" target="_blank">中国纪录片网</a>
-							<li><a href="http://www.guangbomi.com/" target="_blank">在线广播/电视</a></li>
-							<li><a href="https://tv.garden/" target="_blank">世界各地电视台</a></li>
+									target="_blank" rel="noopener">CCTV官网</a></li>
+							<li><a href="http://www.docuchina.cn/" target="_blank" rel="noopener">中国纪录片网</a>
+							<li><a href="http://www.guangbomi.com/" target="_blank" rel="noopener">在线广播/电视</a></li>
+							<li><a href="https://tv.garden/" target="_blank" rel="noopener">世界各地电视台</a></li>
 							<h4>音乐类🎵</h4>
-							<li><a href="https://music.163.com/" target="_blank">网易云音乐</a></li>
-							<li><a href="https://y.qq.com/" target="_blank">QQ音乐</a></li>
-							<li><a href="https://www.kugou.com/" target="_blank">酷狗音乐</a></li>
-							<li><a href="https://plaza.one/" target="_blank">Win95风格电台</a></li>
-							<!-- 					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li> -->
+							<li><a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a></li>
+							<li><a href="https://y.qq.com/" target="_blank" rel="noopener">QQ音乐</a></li>
+							<li><a href="https://www.kugou.com/" target="_blank" rel="noopener">酷狗音乐</a></li>
+							<li><a href="https://plaza.one/" target="_blank" rel="noopener">Win95风格电台</a></li>
+							<!-- 					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 					<!-- 模拟类 -->
@@ -280,9 +309,9 @@
 						<h2>模拟类💻</h2>
 						<ul>
 							<h4>系统类🖥️</h4>
-							<li><a href="https://www.compumuseum.com/" target="_blank">网页电脑博物馆</a></li>
-							<li><a href="https://copy.sh/v86/" target="_blank">x86架构系统模拟</a></li>
-							<li><a href="https://infinitemac.org/" target="_blank">MAC系统模拟</a></li>
+							<li><a href="https://www.compumuseum.com/" target="_blank" rel="noopener">网页电脑博物馆</a></li>
+							<li><a href="https://copy.sh/v86/" target="_blank" rel="noopener">x86架构系统模拟</a></li>
+							<li><a href="https://infinitemac.org/" target="_blank" rel="noopener">MAC系统模拟</a></li>
 						</ul>
 					</div>
 					<!-- 开发设计类网站 -->
@@ -291,49 +320,59 @@
 						<ul>
 							<h4>社区类🏠️️</h4>
 							<!-- 调整逻辑：先核心代码平台 → 国内替代/社区 → 镜像站 → 工具官网 -->
-							<li><a href="https://github.com/" target="_blank">GitHub</a></li>
-							<li><a href="https://gitee.com/" target="_blank">Gitee</a></li>
-							<li><a href="https://www.csdn.net/" target="_blank">CSDN</a></li>
-							<li><a href="https://www.gitclone.com/" target="_blank">方达极客社区</a></li>
+							<li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+							<li><a href="https://gitee.com/" target="_blank" rel="noopener">Gitee</a></li>
+							<li><a href="https://www.csdn.net/" target="_blank" rel="noopener">CSDN</a></li>
+							<li><a href="https://www.gitclone.com/" target="_blank" rel="noopener">方达极客社区</a></li>
 							<li><a href="https://fcp7.com/github-mirror-daily-updates.html#01-github-%e9%95%9c%e5%83%8f%e5%8f%af%e7%94%a8%e7%ab%99%e7%82%b9"
-									target="_blank">Github镜像1</a></li>
-							<li><a href="https://kkgithub.com/kgithub666/kgithub" target="_blank">Github镜像2</a></li>
-							<li><a href="https://git-scm.com/" target="_blank">Git</a></li>
+									target="_blank" rel="noopener">Github镜像1</a></li>
+							<li><a href="https://kkgithub.com/kgithub666/kgithub" target="_blank"
+									rel="noopener">Github镜像2</a></li>
+							<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
 
 							<h4>网络类🔗</h4>
 							<!-- 调整逻辑：先学习文档 → 接口资源 → URL/编码工具 → 部署平台 -->
-							<li><a href="https://www.speedtest.cn/" target="_blank">测速网</a></li>
-							<li><a href="https://www.speedtest.net/zh-Hans" target="_blank">SPEEDTEST测速网</a></li>
-							<li><a href="https://test.ustc.edu.cn/" target="_blank">中科大测速网站</a></li>
-							<li><a href="https://www.free-api.com/" target="_blank">Api大全</a></li>
-							<li><a href="https://seostudio.tools/zh/url-parser" target="_blank">网站相关工具大全</a></li>
-							<li><a href="https://toolight.cn/dev/url-parser" target="_blank">URL解析</a></li>
-							<li><a href="https://coding.tools/cn/port-checker" target="_blank">端口在线检测工具</a></li>
-							<li><a href="https://vercel.com/" target="_blank">Vercel</a></li>
+							<li><a href="https://www.speedtest.cn/" target="_blank" rel="noopener">测速网</a></li>
+							<li><a href="https://www.speedtest.net/zh-Hans" target="_blank"
+									rel="noopener">SPEEDTEST测速网</a></li>
+							<li><a href="https://test.ustc.edu.cn/" target="_blank" rel="noopener">中科大测速网站</a></li>
+							<li><a href="https://www.free-api.com/" target="_blank" rel="noopener">Api大全</a></li>
+							<li><a href="https://seostudio.tools/zh/url-parser" target="_blank"
+									rel="noopener">网站相关工具大全</a></li>
+							<li><a href="https://site.ip138.com/" target="_blank" rel="noopener">IP/域名查询</a></li>
+							<li><a href="https://toolight.cn/dev/url-parser" target="_blank" rel="noopener">URL解析</a>
+							</li>
+							<li><a href="https://coding.tools/cn/port-checker" target="_blank"
+									rel="noopener">端口在线检测工具</a></li>
+							<li><a href="https://vercel.com/" target="_blank" rel="noopener">Vercel网页托管服务</a></li>
 
 							<h4>下载类💾</h4>
 							<!-- 调整逻辑：先系统/软件下载 → 脚本镜像 → GitHub文件下载 -->
-							<li><a href="https://msdn.itellyou.cn/" target="_blank">系统/系统软件下载</a></li>
-							<li><a href="https://gf.qytechs.cn/zh-CN" target="_blank">Greasy Fork镜像</a></li>
-							<li><a href="https://github.moeyy.xyz/" target="_blank">Github文件下载</a></li>
+							<li><a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">系统/系统软件下载</a></li>
+							<li><a href="https://gf.qytechs.cn/zh-CN" target="_blank" rel="noopener">Greasy Fork镜像</a>
+							</li>
+							<li><a href="https://github.moeyy.xyz/" target="_blank" rel="noopener">Github文件下载</a></li>
 
 							<h4>设计类🖌️</h4>
 							<!-- 调整逻辑：先基础设计工具 → 颜色/字体资源 → 图标资源 → 设计科普 -->
-							<li><a href="https://cli.im/" target="_blank">草料二维码</a></li>
-							<li><a href="https://www.coloraa.com/" target="_blank">Coloraa颜色百科</a></li>
-							<li><a href="https://www.grid-type.com" target="_blank">设计自己的字体</a></li>
-							<li><a href="https://www.zitijia.com/" target="_blank">字体网</a></li>
-							<li><a href="https://iconduck.com/" target="_blank">图标下载</a></li>
-							<li><a href="https://appicons.co/icons/84556" target="_blank">查找苹果商店图标</a></li>
-							<li><a href="https://www.webdesignmuseum.org/" target="_blank">网页设计博物馆</a></li>
+							<li><a href="https://cli.im/" target="_blank" rel="noopener">草料二维码</a></li>
+							<li><a href="https://www.coloraa.com/" target="_blank" rel="noopener">Coloraa颜色百科</a></li>
+							<li><a href="https://www.grid-type.com" target="_blank" rel="noopener">设计自己的字体</a></li>
+							<li><a href="https://www.zitijia.com/" target="_blank" rel="noopener">字体网</a></li>
+							<li><a href="https://toolb.cn/favicon" target="_blank" rel="noopener">获取网页图标</a></li>
+							<li><a href="https://iconduck.com/" target="_blank" rel="noopener">图标下载</a></li>
+							<li><a href="https://appicons.co/icons/84556" target="_blank" rel="noopener">查找苹果商店图标</a>
+							</li>
+							<li><a href="https://www.webdesignmuseum.org/" target="_blank" rel="noopener">网页设计博物馆</a>
+							</li>
 							<!-- <h4>工具类🧰</h4> -->
-							<!-- 					<li><a href="" target="_blank"></a></li>
-                    <li><a href="" target="_blank"></a></li> -->
-							<!-- 					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li> -->
+							<!-- 					<li><a href="" target="_blank" rel="noopener"></a></li>
+                    <li><a href="" target="_blank" rel="noopener"></a></li> -->
+							<!-- 					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 					<!-- 硬件类网站 -->
@@ -342,22 +381,25 @@
 						<ul>
 							<h4>资讯类ℹ️</h4>
 							<!-- 调整逻辑：先权威资讯平台 → 装机工具 → 实用维修手册 -->
-							<li><a href="https://www.zol.com.cn/" target="_blank">中关村在线</a></li>
-							<li><a href="https://www.diy888.cn/" target="_blank">装机猫</a></li>
-							<li><a href="https://www.buildcores.com/" target="_blank">3D装机</a></li>
-							<li><a href="https://zh.ifixit.com//" target="_blank">免费修理手册</a></li>
+							<li><a href="https://www.zol.com.cn/" target="_blank" rel="noopener">中关村在线</a></li>
+							<li><a href="https://www.diy888.cn/" target="_blank" rel="noopener">装机猫</a></li>
+							<li><a href="https://www.buildcores.com/" target="_blank" rel="noopener">3D装机</a></li>
+							<li><a href="https://zh.ifixit.com//" target="_blank" rel="noopener">免费修理手册</a></li>
 
 							<h4>检测类🔩</h4>
 							<!-- 调整逻辑：按常用硬件使用频率排序（键盘→鼠标→屏幕→手柄） -->
-							<li><a href="https://www.keyboardtest.cn/" target="_blank">在线检测键盘</a></li>
-							<li><a href="https://garphy.com/tool/mouseTest.html" target="_blank">在线检测鼠标</a></li>
-							<li><a href="https://screen.bmcx.com/#welcome" target="_blank">在线检测屏幕</a></li>
-							<li><a href="https://www.gobing.cn/experiment/key" target="_blank">在线检测手柄</a></li>
-							<!--<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li> -->
+							<li><a href="https://www.keyboardtest.cn/" target="_blank" rel="noopener">在线检测键盘</a></li>
+							<li><a href="https://garphy.com/tool/mouseTest.html" target="_blank"
+									rel="noopener">在线检测鼠标</a></li>
+							<li><a href="https://screen.bmcx.com/#welcome" target="_blank" rel="noopener">在线检测屏幕</a>
+							</li>
+							<li><a href="https://www.gobing.cn/experiment/key" target="_blank" rel="noopener">在线检测手柄</a>
+							</li>
+							<!--<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 					<!-- 安全类 -->
@@ -366,18 +408,19 @@
 						<ul>
 							<h4>软件类💾</h4>
 							<!-- 调整逻辑：按轻量化/易用性优先级（火绒→360安全卫士），贴合开发者/学生偏好 -->
-							<li><a href="https://www.huorong.cn/" target="_blank">火绒</a></li>
-							<li><a href="https://360.lianghoo.cn/" target="_blank">360安全卫士</a></li>
+							<li><a href="https://www.huorong.cn/" target="_blank" rel="noopener">火绒</a></li>
+							<li><a href="https://360.lianghoo.cn/" target="_blank" rel="noopener">360安全卫士</a></li>
 
 							<h4>网站类🌐</h4>
 							<!-- 调整逻辑：先文件安全检测 → 网络威胁监控 → 隐私防护工具 -->
-							<li><a href="https://www.virscan.org/" target="_blank">检测文件是否恶意</a></li>
-							<li><a href="https://cybermap.kaspersky.com/cn" target="_blank">卡巴斯基网络威胁实时</a></li>
-							<!-- 					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li> -->
+							<li><a href="https://www.virscan.org/" target="_blank" rel="noopener">检测文件是否恶意</a></li>
+							<li><a href="https://cybermap.kaspersky.com/cn" target="_blank"
+									rel="noopener">卡巴斯基网络威胁实时</a></li>
+							<!-- 					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 					<!-- 氛围类 -->
@@ -385,21 +428,22 @@
 						<h2>氛围类♨️</h2>
 						<ul>
 							<!-- 调整逻辑：先视觉类氛围（静态→动态）→ 听觉类氛围 → 互动类趣味氛围，贴合“放松/氛围感”核心需求 -->
-							<li><a href="https://www.8bitdash.com/" target="_blank">像素时钟</a></li>
-							<li><a href="https://www.skylinewebcams.com/" target="_blank">全球高清摄像头</a></li>
-							<li><a href="https://www.citywalki.com/" target="_blank">赛博CityWalk</a></li>
-							<li><a href="https://www.sigoo.com/" target="_blank">超高像素看世界</a></li>
-							<li><a href="https://oneminutepark.tv/" target="_blank">一分钟公园</a></li>
-							<li><a href="https://29a.ch/noise-generator/" target="_blank">自定义白噪音</a></li>
-							<li><a href="https://asoftmurmur.com/" target="_blank">自定义自然白噪音</a></li>
-							<li><a href="https://thisissand.com/" target="_blank">在线画沙画</a></li>
-							<!-- 						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li> -->
+							<li><a href="https://www.8bitdash.com/" target="_blank" rel="noopener">像素时钟</a></li>
+							<li><a href="https://www.skylinewebcams.com/" target="_blank" rel="noopener">全球高清摄像头</a>
+							</li>
+							<li><a href="https://www.citywalki.com/" target="_blank" rel="noopener">赛博CityWalk</a></li>
+							<li><a href="https://www.sigoo.com/" target="_blank" rel="noopener">超高像素看世界</a></li>
+							<li><a href="https://oneminutepark.tv/" target="_blank" rel="noopener">一分钟公园</a></li>
+							<li><a href="https://29a.ch/noise-generator/" target="_blank" rel="noopener">自定义白噪音</a></li>
+							<li><a href="https://asoftmurmur.com/" target="_blank" rel="noopener">自定义自然白噪音</a></li>
+							<li><a href="https://thisissand.com/" target="_blank" rel="noopener">在线画沙画</a></li>
+							<!-- 						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 					<!-- 社交类网站 -->
@@ -408,30 +452,30 @@
 						<ul>
 							<h4>通讯类☎️</h4>
 							<!-- 调整逻辑：按日常使用频率（微信→QQ→QQ邮箱→新浪邮箱），贴合大众使用习惯 -->
-							<li><a href="https://weixin.qq.com/" target="_blank">微信</a></li>
-							<li><a href="https://im.qq.com/index/" target="_blank">QQ</a></li>
-							<li><a href="https://mail.qq.com/" target="_blank">QQ邮箱</a></li>
-							<li><a href="https://email.163.com/" target="_blank">网易邮箱</a></li>
-							<li><a href="https://mail.sina.com.cn/" target="_blank">新浪邮箱</a></li>
+							<li><a href="https://weixin.qq.com/" target="_blank" rel="noopener">微信</a></li>
+							<li><a href="https://im.qq.com/index/" target="_blank" rel="noopener">QQ</a></li>
+							<li><a href="https://mail.qq.com/" target="_blank" rel="noopener">QQ邮箱</a></li>
+							<li><a href="https://email.163.com/" target="_blank" rel="noopener">网易邮箱</a></li>
+							<li><a href="https://mail.sina.com.cn/" target="_blank" rel="noopener">新浪邮箱</a></li>
 
 							<h4>社区类🏠️</h4>
 							<!-- 调整逻辑：按用户活跃度/年轻化程度（微博→小红书→豆瓣→百度贴吧），贴合学生/年轻用户偏好 -->
-							<li><a href="https://weibo.com/" target="_blank">微博</a></li>
-							<li><a href="https://www.xiaohongshu.com/" target="_blank">小红书</a></li>
-							<li><a href="https://www.douban.com/" target="_blank">豆瓣</a></li>
-							<li><a href="https://tieba.baidu.com/" target="_blank">百度贴吧</a></li>
+							<li><a href="https://weibo.com/" target="_blank" rel="noopener">微博</a></li>
+							<li><a href="https://www.xiaohongshu.com/" target="_blank" rel="noopener">小红书</a></li>
+							<li><a href="https://www.douban.com/" target="_blank" rel="noopener">豆瓣</a></li>
+							<li><a href="https://tieba.baidu.com/" target="_blank" rel="noopener">百度贴吧</a></li>
 
 							<h4>语音类🎤</h4>
-							<li><a href="https://oopz.cn/" target="_blank">Oppz</a></li>
-							<li><a href="https://www.kookapp.cn/" target="_blank">KooK</a></li>
-							<!-- 				<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li> -->
-							<!-- 				<li><a href="" target="_blank"></a></li> 
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li> -->
+							<li><a href="https://oopz.cn/" target="_blank" rel="noopener">Oppz</a></li>
+							<li><a href="https://www.kookapp.cn/" target="_blank" rel="noopener">KooK</a></li>
+							<!-- 				<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li> -->
+							<!-- 				<li><a href="" target="_blank" rel="noopener"></a></li> 
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 					<!-- 网盘类 -->
@@ -439,15 +483,15 @@
 						<h2>网盘类☁️</h2>
 						<ul>
 							<!-- 调整逻辑：按大众使用频率/普及度（主流网盘→小众网盘→下载工具），贴合日常使用习惯 -->
-							<li><a href="https://pan.baidu.com/" target="_blank">百度网盘</a></li>
-							<li><a href="https://pc.woozooo.com/" target="_blank">蓝奏云</a></li>
-							<li><a href="https://www.ilanzou.com/" target="_blank">蓝奏云优享版</a></li>
-							<li><a href="https://www.123pan.com/" target="_blank">123网盘</a></li>
-							<li><a href="https://www.ctfile.com/" target="_blank">城通网盘</a></li>
-							<li><a href="https://www.ttttt.link/" target="_blank">钛盘</a></li>
-							<!-- 					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li>
-					<li><a href="" target="_blank"></a></li> -->
+							<li><a href="https://pan.baidu.com/" target="_blank" rel="noopener">百度网盘</a></li>
+							<li><a href="https://pc.woozooo.com/" target="_blank" rel="noopener">蓝奏云</a></li>
+							<li><a href="https://www.ilanzou.com/" target="_blank" rel="noopener">蓝奏云优享版</a></li>
+							<li><a href="https://www.123pan.com/" target="_blank" rel="noopener">123网盘</a></li>
+							<li><a href="https://www.ctfile.com/" target="_blank" rel="noopener">城通网盘</a></li>
+							<li><a href="https://www.ttttt.link/" target="_blank" rel="noopener">钛盘</a></li>
+							<!-- 					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li>
+					<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 					<!-- 下载类 -->
@@ -456,35 +500,38 @@
 						<ul>
 							<h4>网站类🌐</h4>
 							<!-- 顺序不变，老牌下载站→小众资源站，逻辑合理 -->
-							<li><a href="https://www.onlinedown.net/" target="_blank">华军软件园</a></li>
-							<li><a href="http://www.downcc.com/" target="_blank">绿色资源网</a></li>
+							<li><a href="https://www.onlinedown.net/" target="_blank" rel="noopener">华军软件园</a></li>
+							<li><a href="http://www.downcc.com/" target="_blank" rel="noopener">绿色资源网</a></li>
 							<h4>软件类💾</h4>
 							<!-- 调整逻辑：主流下载工具→通用工具→实用工具→专业/小众工具，贴合使用优先级 -->
-							<li><a href="https://www.xunlei.com/" target="_blank">迅雷</a></li>
-							<li><a href="https://www.quark.cn/" target="_blank">夸克</a></li>
-							<li><a href="https://www.winrar.com.cn/" target="_blank">WinRAR</a></li>
-							<li><a href="https://www.potplayercn.com" target="_blank">PotPlayer</a></li>
-							<li><a href="https://www.tbtool.cn/" target="_blank">图吧工具箱</a></li>
-							<li><a href="https://www.wisecleaner.com.cn/" target="_blank">智慧清理</a></li>
-							<li><a href="https://www.hibituninstaller.cn/" target="_blank">HiBit卸载器</a></li>
-							<li><a href="https://justgetflux.com/" target="_blank">F.lux</a></li>
-							<li><a href="https://steampp.net/" target="_blank">Watt Toolkit</a></li>
-							<li><a href="https://turbowarp.org/" target="_blank">Turbowarp</a></li>
-							<li><a href="https://www.cheatengine.org/#google_vignette" target="_blank">CE内存修改器</a></li>
+							<li><a href="https://www.xunlei.com/" target="_blank" rel="noopener">迅雷</a></li>
+							<li><a href="https://www.quark.cn/" target="_blank" rel="noopener">夸克</a></li>
+							<li><a href="https://www.winrar.com.cn/" target="_blank" rel="noopener">WinRAR</a></li>
+							<li><a href="https://www.potplayercn.com" target="_blank" rel="noopener">PotPlayer</a></li>
+							<li><a href="https://www.tbtool.cn/" target="_blank" rel="noopener">图吧工具箱</a></li>
+							<li><a href="https://www.wisecleaner.com.cn/" target="_blank" rel="noopener">智慧清理</a></li>
+							<li><a href="https://www.hibituninstaller.cn/" target="_blank" rel="noopener">HiBit卸载器</a>
+							</li>
+							<li><a href="https://justgetflux.com/" target="_blank" rel="noopener">F.lux</a></li>
+							<li><a href="https://steampp.net/" target="_blank" rel="noopener">Watt Toolkit</a></li>
+							<li><a href="https://turbowarp.org/" target="_blank" rel="noopener">Turbowarp</a></li>
+							<li><a href="https://www.cheatengine.org/#google_vignette" target="_blank"
+									rel="noopener">CE内存修改器</a></li>
 							<h4>影音类🎥</h4>
 							<!-- 顺序不变，视频解析→音乐解析，贴合下载场景 -->
-							<li><a href="https://www.xiazaitool.com/" target="_blank">视频解析</a></li>
-							<li><a href="https://cobalt.tools/" target="_blank">超全视频解析</a></li>
-							<li><a href="https://www.gequhai.com/" target="_blank">歌曲海</a></li>
-							<li><a href="https://api.toubiec.cn/wyapi.html" target="_blank">网易云音乐解析</a></li>
-							<!-- 						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li>
-						<li><a href="" target="_blank"></a></li> -->
+							<li><a href="https://www.xiazaitool.com/" target="_blank" rel="noopener">视频解析</a></li>
+							<li><a href="https://cobalt.tools/" target="_blank" rel="noopener">超全视频解析</a></li>
+							<li><a href="https://www.gequhai.com/" target="_blank" rel="noopener">歌曲海</a></li>
+							<li><a href="https://api.toubiec.cn/wyapi.html" target="_blank" rel="noopener">网易云音乐解析</a>
+							</li>
+							<!-- 						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li> -->
 						</ul>
 					</div>
 
@@ -508,92 +555,106 @@
 						<h5 title="适合/(大部分是)只能一个人玩">自娱自乐🧑</h5>
 						<ul>
 							<h6 title="火遍全网的每日单词猜谜小游戏" class="series-title">Wordle系列</h6>
-							<li><a href="https://www.fanwa.com/" target="_blank">Wordle每日版</a></li>
-							<li><a href="https://wordly.org/" target="_blank">Wordle无限版</a></li>
-							<li><a href="https://cy.surprising.studio/" target="_blank">词影-中文版Wordle</a></li>
-							<li><a href="https://handle.antfu.me/" target="_blank">汉兜</a></li>
-							<li><a href="https://phrazle.gg/" target="_blank">Phrazle-每日版</a></li>
-							<li><a href="https://phrazle.io/" target="_blank">Phrazle-可选无限</a></li>
-							<li><a href="https://connections.gg/" target="_blank">寻找词语关联</a></li>
-							<li><a href="https://poetrystrands.com/" target="_blank">古诗连词</a></li>
-							<li><a href="https://likewordle.com/" target="_blank">类似Wordle游戏收集</a></li>
+							<li><a href="https://www.fanwa.com/" target="_blank" rel="noopener">Wordle每日版</a></li>
+							<li><a href="https://wordly.org/" target="_blank" rel="noopener">Wordle无限版</a></li>
+							<li><a href="https://cy.surprising.studio/" target="_blank" rel="noopener">词影-中文版Wordle</a>
+							</li>
+							<li><a href="https://handle.antfu.me/" target="_blank" rel="noopener">汉兜</a></li>
+							<li><a href="https://phrazle.gg/" target="_blank" rel="noopener">Phrazle-每日版</a></li>
+							<li><a href="https://phrazle.io/" target="_blank" rel="noopener">Phrazle-可选无限</a></li>
+							<li><a href="https://connections.gg/" target="_blank" rel="noopener">寻找词语关联</a></li>
+							<li><a href="https://poetrystrands.com/" target="_blank" rel="noopener">古诗连词</a></li>
+							<li><a href="https://likewordle.com/" target="_blank" rel="noopener">类似Wordle游戏收集</a></li>
 
 							<h6 class="series-title">益智解谜系列</h6>
-							<li><a href="https://moviegame.top/" target="_blank">看截图猜电影</a></li>
-							<li><a href="https://figure.game/zh" target="_blank">Figure</a></li>
-							<li><a href="https://www.sudoku-cn.com/" target="_blank">在线数独</a></li>
-							<li><a href="https://cn.samuraisudoku.com/" target="_blank">每日数独</a></li>
-							<li><a href="https://www.1000mines.com/" target="_blank">扫雷-无限版</a></li>
-							<li><a href="https://www.jigsawplanet.com/" target="_blank">拼图</a></li>
-							<li><a href="https://cn.puzzle-nonograms.com/" target="_blank">格子类益智游戏收集1</a></li>
-							<li><a href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
-									target="_blank">格子类益智游戏收集2</a></li>
-							<li><a href="https://www.zhaosecha.com/" target="_blank">找色差</a></li>
-							<li><a href="https://www.gamesforthebrain.com/chinese/guesscolors/"
-									target="_blank">彩球猜颜色</a></li>
-							<li><a href="https://realornotquiz.com/" target="_blank">猜图辨AI</a></li>
+							<li><a href="https://moviegame.top/" target="_blank" rel="noopener">看截图猜电影</a></li>
+							<li><a href="https://figure.game/zh" target="_blank" rel="noopener">Figure</a></li>
+							<li><a href="https://www.sudoku-cn.com/" target="_blank" rel="noopener">在线数独</a></li>
+							<li><a href="https://cn.samuraisudoku.com/" target="_blank" rel="noopener">每日数独</a></li>
+							<li><a href="https://www.1000mines.com/" target="_blank" rel="noopener">扫雷-无限版</a></li>
+							<li><a href="https://www.jigsawplanet.com/" target="_blank" rel="noopener">拼图</a></li>
+							<li><a href="https://cn.puzzle-nonograms.com/" target="_blank" rel="noopener">格子类益智游戏收集1</a>
+							</li>
+							<li><a href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/" target="_blank"
+									rel="noopener">格子类益智游戏收集2</a></li>
+							<li><a href="https://www.zhaosecha.com/" target="_blank" rel="noopener">找色差</a></li>
+							<li><a href="https://www.gamesforthebrain.com/chinese/guesscolors/" target="_blank"
+									rel="noopener">彩球猜颜色</a></li>
+							<li><a href="https://realornotquiz.com/" target="_blank" rel="noopener">猜图辨AI</a></li>
 
 							<h6>模拟系列</h6>
-							<li><a href="https://liferestart.syaro.io/public/index.html" target="_blank">人生重开模拟器</a>
+							<li><a href="https://liferestart.syaro.io/public/index.html" target="_blank"
+									rel="noopener">人生重开模拟器</a>
 							</li>
-							<li><a href="https://hong.greatdk.com/" target="_blank">哄哄模拟器</a></li>
-							<li><a href="https://www.geo-fs.com/" target="_blank">飞行模拟</a></li>
-							<li><a href="https://missile-game.bwhmather.com/" target="_blank">模拟穿越机</a></li>
-							<li><a href="https://yrxs.net/kx/" target="_blank">开箱模拟</a></li>
-							<li><a href="https://convars.com/case/en" target="_blank">开箱模拟高级版</a></li>
-							<li><a href="https://xn--o1qx19eeqi.cn/000000" target="_blank">像素点电子宠物</a></li>
-							<li><a href="https://www.jazzvswaffles.com/game" target="_blank">萨克斯VS华夫饼(AI模拟对战)</a>
+							<li><a href="https://hong.greatdk.com/" target="_blank" rel="noopener">哄哄模拟器</a></li>
+							<li><a href="https://www.geo-fs.com/" target="_blank" rel="noopener">飞行模拟</a></li>
+							<li><a href="https://missile-game.bwhmather.com/" target="_blank" rel="noopener">模拟穿越机</a>
+							</li>
+							<li><a href="https://yrxs.net/kx/" target="_blank" rel="noopener">开箱模拟</a></li>
+							<li><a href="https://convars.com/case/en" target="_blank" rel="noopener">开箱模拟高级版</a></li>
+							<li><a href="https://xn--o1qx19eeqi.cn/000000" target="_blank" rel="noopener">像素点电子宠物</a>
+							</li>
+							<li><a href="https://www.jazzvswaffles.com/game" target="_blank"
+									rel="noopener">萨克斯VS华夫饼(AI模拟对战)</a>
 							</li>
 
 							<h6>创造系列</h6>
-							<li><a href="https://neal.fun/infinite-craft/" target="_blank">无限词语创造</a></li>
-							<li><a href="https://littlealchemy2.com/" target="_blank">炼金术</a></li>
-							<li><a href="https://sandspiel.club/" target="_blank">网页版粉末游戏</a></li>
-							<li><a href="http://copy.sh/life/" target="_blank">康威生命游戏</a></li>
-							<li><a href="https://oskarstalberg.com/Townscaper/" target="_blank">点点造小镇-海上版</a></li>
-							<li><a href="https://oskarstalberg.com/game/house/index.html" target="_blank">点点造小镇-城市版</a>
+							<li><a href="https://neal.fun/infinite-craft/" target="_blank" rel="noopener">无限词语创造</a>
+							</li>
+							<li><a href="https://littlealchemy2.com/" target="_blank" rel="noopener">炼金术</a></li>
+							<li><a href="https://sandspiel.club/" target="_blank" rel="noopener">网页版粉末游戏</a></li>
+							<li><a href="http://copy.sh/life/" target="_blank" rel="noopener">康威生命游戏</a></li>
+							<li><a href="https://oskarstalberg.com/Townscaper/" target="_blank"
+									rel="noopener">点点造小镇-海上版</a></li>
+							<li><a href="https://oskarstalberg.com/game/house/index.html" target="_blank"
+									rel="noopener">点点造小镇-城市版</a>
 							</li>
 
 							<h6>经典系列</h6>
-							<li><a href="https://play.tetris.com/" target="_blank">经典俄罗斯方块</a></li>
-							<li><a href="http://farter.cn/tetr.js/" target="_blank">俄罗斯方块变种收集</a></li>
-							<li><a href="https://threejs-tetris-react.rylan.cn/" target="_blank">3D俄罗斯方块</a></li>
-							<li><a href="https://sandtris.com/" target="_blank">俄罗沙方块</a></li>
-							<li><a href="https://play.neverball.org/" target="_blank">滚球小游戏</a></li>
-							<li><a href="https://www.marblerun.at/" target="_blank">滚动的弹珠</a></li>
-							<li><a href="https://www.jxgame.net/" target="_blank">各种经典游戏</a></li>
-							<li><a href="https://www.coolmathgames.com/zh-hans" target="_blank">数学游戏网</a></li>
+							<li><a href="https://play.tetris.com/" target="_blank" rel="noopener">经典俄罗斯方块</a></li>
+							<li><a href="http://farter.cn/tetr.js/" target="_blank" rel="noopener">俄罗斯方块变种收集</a></li>
+							<li><a href="https://threejs-tetris-react.rylan.cn/" target="_blank"
+									rel="noopener">3D俄罗斯方块</a></li>
+							<li><a href="https://sandtris.com/" target="_blank" rel="noopener">俄罗沙方块</a></li>
+							<li><a href="https://play.neverball.org/" target="_blank" rel="noopener">滚球小游戏</a></li>
+							<li><a href="https://www.marblerun.at/" target="_blank" rel="noopener">滚动的弹珠</a></li>
+							<li><a href="https://www.jxgame.net/" target="_blank" rel="noopener">各种经典游戏</a></li>
+							<li><a href="https://www.coolmathgames.com/zh-hans" target="_blank" rel="noopener">数学游戏网</a>
+							</li>
 
 							<h6>冒险系列</h6>
-							<li><a href="https://pokemon-auto-chess.com/" target="_blank">宝可梦自走棋</a></li>
-							<li><a href="https://yx.g8hh.com/pokeclicker/" target="_blank">宝可梦点击</a></li>
-							<li><a href="http://cav.maougame.com/" target="_blank">卡牌冒险者</a></li>
-							<li><a href="http://cav2.maougame.com/" target="_blank">卡牌冒险者-续</a></li>
-							<li><a href="http://ta.maougame.com/" target="_blank">地下探险队</a></li>
-							<li><a href="http://kubitionadvanture.sinaapp.com/" target="_blank">超苦逼冒险者</a></li>
-							<li><a href="https://nodes-escape.hzfe.org/" target="_blank">文字密室逃脱</a></li>
+							<li><a href="https://pokemon-auto-chess.com/" target="_blank" rel="noopener">宝可梦自走棋</a></li>
+							<li><a href="https://yx.g8hh.com/pokeclicker/" target="_blank" rel="noopener">宝可梦点击</a></li>
+							<li><a href="http://cav.maougame.com/" target="_blank" rel="noopener">卡牌冒险者</a></li>
+							<li><a href="http://cav2.maougame.com/" target="_blank" rel="noopener">卡牌冒险者-续</a></li>
+							<li><a href="http://ta.maougame.com/" target="_blank" rel="noopener">地下探险队</a></li>
+							<li><a href="http://kubitionadvanture.sinaapp.com/" target="_blank"
+									rel="noopener">超苦逼冒险者</a></li>
+							<li><a href="https://nodes-escape.hzfe.org/" target="_blank" rel="noopener">文字密室逃脱</a></li>
 
 							<h6>休闲系列</h6>
-							<li><a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">点点饼干</a></li>
-							<li><a href="https://uno-online.io/" target="_blank">单机UNO</a></li>
-							<li><a href="https://taming.io/" target="_blank">Taming.io</a></li>
-							<li><a href="https://yorg.io/" target="_blank">Yorg.io</a></li>
-							<li><a href="https://dccxi.com/trust/" target="_blank">信任的进化</a></li>
-							<li><a href="https://cuber.heheda.top/" target="_blank">电子魔方</a></li>
-							<li><a href="https://golddigger.frvr.com/" target="_blank">黄金挖掘者</a></li>
-							<li><a href="https://www.freeriderhd.com/" target="_blank">画布骑手</a></li>
-							<li><a href="https://www.3daimtrainer.com/" target="_blank">在线3D练枪</a></li>
-							<li><a href="https://deepmess.com/namerena/" target="_blank">名字竞技场</a></li>
-							<li><a href="https://neal.fun/" target="_blank">Neal作品合集</a></li>
+							<li><a href="https://orteil.dashnet.org/cookieclicker/" target="_blank"
+									rel="noopener">点点饼干</a></li>
+							<li><a href="https://uno-online.io/" target="_blank" rel="noopener">单机UNO</a></li>
+							<li><a href="https://taming.io/" target="_blank" rel="noopener">Taming.io</a></li>
+							<li><a href="https://yorg.io/" target="_blank" rel="noopener">Yorg.io</a></li>
+							<li><a href="https://dccxi.com/trust/" target="_blank" rel="noopener">信任的进化</a></li>
+							<li><a href="https://cuber.heheda.top/" target="_blank" rel="noopener">电子魔方</a></li>
+							<li><a href="https://golddigger.frvr.com/" target="_blank" rel="noopener">黄金挖掘者</a></li>
+							<li><a href="https://www.freeriderhd.com/" target="_blank" rel="noopener">画布骑手</a></li>
+							<li><a href="https://www.3daimtrainer.com/" target="_blank" rel="noopener">在线3D练枪</a></li>
+							<li><a href="https://deepmess.com/namerena/" target="_blank" rel="noopener">名字竞技场</a></li>
+							<li><a href="https://neal.fun/" target="_blank" rel="noopener">Neal作品合集</a></li>
 
 							<h6>模拟系列</h6>
-							<li><a href="https://www.windows93.net/" target="_blank">win93模拟</a></li>
-							<li><a href="https://desk.glitchy.website/" target="_blank">/win7模拟/</a></li>
-							<li><a href="https://win11.blueedge.me/" target="_blank">/win11模拟/</a></li>
-							<li><a href="https://tjy-gitnub.github.io/win12/desktop.html" target="_blank">win12模拟</a>
+							<li><a href="https://www.windows93.net/" target="_blank" rel="noopener">win93模拟</a></li>
+							<li><a href="https://desk.glitchy.website/" target="_blank" rel="noopener">/win7模拟/</a></li>
+							<li><a href="https://win11.blueedge.me/" target="_blank" rel="noopener">/win11模拟/</a></li>
+							<li><a href="https://tjy-gitnub.github.io/win12/desktop.html" target="_blank"
+									rel="noopener">win12模拟</a>
 							</li>
-							<li><a href="https://www.xiwnn.com/piano/" target="_blank">钢琴模拟</a></li>
-							<li><a href="https://3d-app.yunser.com/earth" target="_blank">地球模拟</a></li>
+							<li><a href="https://www.xiwnn.com/piano/" target="_blank" rel="noopener">钢琴模拟</a></li>
+							<li><a href="https://3d-app.yunser.com/earth" target="_blank" rel="noopener">地球模拟</a></li>
 						</ul>
 					</div>
 
@@ -602,23 +663,26 @@
 						<h5 title="只能/建议多人一起">呼朋唤友🧑‍🤝‍🧑</h5>
 						<ul>
 							<h6>社交系列</h6>
-							<li><a href="https://enazo.cn/" target="_blank">绘谜</a></li>
-							<li><a href="https://skribbl.io/" target="_blank">你画我猜国际版</a></li>
-							<li><a href="https://drawbattle.io/" target="_blank">你画我猜对抗版</a></li>
-							<li><a href="https://garticphone.com/zh-CN" target="_blank">传话游戏</a></li>
-							<li><a href="https://makeitmeme.com/zh/" target="_blank">看图编表情MEME</a></li>
+							<li><a href="https://enazo.cn/" target="_blank" rel="noopener">绘谜</a></li>
+							<li><a href="https://skribbl.io/" target="_blank" rel="noopener">你画我猜国际版</a></li>
+							<li><a href="https://drawbattle.io/" target="_blank" rel="noopener">你画我猜对抗版</a></li>
+							<li><a href="https://garticphone.com/zh-CN" target="_blank" rel="noopener">传话游戏</a></li>
+							<li><a href="https://makeitmeme.com/zh/" target="_blank" rel="noopener">看图编表情MEME</a></li>
 
 							<h6>桌游系列</h6>
-							<li><a href="https://game.hullqin.cn/" target="_blank">桌游合集</a></li>
-							<li><a href="https://richup.io/" target="_blank">在线大富翁</a></li>
-							<li><a href="https://www.playok.com/" target="_blank">在线下棋</a></li>
+							<li><a href="https://game.hullqin.cn/" target="_blank" rel="noopener">桌游合集</a></li>
+							<li><a href="https://richup.io/" target="_blank" rel="noopener">在线大富翁</a></li>
+							<li><a href="https://www.playok.com/" target="_blank" rel="noopener">在线下棋</a></li>
 
 							<h6>对战系列</h6>
-							<li><a href="https://play-cs.com/zh/" target="_blank">在线CS1.6</a></li>
-							<li><a href="https://kiomet.com/" target="_blank">Kiomet.io</a></li>
-							<li><a href="https://deadswitch3.com/play/" target="_blank">DeadSwitch3</a></li>
-							<li><a href="https://dinogenonline.com/play/" target="_blank">Dinogen</a></li>
-							<li><a href="https://dts.momobako.com/index.php" target="_blank">ACFUN大逃杀</a></li>
+							<li><a href="https://play-cs.com/zh/" target="_blank" rel="noopener">在线CS1.6</a></li>
+							<li><a href="https://kiomet.com/" target="_blank" rel="noopener">Kiomet.io</a></li>
+							<li><a href="https://deadswitch3.com/play/" target="_blank" rel="noopener">DeadSwitch3</a>
+							</li>
+							<li><a href="https://dinogenonline.com/play/" target="_blank" rel="noopener">Dinogen</a>
+							</li>
+							<li><a href="https://dts.momobako.com/index.php" target="_blank" rel="noopener">ACFUN大逃杀</a>
+							</li>
 						</ul>
 					</div>
 
@@ -627,28 +691,32 @@
 						<h5 title="可以一个人又可以多人(可以路匹对手/队友的也算一个人)">两者兼得👪</h5>
 						<ul>
 							<h6>休闲系列</h6>
-							<li><a href="https://tuxun.fun/" target="_blank">图寻</a></li>
-							<li><a href="https://www.crazygames.com/" target="_blank">CrazyGame</a></li>
-							<li><a href="https://www.toomanychefs.party/" target="_blank">文字多人烹饪</a></li>
-							<li><a href="https://www.emu666.com/" target="_blank">古早游戏模拟</a></li>
-							<li><a href="https://tanghenre.com/" target="_blank">AI海龟汤</a></li>
-							<li><a href="https://www.chess.com/" target="_blank">国际象棋</a></li>
-							<li><a href="http://zh.battleship-game.org/" target="_blank">在线海战棋</a></li>
+							<li><a href="https://tuxun.fun/" target="_blank" rel="noopener">图寻</a></li>
+							<li><a href="https://www.crazygames.com/" target="_blank" rel="noopener">CrazyGame</a></li>
+							<li><a href="https://www.toomanychefs.party/" target="_blank" rel="noopener">文字多人烹饪</a></li>
+							<li><a href="https://www.emu666.com/" target="_blank" rel="noopener">古早游戏模拟</a></li>
+							<li><a href="https://tanghenre.com/" target="_blank" rel="noopener">AI海龟汤</a></li>
+							<li><a href="https://www.chess.com/" target="_blank" rel="noopener">国际象棋</a></li>
+							<li><a href="http://zh.battleship-game.org/" target="_blank" rel="noopener">在线海战棋</a></li>
 
 							<h6>竞技系列</h6>
-							<li><a href="https://narrow.one/" target="_blank">中世纪射箭</a></li>
-							<li><a href="https://robostorm.io/" target="_blank">机器人风暴</a></li>
-							<li><a href="https://mk48.io/" target="_blank">在线海战</a></li>
-							<li><a href="https://bloxd.io/" target="_blank">网页版MC小游戏</a></li>
-							<li><a href="https://poxel.io/" target="_blank">方块人射击</a></li>
-							<li><a href="https://bruh.io/" target="_blank">Bruh.io-伪2D射击</a></li>
-							<li><a href="https://battledudes.io/" target="_blank">BattleDudes.io-上帝视角射击</a></li>
+							<li><a href="https://narrow.one/" target="_blank" rel="noopener">中世纪射箭</a></li>
+							<li><a href="https://robostorm.io/" target="_blank" rel="noopener">机器人风暴</a></li>
+							<li><a href="https://mk48.io/" target="_blank" rel="noopener">在线海战</a></li>
+							<li><a href="https://bloxd.io/" target="_blank" rel="noopener">网页版MC小游戏</a></li>
+							<li><a href="https://poxel.io/" target="_blank" rel="noopener">方块人射击</a></li>
+							<li><a href="https://bruh.io/" target="_blank" rel="noopener">Bruh.io-伪2D射击</a></li>
+							<li><a href="https://battledudes.io/" target="_blank"
+									rel="noopener">BattleDudes.io-上帝视角射击</a></li>
 						</ul>
 					</div>
 					<div class="inner-small-box">
-						<h5 title="啊这...还没有体验不知道人数">此为几人?👀</h5>
-						<li><a href="" target="_blank">暂无</a></li>
+						<h5 title="啊这...还没有体验不知道人数" class="howmany">此为几人?👀</h5>
 						<ul>
+							<li>
+								<p href="" target="_blank" rel="noopener" class="nothing"
+									title="其实我并不是超链接，但是为了统一队形所以我才会是这个样子(｀・ω・´)">暂无</p>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -659,12 +727,13 @@
 					<div class="inner-small-box">
 						<h5>社区/资讯</h5>
 						<ul>
-							<li><a href="https://www.xiaoheihe.cn/app/bbs/home" target="_blank">小黑盒</a></li>
-							<li><a href="https://www.3dmgame.com/" target="_blank">3DM</a></li>
-							<li><a href="https://www.ali213.net/" target="_blank">游侠网</a></li>
-							<li><a href="https://www.gamersky.com/" target="_blank">游民星空</a></li>
-							<li><a href="https://gamepp.com/" target="_blank">Game++</a></li>
-							<li><a href="https://www.pvz.moe/" target="_blank">PVZ之家</a></li>
+							<li><a href="https://www.xiaoheihe.cn/app/bbs/home" target="_blank" rel="noopener">小黑盒</a>
+							</li>
+							<li><a href="https://www.3dmgame.com/" target="_blank" rel="noopener">3DM</a></li>
+							<li><a href="https://www.ali213.net/" target="_blank" rel="noopener">游侠网</a></li>
+							<li><a href="https://www.gamersky.com/" target="_blank" rel="noopener">游民星空</a></li>
+							<li><a href="https://gamepp.com/" target="_blank" rel="noopener">Game++</a></li>
+							<li><a href="https://www.pvz.moe/" target="_blank" rel="noopener">PVZ之家</a></li>
 						</ul>
 					</div>
 
@@ -672,9 +741,9 @@
 					<div class="inner-small-box">
 						<h5>交易</h5>
 						<ul>
-							<li><a href="https://www.youpin898.com/" target="_blank">悠悠有品</a></li>
-							<li><a href="https://buff.163.com/" target="_blank">Buff</a></li>
-							<li><a href="https://steampy.com/" target="_blank">Steampy</a></li>
+							<li><a href="https://www.youpin898.com/" target="_blank" rel="noopener">悠悠有品</a></li>
+							<li><a href="https://buff.163.com/" target="_blank" rel="noopener">Buff</a></li>
+							<li><a href="https://steampy.com/" target="_blank" rel="noopener">Steampy</a></li>
 						</ul>
 					</div>
 
@@ -682,10 +751,11 @@
 					<div class="inner-small-box">
 						<h5>平台</h5>
 						<ul>
-							<li><a href="https://store.steampowered.com/" target="_blank">Steam</a></li>
-							<li><a href="https://www.epicgames.com/site/zh-CN/home/" target="_blank">Epic</a></li>
-							<li><a href="https://www.wegame.com.cn/" target="_blank">WeGame</a></li>
-							<li><a href="https://itch.io/" target="_blank">Itch.io</a></li>
+							<li><a href="https://store.steampowered.com/" target="_blank" rel="noopener">Steam</a></li>
+							<li><a href="https://www.epicgames.com/site/zh-CN/home/" target="_blank"
+									rel="noopener">Epic</a></li>
+							<li><a href="https://www.wegame.com.cn/" target="_blank" rel="noopener">WeGame</a></li>
+							<li><a href="https://itch.io/" target="_blank" rel="noopener">Itch.io</a></li>
 						</ul>
 					</div>
 
@@ -693,9 +763,10 @@
 					<div class="inner-small-box">
 						<h5>官方站点</h5>
 						<ul>
-							<li><a href="https://www.minecraft.net/zh-hans" target="_blank">Minecraft</a></li>
-							<li><a href="https://www.pvzge.com" target="_blank">PVZ-Grandless</a></li>
-							<li><a href="https://www.pvzhe.com" target="_blank">PVZ-杂交版</a></li>
+							<li><a href="https://www.minecraft.net/zh-hans" target="_blank" rel="noopener">Minecraft</a>
+							</li>
+							<li><a href="https://www.pvzge.com" target="_blank" rel="noopener">PVZ-Grandless</a></li>
+							<li><a href="https://www.pvzhe.com" target="_blank" rel="noopener">PVZ-杂交版</a></li>
 						</ul>
 					</div>
 				</div>
@@ -716,26 +787,29 @@
 					<div class="inner-small-box">
 						<h5>单机类工具</h5>
 						<ul>
-							<li><a href="https://textcraft.net/" target="_blank">MC LOGO生成</a></li>
-							<li><a href="https://www.chunkbase.com/apps/" target="_blank">MC结构查找</a></li>
-							<li><a href="https://o.xbottle.top/mcsounds/" target="_blank">MC音效</a></li>
-							<li><a href="https://mcpedl.com/" target="_blank">MC基岩版资源论坛</a></li>
-							<li><a href="https://pling.top/" target="_blank">MC基岩版汉化资源</a></li>
-							<li><a href="https://yal.cc/r/terrasavr/" target="_blank">泰拉存档修改器</a></li>
+							<li><a href="https://textcraft.net/" target="_blank" rel="noopener">MC LOGO生成</a></li>
+							<li><a href="https://www.chunkbase.com/apps/" target="_blank" rel="noopener">MC结构查找</a></li>
+							<li><a href="https://o.xbottle.top/mcsounds/" target="_blank" rel="noopener">MC音效</a></li>
+							<li><a href="https://mcpedl.com/" target="_blank" rel="noopener">MC基岩版资源论坛</a></li>
+							<li><a href="https://pling.top/" target="_blank" rel="noopener">MC基岩版汉化资源</a></li>
+							<li><a href="https://yal.cc/r/terrasavr/" target="_blank" rel="noopener">泰拉存档修改器</a></li>
 						</ul>
 					</div>
 
 					<div class="inner-small-box">
 						<h5>联机类工具</h5>
 						<ul>
-							<li><a href="https://df.qq.com/cp/a20240729directory/" target="_blank">三角洲地图工具</a></li>
-							<li><a href="https://www.kkrb.net/?viewpage=view%2Foverview" target="_blank">三角洲一图流</a>
-							<li><a href="https://orzice.com/" _blank">三角洲小涛查</a>
-							<li><a href="https://sjz.hengj.cn/" target="_blank">三角洲鼠鼠工具</a>
-							<li><a href="https://aqtwwx.net/home" target="_blank">暗区无限情报站</a>
+							<li><a href="https://df.qq.com/cp/a20240729directory/" target="_blank"
+									rel="noopener">三角洲地图工具</a></li>
+							<li><a href="https://www.kkrb.net/?viewpage=view%2Foverview" target="_blank"
+									rel="noopener">三角洲一图流</a>
+							<li><a href="https://orzice.com/" target="_blank" rel="noopener">三角洲小涛查</a>
+							<li><a href="https://sjz.hengj.cn/" target="_blank" rel="noopener">三角洲鼠鼠工具</a>
+							<li><a href="https://aqtwwx.net/home" target="_blank" rel="noopener">暗区无限情报站</a>
 							</li>
-							<li><a href="https://www.gamersky.com/tools/valorantSkin/" target="_blank">无畏契约皮肤站</a>
-							<li><a href="https://down-cs.su/" target="_blank">CS1.6下载大全</a></li>
+							<li><a href="https://www.gamersky.com/tools/valorantSkin/" target="_blank"
+									rel="noopener">无畏契约皮肤站</a>
+							<li><a href="https://down-cs.su/" target="_blank" rel="noopener">CS1.6下载大全</a></li>
 							</li>
 						</ul>
 					</div>
@@ -745,8 +819,9 @@
 				<div class="middle-rect-box">
 					<h4 title="说实话,不建议在上课工作等情景打开此些网站x5 You have already been warned!!!">GAME百科类📕️</h4>
 					<ul>
-						<li><a href="https://wiki.52poke.com/wiki/%E4%B8%BB%E9%A1%B5" target="_blank">宝可梦Wiki</a></li>
-						<li><a href="https://zh.minecraft.wiki/" target="_blank">MC Wiki</a></li>
+						<li><a href="https://wiki.52poke.com/wiki/%E4%B8%BB%E9%A1%B5" target="_blank"
+								rel="noopener">宝可梦Wiki</a></li>
+						<li><a href="https://zh.minecraft.wiki/" target="_blank" rel="noopener">MC Wiki</a></li>
 					</ul>
 				</div>
 
@@ -758,12 +833,16 @@
 					<div class="inner-small-box">
 						<h5 title="仅供参考,请勿当真">娱乐测试/挑战🧪</h5>
 						<ul>
-							<li><a href="https://www.tomscott.com/usvsth3m/maths/" target="_blank">限时间的算数挑战</a></li>
-							<li><a href="http://shengfen.top/" target="_blank">中国省份测试</a></li>
-							<li><a href="https://bingehomepagequiz.com/zh/" target="_blank">Bing 首页测验</a></li>
-							<li><a href="https://www.16personalities.com/ch" target="_blank">16性格测试</a></li>
-							<li><a href="https://www.arealme.com/cn" target="_blank">A Real Me在线测试大全</a></li>
-							<li><a href="https://dazi.kukuw.com/" target="_blank">在线打字测试</a></li>
+							<li><a href="https://www.tomscott.com/usvsth3m/maths/" target="_blank"
+									rel="noopener">限时间的算数挑战</a></li>
+							<li><a href="http://shengfen.top/" target="_blank" rel="noopener">中国省份测试</a></li>
+							<li><a href="https://bingehomepagequiz.com/zh/" target="_blank" rel="noopener">Bing 首页测验</a>
+							</li>
+							<li><a href="https://www.16personalities.com/ch" target="_blank" rel="noopener">16性格测试</a>
+							</li>
+							<li><a href="https://www.arealme.com/cn" target="_blank" rel="noopener">A Real Me在线测试大全</a>
+							</li>
+							<li><a href="https://dazi.kukuw.com/" target="_blank" rel="noopener">在线打字测试</a></li>
 						</ul>
 					</div>
 
@@ -771,18 +850,19 @@
 					<div class="inner-small-box">
 						<h5 title="为什么这还单独分个???">图文娱乐🌆</h5>
 						<ul>
-							<li><a href="https://www.dongmanmanhua.cn/?ivk_sa=1021577i" target="_blank">咚漫漫画</a></li>
+							<li><a href="https://www.dongmanmanhua.cn/?ivk_sa=1021577i" target="_blank"
+									rel="noopener">咚漫漫画</a></li>
 							<li><a href="https://bbsactivity.hupu.com/pc-viewer/index.html?t=https%3A%2F%2Fm.hupu.com%2Fscore-home"
-									target="_blank">虎扑评分</a></li>
-							<li><a href="https://zeli.app/zh" target="_blank">用中文读科技新闻</a></li>
-							<li><a href="https://shadiao.plus/" target="_blank">沙雕新闻</a></li>
-							<li><a href="https://imgflip.com/" target="_blank">外网梗图素材</a></li>
-							<li><a href="https://cp.azite.cn/" target="_blank">复制粘贴语录</a></li>
-							<li><a href="https://nyancatcollection.com/" target="_blank">彩虹猫合集</a></li>
-							<li><a href="https://pointerpointer.com/" target="_blank">指向你的鼠标</a></li>
-							<li><a href="https://toolwa.com/petpet/" target="_blank">摸头杀生成器</a></li>
-							<li><a href="https://pixelart.liveblocks.app/?room=c483e63c853389d8f6af1"
-									target="_blank">在线像素画</a></li>
+									target="_blank" rel="noopener">虎扑评分</a></li>
+							<li><a href="https://zeli.app/zh" target="_blank" rel="noopener">用中文读科技新闻</a></li>
+							<li><a href="https://shadiao.plus/" target="_blank" rel="noopener">沙雕新闻</a></li>
+							<li><a href="https://imgflip.com/" target="_blank" rel="noopener">外网梗图素材</a></li>
+							<li><a href="https://cp.azite.cn/" target="_blank" rel="noopener">复制粘贴语录</a></li>
+							<li><a href="https://nyancatcollection.com/" target="_blank" rel="noopener">彩虹猫合集</a></li>
+							<li><a href="https://pointerpointer.com/" target="_blank" rel="noopener">指向你的鼠标</a></li>
+							<li><a href="https://toolwa.com/petpet/" target="_blank" rel="noopener">摸头杀生成器</a></li>
+							<li><a href="https://pixelart.liveblocks.app/?room=c483e63c853389d8f6af1" target="_blank"
+									rel="noopener">在线像素画</a></li>
 						</ul>
 					</div>
 
@@ -790,22 +870,27 @@
 					<div class="inner-small-box">
 						<h5 title="不知道怎么分类了...">杂七杂八/趣味创意📡</h5>
 						<ul>
-							<li><a href="https://lab.magiconch.com/homo/" target="_blank">114514论证</a></li>
-							<li><a href="https://worthjob.zippland.com/" target="_blank">这班上的值不值</a></li>
-							<li><a href="https://cike.app/" target="_blank">人们此刻在做什么</a></li>
-							<li><a href="https://www.boredbutton.com/" target="_blank">无聊按钮</a></li>
-							<li><a href="https://willyoupressthebutton.com/" target="_blank">你会按下这个按钮吗?</a></li>
-							<li><a href="https://fuun.fun/go/1686" target="_blank">随机和网上一个人击掌</a></li>
-							<li><a href="https://botgroup.chat/" target="_blank">硅碳生命体交流</a></li>
-							<li><a href="https://www.emojiall.com/zh-hans" target="_blank">Emoji百科</a></li>
-							<li><a href="https://translate.yandex.com/?lang=zh-emj" target="_blank">Emoji翻译</a></li>
-							<li><a href="https://emoji6.com/emojimix/" target="_blank">Emoji合成器</a></li>
-							<li><a href="https://nuclearsecrecy.com/nukemap/" target="_blank">核弹模拟地图</a></li>
+							<li><a href="https://lab.magiconch.com/homo/" target="_blank" rel="noopener">114514论证</a>
+							</li>
+							<li><a href="https://worthjob.zippland.com/" target="_blank" rel="noopener">这班上的值不值</a></li>
+							<li><a href="https://cike.app/" target="_blank" rel="noopener">人们此刻在做什么</a></li>
+							<li><a href="https://www.boredbutton.com/" target="_blank" rel="noopener">无聊按钮</a></li>
+							<li><a href="https://willyoupressthebutton.com/" target="_blank"
+									rel="noopener">你会按下这个按钮吗?</a></li>
+							<li><a href="https://fuun.fun/go/1686" target="_blank" rel="noopener">随机和网上一个人击掌</a></li>
+							<li><a href="https://botgroup.chat/" target="_blank" rel="noopener">硅碳生命体交流</a></li>
+							<li><a href="https://www.emojiall.com/zh-hans" target="_blank" rel="noopener">Emoji百科</a>
+							</li>
+							<li><a href="https://translate.yandex.com/?lang=zh-emj" target="_blank"
+									rel="noopener">Emoji翻译</a></li>
+							<li><a href="https://emoji6.com/emojimix/" target="_blank" rel="noopener">Emoji合成器</a></li>
+							<li><a href="https://nuclearsecrecy.com/nukemap/" target="_blank" rel="noopener">核弹模拟地图</a>
+							</li>
 							<li><a href="https://science.nasa.gov/mission/landsat/outreach/your-name-in-landsat/"
-									target="_blank">地球上的字母</a></li>
-							<li><a href="https://demo.marpi.pl/biomes/" target="_blank">3D体素生成器</a></li>
-							<li><a href="https://oreo.ddiu.io/" target="_blank">合成奥利奥</a></li>
-							<li><a href="https://michaelbach.de/ot/" target="_blank">著名视错觉</a></li>
+									target="_blank" rel="noopener">地球上的字母</a></li>
+							<li><a href="https://demo.marpi.pl/biomes/" target="_blank" rel="noopener">3D体素生成器</a></li>
+							<li><a href="https://oreo.ddiu.io/" target="_blank" rel="noopener">合成奥利奥</a></li>
+							<li><a href="https://michaelbach.de/ot/" target="_blank" rel="noopener">著名视错觉</a></li>
 						</ul>
 					</div>
 				</div>
@@ -814,16 +899,18 @@
 				<div class="middle-rect-box">
 					<h4 title="说实话......这个无所谓">🏫</h4>
 					<ul>
-						<li><a href="https://www.szhvs.com/" target="_blank">苏州高等职业技术学校</a></li>
+						<li><a href="https://www.szhvs.com/" target="_blank" rel="noopener">苏州高等职业技术学校</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		</div>
 		<!-- 引入外部 JS 文件 -->
-		<script src="js/icon.js"></script>
+		<script src="js/icon_loader.js"></script>
 		<script src="js/notice.js"></script>
-		<script src="js/blackandwhite.js"></script>
+		<script src="js/background-mode.js"></script>
+		<!-- <script src="js/blackandwhite.js"></script> -->
+		<!-- 好像是夜间模式，但是搞不明白，放弃了,没啥用 -->
 	</body>
 </html>
 
@@ -832,6 +919,6 @@
 <!-- <div class="category">
 					<h2>类</h2>
 					<ul>
-						<li><a href="" target="_blank"></a></li>
+						<li><a href="" target="_blank" rel="noopener"></a></li>
 					</ul>
 				</div> -->
