@@ -19,7 +19,9 @@ html {
 body {
 	font-family: Microsoft YaHei;
 	margin: 20px;
+	background: #e8f5e9;
 	background-image: url('https://tu.ltyuanfang.cn/api/fengjing.php');
+	/* background-image: url('https://picsum.photos/1920/1080'); */
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -215,6 +217,13 @@ ul {
 
 li {
 	margin-bottom: 10px;
+	list-style-type: none;
+	display: flex;
+	/* 新增：让li内元素弹性布局 */
+	align-items: center;
+	/* 核心：li内所有元素垂直居中 */
+	/* gap: 5px; */
+	/* 可选：控制图标和文字的间距 */
 }
 
 /* 链接样式 */
@@ -228,9 +237,15 @@ a:hover {
 }
 
 li a {
-	display: inline-block;
+	display: inline-flex;
+	/* 改：inline-flex 替代 inline-block，兼容居中 */
+	align-items: center;
+	/* 核心：链接内图标+文字垂直居中 */
 	transition: all 0.3s ease;
+	border-radius: 5px;
 	padding: 5px;
+	gap: 5px;
+	/* 可选：图标和文字的间距，可自行调整 */
 }
 
 li a:hover {
@@ -257,7 +272,7 @@ li a:hover {
 	height: 16px;
 	animation: spin 1s linear infinite;
 	display: inline-block;
-	margin-right: 5px;
+	/* margin-right: 5px; */
 	vertical-align: middle;
 }
 
@@ -348,7 +363,8 @@ li a:hover {
 	align-items: center;
 	z-index: 1002;
 	background-color: rgba(0, 0, 0, 0);
-	transition: background-color 0.3s ease;
+	transition: opacity 0.4s ease, background-color 0.3s ease;
+	/* 合并过渡 */
 	pointer-events: none;
 	opacity: 0;
 	margin: 0;
@@ -357,21 +373,22 @@ li a:hover {
 
 #announcementPopup.active {
 	background-color: rgba(0, 0, 0, 0.5);
-	pointer-events: auto;
 	opacity: 1;
+	pointer-events: auto;
 }
 
 .popup-content {
-	transform: scale(0.7);
-	opacity: 0;
-	transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-	position: relative;
-	background: rgba(255, 255, 255, 0.9);
+	background: rgba(255, 255, 255, 0.95);
 	padding: 30px;
 	border-radius: 15px;
 	max-width: 600px;
 	margin: 20px;
-	/* 弹窗内边距适配 */
+	transform: scale(0.95);
+	/* 稍微缩小一点 */
+	opacity: 0.9;
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	/* 更自然的缓动函数 */
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 #announcementPopup.active .popup-content {
@@ -379,12 +396,13 @@ li a:hover {
 	opacity: 1;
 }
 
-/* 关闭按钮样式 */
+/* 关闭按钮样式 - 改为圆形 */
 .closePopup {
 	position: absolute;
 	top: 15px;
 	right: 20px;
-	font-size: 28px;
+	font-size: 22px;
+	/* 稍微缩小字体，适配圆形按钮 */
 	cursor: pointer;
 	z-index: 1003;
 	color: #666;
@@ -394,6 +412,28 @@ li a:hover {
 	padding: 0;
 	line-height: 1;
 	margin: 0;
+	/* 以下是圆形按钮核心样式 */
+	width: 36px;
+	/* 固定宽高，保证是正圆 */
+	height: 36px;
+	border-radius: 50%;
+	/* 100%圆角 = 圆形 */
+	display: flex;
+	/* 让×符号在圆形中居中 */
+	align-items: center;
+	justify-content: center;
+}
+
+.closePopup:hover {
+	transform: scale(1.15);
+	/* 和其他按钮保持1.15的缩放比例 */
+	background-color: #C1C1C1;
+	/* 统一用实色#C1C1C1 */
+	text-decoration: none;
+	border-radius: 50%;
+	/* 关键：hover时也保持圆形，不再是5px圆角 */
+	opacity: 1;
+	/* 新增，和背景切换按钮的hover保持一致 */
 }
 
 /* 标题组样式 */
@@ -414,6 +454,8 @@ li a:hover {
 	transition: transform 0.3s ease;
 	margin: 0;
 	padding: 0;
+	vertical-align: middle;
+	/* 新增这一行！ */
 }
 
 .title-icon:hover {
@@ -689,19 +731,19 @@ table.domain .errcon {
 /* 统一h5和h6的基础样式，让居中后视觉一致 */
 .inner-small-box h5,
 .inner-small-box h6 {
-		text-align: center;
-		/* 文字水平居中 */
-		width: 100%;
-		/* 标题宽度=小框宽度 */
-		margin: 15px 0 10px 0;
-		/* 统一上下边距 */
-		display: block;
-		/* 强制独占一行 */
-		clear: both;
-		/* 清除浮动影响 */
-		padding: 0;
-		/* 清空默认内边距 */
-	}
+	text-align: center;
+	/* 文字水平居中 */
+	width: 100%;
+	/* 标题宽度=小框宽度 */
+	margin: 15px 0 10px 0;
+	/* 统一上下边距 */
+	display: block;
+	/* 强制独占一行 */
+	clear: both;
+	/* 清除浮动影响 */
+	padding: 0;
+	/* 清空默认内边距 */
+}
 
 
 .middle-rect-box h4 {
@@ -723,20 +765,141 @@ table.domain .errcon {
 	/* 去掉链接下划线（如需） */
 }
 
-.inner-small-box a:hover {
-	color: #ff6600;
+.inner-small-box a p:hover {
+	/* color: #ff6600; */
 	/* 链接hover变色（如需） */
 	transform: scale(1.1);
 	background-color: #c1c1c1;
 	border-radius: 5px;
 }
 
-.osww-title-h1{
+.osww-title-h1 {
 	margin: 30px 0 0 0;
 }
 
-.osww-title-h3{
+.osww-title-h3 {
 	margin: 0px;
+}
+
+.nothing {
+	color: #0066cc;
+	/* 保持蓝色 */
+	cursor: pointer;
+	/* display: inline-block; */
+	padding: 2px 5px;
+	text-decoration: none;
+	/* 去掉下划线 */
+	transition: all 0.3s ease;
+	border-radius: 5px;
+	display: block; /* 配合margin:0 auto生效 */
+}
+
+.nothing:hover {
+	transform: scale(1.1);
+	background-color: #c1c1c1;
+	border-radius: 5px;
+	transition: all 0.2s ease;
+}
+
+.howmany {
+	text-align: center;
+	display: flex;
+	/* 新增：启用Flex布局 */
+	justify-content: center;
+	/* 新增：水平居中 */
+	align-items: center;
+	/* 新增：垂直居中 */
+}
+
+/* ========== 背景切换按钮样式 ========== */
+/* 背景模式过渡优化 - 只改需要淡入淡出的元素 */
+.background-toggle {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #333;
+	padding: 10px 15px;
+	border-radius: 50px;
+	z-index: 1001;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	line-height: 1;
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	transition: all 0.3s ease;
+}
+
+/* 所有需要淡出的元素 —— 修复过渡生硬 */
+.main-container,
+.maker,
+.github,
+.issue,
+#announcementBtn,
+.fixed-button,
+#announcementPopup {
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 背景模式下的淡出状态 */
+body.background-mode .main-container,
+body.background-mode .maker,
+body.background-mode .github,
+body.background-mode .issue,
+body.background-mode #announcementBtn,
+body.background-mode .fixed-button {
+	opacity: 0;
+	visibility: hidden;
+	transition-delay: 0s;
+}
+
+/* 公告弹窗单独处理 */
+body.background-mode #announcementPopup {
+	opacity: 0 !important;
+	visibility: hidden !important;
+}
+
+/* 背景模式下的按钮样式 */
+body.background-mode .background-toggle {
+	opacity: 0.6;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: rgba(255, 255, 255, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(8px);
+}
+
+body.background-mode .background-toggle:hover {
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+	transform: scale(1.15);
+}
+
+/* 手机端隐藏按钮 */
+@media only screen and (max-width: 768px) {
+	.background-toggle {
+		display: none !important;
+	}
+}
+
+/* 如果和小伙伴的公告按钮位置冲突，可以调整 */
+@media only screen and (max-width: 480px) {
+	.background-toggle {
+		display: none !important;
+		/* 小屏手机也强制隐藏 */
+	}
+}
+
+.background-toggle:hover {
+	opacity: 1;
+	background-color: #C1C1C1;
+	transform: scale(1.15);
+
 }
 
 /* 手机适配测试 */
