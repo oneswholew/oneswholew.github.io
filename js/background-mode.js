@@ -1,34 +1,49 @@
 // 背景模式切换功能 - 优化版
 document.addEventListener('DOMContentLoaded', function() {
 	const backgroundBtn = document.getElementById('backgroundBtn');
+	const ANIMATION_DURATION = 400; // 提取常量
 
 	if (!backgroundBtn || window.innerWidth <= 768) return;
 
 	let isAnimating = false;
-	let animationTimer = null; // 新增：动画计时器引用
+	let animationTimer = null;
+
+	function setBackgroundMode(active) {
+		if (active) {
+			document.body.classList.add('background-mode');
+			backgroundBtn.textContent = '🔙';
+			backgroundBtn.title = '点击返回';
+		} else {
+			document.body.classList.remove('background-mode');
+			backgroundBtn.textContent = '🌄';
+			backgroundBtn.title = '只看背景';
+		}
+	}
 
 	function toggleBackgroundMode() {
 		if (isAnimating) return;
 
 		isAnimating = true;
+		setBackgroundMode(!document.body.classList.contains('background-mode'));
 
-		if (document.body.classList.contains('background-mode')) {
-			document.body.classList.remove('background-mode');
-			backgroundBtn.textContent = '🌄';
-			backgroundBtn.title = '只看背景';
-		} else {
-			document.body.classList.add('background-mode');
-			backgroundBtn.textContent = '🔙';
-			backgroundBtn.title = '点击返回';
-		}
-
-		// 清除之前的计时器（防止多次切换时混乱）
+		// 清除之前的计时器
 		if (animationTimer) clearTimeout(animationTimer);
 
 		animationTimer = setTimeout(() => {
 			isAnimating = false;
 			animationTimer = null;
-		}, 400); // 改为400ms，和CSS一致
+		}, ANIMATION_DURATION);
+	}
+
+	// 重置状态
+	function resetBackgroundMode() {
+		if (document.body.classList.contains('background-mode')) {
+			setBackgroundMode(false);
+			// 重置动画状态
+			if (animationTimer) clearTimeout(animationTimer);
+			isAnimating = false;
+			animationTimer = null;
+		}
 	}
 
 	backgroundBtn.addEventListener('click', function(e) {
@@ -38,9 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// ESC退出
 	document.addEventListener('keydown', function(e) {
-		if (e.key === 'Escape' &&
-			document.body.classList.contains('background-mode') &&
-			!isAnimating) {
+		if (e.key === 'Escape' && document.body.classList.contains('background-mode') && !isAnimating) {
 			toggleBackgroundMode();
 		}
 	});
@@ -48,15 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// 窗口大小改变
 	window.addEventListener('resize', function() {
 		if (window.innerWidth <= 768) {
-			if (document.body.classList.contains('background-mode')) {
-				document.body.classList.remove('background-mode');
-				backgroundBtn.textContent = '🌄';
-				backgroundBtn.title = '只看背景';
-				// 重置动画状态
-				if (animationTimer) clearTimeout(animationTimer);
-				isAnimating = false;
-				animationTimer = null;
-			}
+			resetBackgroundMode();
 		}
 	});
 
@@ -71,19 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 });
 
-// 在文件末尾添加
+// 刷新背景图片
 function refreshBackground() {
-	const bgUrl = 'https://tu.ltyuanfang.cn/api/fengjing.php?t=' + Date.now();
+	const bgUrl = `https://tu.ltyuanfang.cn/api/fengjing.php?t=${Date.now()}`;
 	document.body.style.backgroundImage = `url('${bgUrl}')`;
 }
-
-// // 双击背景按钮刷新背景（不干扰原有功能）
-// backgroundBtn.addEventListener('dblclick', function(e) {
-// 	e.stopPropagation();
-// 	refreshBackground();
-// 	// 可选：给个提示
-// 	backgroundBtn.textContent = '🔄';
-// 	setTimeout(() => {
-// 		backgroundBtn.textContent = document.body.classList.contains('background-mode') ? '🔙' : '🌄';
-// 	}, 500);
-// });

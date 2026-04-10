@@ -8,62 +8,60 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
+    const ANIMATION_DURATION = 300;  // 动画时长常量
     let closeBtn = popup.querySelector('.closePopup');
-    let isAnimating = false;  // 防止动画冲突
+    let isAnimating = false;
     
-    // 关闭弹窗函数
-    const closePopup = () => {
+    // 统一处理动画状态
+    const setAnimating = (callback) => {
         if (isAnimating) return;
         isAnimating = true;
         
-        popup.classList.remove('active');
-        document.body.style.overflow = '';
+        callback();
         
-        // 动画结束后解锁
         setTimeout(() => {
             isAnimating = false;
-        }, 300);  // 和CSS过渡时间一致
+        }, ANIMATION_DURATION);
+    };
+    
+    // 关闭弹窗函数
+    const closePopup = () => {
+        setAnimating(() => {
+            popup.classList.remove('active');
+            document.body.style.overflow = '';
+        });
     };
     
     // 打开弹窗函数
     const openPopup = () => {
-        if (isAnimating) return;
-        isAnimating = true;
-        
-        popup.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        
-        // 重新获取关闭按钮（防止动态加载问题）
-        closeBtn = popup.querySelector('.closePopup');
-        
-        setTimeout(() => {
-            isAnimating = false;
-        }, 300);
+        setAnimating(() => {
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            // 重新获取关闭按钮（防止动态加载问题）
+            closeBtn = popup.querySelector('.closePopup');
+        });
+    };
+    
+    // 事件监听合并
+    const handlePopupClick = (e) => {
+        // 点击关闭按钮或背景
+        if (e.target.classList.contains('closePopup') || 
+            e.target.closest('.closePopup') ||
+            e.target === popup) {
+            closePopup();
+        }
     };
     
     // 点击按钮打开弹窗
     announcementBtn.addEventListener('click', openPopup);
     
-    // 关闭按钮点击
-    popup.addEventListener('click', (e) => {
-        if (e.target.classList.contains('closePopup') || 
-            e.target.closest('.closePopup')) {
-            closePopup();
-        }
-    });
-    
-    // 点击背景关闭
-    popup.addEventListener('click', (e) => {
-        if (e.target === popup) {
-            closePopup();
-        }
-    });
+    // 弹窗点击处理（关闭按钮和背景）
+    popup.addEventListener('click', handlePopupClick);
     
     // ESC关闭
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && popup.classList.contains('active')) {
             closePopup();
-            e.preventDefault();
         }
     });
     
