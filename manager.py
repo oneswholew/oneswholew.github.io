@@ -1,7 +1,10 @@
 # ==========================================================
 # 🐟 鲸鱼娘超链接管理工具
-# 本鲸鱼娘特制注释版 V3.2
-# 新增：上下移动分类、分组、子分组、链接！
+# 本鲸鱼娘特制注释版 V3.3
+# 新增：
+#   1. 自动合并 "自娱自乐🧑 - Wordle🎯" 这种被拍平的分组
+#   2. 搜索框（只搜当前分类下的链接）
+#   3. 撤销功能（操作前自动备份，Ctrl+Z 般的体验）
 # ==========================================================
 
 import tkinter as tk
@@ -10,6 +13,7 @@ import json
 import os
 import re
 import uuid
+import copy
 import tkinter.font as tkfont
 
 
@@ -172,11 +176,66 @@ def ensure_ids(data):
     return data
 
 
+# ==========================================================
+# 🐟 鲸鱼娘魔法：自动把 "自娱自乐🧑 - Wordle🎯" 这种被拍平的分组合并
+# 规则：如果 group 名字里含有 " - "，就把 " - " 前面的当作父分组
+# 后面的当作子分组名。同名的父分组自动合并。
+# ==========================================================
+def merge_flat_groups(data):
+    """把 '自娱自乐🧑 - Wordle🎯' 这种被拍平的分组，还原成 subgroups 嵌套结构"""
+    changed = False
+    for cat in data:
+        groups = cat.get("groups", [])
+        if not groups:
+            continue
+
+        new_groups = []
+        # 已经作为父分组处理过的名字 -> 它在 new_groups 里的位置
+        merged_parents = {}
+        # 用来记住父分组在 new_groups 里的下标
+        parent_index = {}
+
+        for group in groups:
+            name = group.get("group") or ""
+            # 只处理含 " - " 的、且还没被合并过的
+            if " - " in name and "subgroups" not in group:
+                parent_name, sub_name = name.split(" - ", 1)
+                parent_name = parent_name.strip()
+                sub_name = sub_name.strip()
+
+                if parent_name not in parent_index:
+                    # 新建一个父分组
+                    parent_group = {
+                        "id": group.get("id", str(uuid.uuid4())),
+                        "group": parent_name,
+                        "links": [],
+                        "subgroups": []
+                    }
+                    parent_index[parent_name] = len(new_groups)
+                    new_groups.append(parent_group)
+                    changed = True
+                else:
+                    # 原有的 group id 已经被父分组用了，这边给一个全新的
+                    changed = True
+
+                new_groups[parent_index[parent_name]]["subgroups"].append({
+                    "id": group.get("id", str(uuid.uuid4())) if "id" not in parent_group else str(uuid.uuid4()),
+                    "name": sub_name,
+                    "links": group.get("links", [])
+                })
+            else:
+                new_groups.append(group)
+
+        if changed:
+            cat["groups"] = new_groups
+    return data, changed
+
+
 class LinkManagerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("🐟 鲸鱼娘超链接管理工具")
-        self.root.geometry("1100x800")
+        self.root.geometry("1200x820")
 
         self.set_fonts()
 
@@ -187,6 +246,10 @@ class LinkManagerApp:
         self.selected_link_id = None
         self._suppress_listbox_event = False
         self._status_after_id = None
+
+        # 🐟 撤销栈
+        self.undo_stack = []
+        self.undo_depth = 20
 
         self.setup_ui()
         self.auto_load()
@@ -206,6 +269,26 @@ class LinkManagerApp:
         style.configure(".", font=(font_family, font_size))
         style.configure("Treeview", font=(font_family, font_size), rowheight=25)
         style.configure("Treeview.Heading", font=(font_family, font_size, "bold"))
+
+    def push_undo(self):
+        """🐟 每次改动前，先把当前状态压进撤销栈"""
+        try:
+            snapshot = copy.deepcopy(self.data)
+        except Exception:
+            return
+        self.undo_stack.append(snapshot)
+        if len(self.undo_stack) > self.undo_depth:
+            self.undo_stack.pop(0)
+
+    def undo(self):
+        """🐟 撤销上一步操作"""
+        if not self.undo_stack:
+            self.set_status("⚠️ 没有可以撤销的操作了！", "red")
+            return
+        self.data = self.undo_stack.pop()
+        self.refresh_categories()
+        self.auto_save()
+        self.set_status("✅ 已撤销上一步操作！")
 
     def auto_load(self):
         if os.path.exists("website_data.json"):
@@ -250,6 +333,10 @@ class LinkManagerApp:
                         return False
 
             ensure_ids(self.data)
+            # 🐟 自动合并被拍平的分组
+            self.data, merged = merge_flat_groups(self.data)
+            if merged and not silent:
+                messagebox.showinfo("提示", "检测到被拍平的分组，已自动合并成子分组嵌套结构！")
 
             if filepath.endswith('.json'):
                 self.current_json_path = filepath
@@ -347,6 +434,10 @@ class LinkManagerApp:
                                                                                                         padx=2)
         tk.Button(file_frame, text="🚀 快速导出 website_data.js", command=self.quick_export_js, bg="#4CAF50",
                   fg="white").pack(side=tk.LEFT, padx=2)
+        tk.Button(file_frame, text="↩️ 撤销", command=self.undo, bg="#FF7043", fg="white").pack(side=tk.LEFT, padx=2)
+        # 🐟 手动合并被拍平的分组
+        tk.Button(file_frame, text="🧹 合并被拍平分组", command=self.manual_merge, bg="#9C27B0", fg="white").pack(
+            side=tk.LEFT, padx=2)
 
         action_frame = tk.Frame(toolbar, bg="#f0f0f0")
         action_frame.pack(side=tk.TOP, fill=tk.X, pady=2)
@@ -355,10 +446,16 @@ class LinkManagerApp:
         tk.Button(action_frame, text="切换到下半部分 (bottom)", command=lambda: self.switch_layout("bottom"),
                   bg="#e0e0e0").pack(side=tk.LEFT, padx=5)
 
+        # 🐟 搜索框
+        tk.Label(action_frame, text="🔎 搜索链接：", bg="#f0f0f0").pack(side=tk.LEFT, padx=(20, 2))
+        self.search_var = tk.StringVar()
+        self.search_var.trace_add("write", lambda *a: self.on_search())
+        tk.Entry(action_frame, textvariable=self.search_var, width=30).pack(side=tk.LEFT)
+        tk.Button(action_frame, text="清空", command=lambda: self.search_var.set("")).pack(side=tk.LEFT, padx=2)
+
         main_panel = tk.Frame(self.root)
         main_panel.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
-        # ===== 左侧：分类列表 =====
         left_frame = tk.Frame(main_panel, width=200)
         left_frame.pack(side=tk.LEFT, fill=tk.Y)
         tk.Label(left_frame, text="📁 分类列表").pack()
@@ -372,7 +469,6 @@ class LinkManagerApp:
         tk.Button(cat_btn_frame, text="❌ 删除分类", command=self.del_category).pack(side=tk.LEFT, expand=True,
                                                                                     fill=tk.X)
 
-        # 🐟 新增：分类上下移动按钮
         cat_move_frame = tk.Frame(left_frame)
         cat_move_frame.pack(fill=tk.X, pady=2)
         tk.Button(cat_move_frame, text="⬆️ 上移分类", command=lambda: self.move_category(-1), bg="#E1BEE7").pack(
@@ -388,7 +484,6 @@ class LinkManagerApp:
         self.group_tree.pack(fill=tk.X, pady=5)
         self.group_tree.bind('<<TreeviewSelect>>', self.on_select_group)
 
-        # 🐟 右键菜单：加上了上下移动
         self.group_menu = tk.Menu(self.root, tearoff=0)
         self.group_menu.add_command(label="⬆️ 上移", command=lambda: self.move_group(-1))
         self.group_menu.add_command(label="⬇️ 下移", command=lambda: self.move_group(1))
@@ -413,7 +508,6 @@ class LinkManagerApp:
         self.link_tree.pack(fill=tk.BOTH, expand=True, pady=5)
         self.link_tree.bind('<<TreeviewSelect>>', self.on_link_select)
 
-        # 🐟 新增：链接上下移动按钮
         link_move_frame = tk.Frame(right_frame)
         link_move_frame.pack(fill=tk.X, pady=2)
         tk.Button(link_move_frame, text="⬆️ 上移链接", command=lambda: self.move_link(-1), bg="#E1BEE7").pack(
@@ -452,14 +546,51 @@ class LinkManagerApp:
             self.root.after_cancel(self._status_after_id)
         self._status_after_id = self.root.after(2500, lambda: self.status_label.config(text=""))
 
-    def show_group_menu(self, event):
-        item = self.group_tree.identify_row(event.y)
-        if item:
-            self.group_tree.selection_set(item)
-            self.group_menu.post(event.x_root, event.y_root)
+    def manual_merge(self):
+        """🐟 手动触发一次合并"""
+        self.push_undo()
+        self.data, changed = merge_flat_groups(self.data)
+        if changed:
+            self.refresh_categories()
+            self.auto_save()
+            self.set_status("✅ 已合并被拍平的分组！")
+        else:
+            self.set_status("ℹ️ 没有找到需要合并的分组。")
+
+    def on_search(self):
+        """🐟 搜索：输入关键字，过滤链接列表（在当前分组下）"""
+        keyword = self.search_var.get().strip().lower()
+        if not keyword:
+            # 清空搜索时，重新显示当前选中分组的全部链接
+            self.on_select_group(None)
+            return
+        # 在当前分类的所有分组里搜
+        cat = self.get_current_category()
+        if not cat: return
+        self.link_tree.delete(*self.link_tree.get_children())
+        found = []
+        for group in cat.get("groups", []):
+            # 分组自身链接
+            for link in group.get("links", []) or []:
+                name = (link.get("name") or "").lower()
+                url = (link.get("url") or "").lower()
+                if keyword in name or keyword in url:
+                    found.append((group.get("group") or "（无分组名）", link))
+            # 子分组
+            for sub in group.get("subgroups", []) or []:
+                for link in sub.get("links", []) or []:
+                    name = (link.get("name") or "").lower()
+                    url = (link.get("url") or "").lower()
+                    if keyword in name or keyword in url:
+                        found.append((f"{group.get('group') or ''} > {sub.get('name') or ''}", link))
+        for container_name, link in found:
+            self.link_tree.insert("", "end",
+                                  values=(f"[{container_name}] {link.get('name', '')}", link.get("url", "")),
+                                  tags=(link.get("id", ""),))
+        self.set_status(f"🔎 找到 {len(found)} 条匹配的链接", "#2196F3")
 
     # ==========================================================
-    # 🐟 通过 ID 查找辅助函数
+    # 🐟 查找辅助函数
     # ==========================================================
     def find_category(self, cat_id):
         for cat in self.data:
@@ -492,27 +623,24 @@ class LinkManagerApp:
         return None
 
     # ==========================================================
-    # 🐟 新增：上下移动功能
+    # 🐟 上下移动
     # ==========================================================
     def move_category(self, direction):
-        """上移/下移选中的分类"""
         cat = self.get_current_category()
         if not cat:
             self.set_status("⚠️ 请先选中一个分类！", "red")
             return
-        # 在当前 layout 过滤后的列表里找位置
         filtered = self.get_filtered_categories()
         idx_in_filtered = filtered.index(cat)
         new_idx_in_filtered = idx_in_filtered + direction
         if new_idx_in_filtered < 0 or new_idx_in_filtered >= len(filtered):
             self.set_status("⚠️ 已经到头了，不能再移动！", "red")
             return
-        # 在 self.data 里找到这两个的实际位置，交换
+        self.push_undo()
         other_cat = filtered[new_idx_in_filtered]
         i1 = self.data.index(cat)
         i2 = self.data.index(other_cat)
         self.data[i1], self.data[i2] = self.data[i2], self.data[i1]
-        # 刷新后选中新位置
         self.refresh_categories()
         if self.cat_listbox.size() > 0:
             self._suppress_listbox_event = True
@@ -523,7 +651,6 @@ class LinkManagerApp:
         self.set_status("✅ 分类位置已调整！")
 
     def move_group(self, direction):
-        """上移/下移选中的分组或子分组"""
         selected = self.group_tree.selection()
         if not selected:
             self.set_status("⚠️ 请先选中一个分组或子分组！", "red")
@@ -535,6 +662,7 @@ class LinkManagerApp:
         cat_id = self.group_tree.item(item, "values")[0]
         cat = self.find_category(cat_id)
         if not cat: return
+        self.push_undo()
 
         if tag.startswith("g_"):
             group_id = tag.split("_", 1)[1]
@@ -547,7 +675,6 @@ class LinkManagerApp:
                 return
             groups[idx], groups[new_idx] = groups[new_idx], groups[idx]
             self.on_select_category(None)
-            # 重新选中移动后的项
             self._reselect_group(cat, "g", groups[new_idx].get("id", ""))
             self.auto_save()
             self.set_status("✅ 分组位置已调整！")
@@ -569,7 +696,6 @@ class LinkManagerApp:
             self.set_status("✅ 子分组位置已调整！")
 
     def _reselect_group(self, cat, prefix, group_id, sub_id=None):
-        """刷新后重新选中移动过的分组/子分组"""
         for g_child in self.group_tree.get_children():
             tags = self.group_tree.item(g_child, "tags")
             if not tags: continue
@@ -588,7 +714,6 @@ class LinkManagerApp:
                         return
 
     def move_link(self, direction):
-        """上移/下移选中的链接"""
         if not self.selected_link_id:
             self.set_status("⚠️ 请先选中一条链接！", "red")
             return
@@ -603,9 +728,9 @@ class LinkManagerApp:
         if new_idx < 0 or new_idx >= len(links):
             self.set_status("⚠️ 已经到头了，不能再移动！", "red")
             return
+        self.push_undo()
         links[idx], links[new_idx] = links[new_idx], links[idx]
         self.on_select_group(None)
-        # 重新选中移动后的链接
         for item_id in self.link_tree.get_children():
             if self.link_tree.item(item_id, "tags") == (self.selected_link_id,):
                 self.link_tree.selection_set(item_id)
@@ -617,6 +742,12 @@ class LinkManagerApp:
     # ==========================================================
     # 其他功能
     # ==========================================================
+    def show_group_menu(self, event):
+        item = self.group_tree.identify_row(event.y)
+        if item:
+            self.group_tree.selection_set(item)
+            self.group_menu.post(event.x_root, event.y_root)
+
     def rename_group(self):
         selected = self.group_tree.selection()
         if not selected: return
@@ -627,6 +758,7 @@ class LinkManagerApp:
         cat_id = self.group_tree.item(item, "values")[0]
         cat = self.find_category(cat_id)
         if not cat: return
+        self.push_undo()
 
         if tag.startswith("g_"):
             group_id = tag.split("_", 1)[1]
@@ -674,30 +806,26 @@ class LinkManagerApp:
         if not self.selected_link_id:
             self.set_status("⚠️ 请先在链接列表里选中一个链接！", "red")
             return
-
         sel = self.link_tree.selection()
         if not sel or self.link_tree.item(sel[0], "tags")[0] != self.selected_link_id:
             self.set_status("⚠️ 链接列表的选择已失效，请重新点一下要修改的链接。", "red")
             self.selected_link_id = None
             return
-
         name = self.link_name_var.get().strip()
         url = self.link_url_var.get().strip()
         if not name or not url:
             self.set_status("⚠️ 网站名称和网址都不能为空！", "red")
             return
-
         container = self.locate_link_container(self.selected_link_id)
         if not container:
             self.set_status("❌ 找不到这条链接，可能已经被删除了。", "red")
             return
-
+        self.push_undo()
         for link in container.get("links", []):
             if link.get("id") == self.selected_link_id:
                 link["name"] = name
                 link["url"] = url
                 break
-
         for item_id in self.link_tree.get_children():
             if self.link_tree.item(item_id, "tags") == (self.selected_link_id,):
                 self.link_tree.item(item_id, values=(name, url))
@@ -716,6 +844,7 @@ class LinkManagerApp:
         if not name or not url:
             self.set_status("⚠️ 请先在输入框里填好网站名称和网址！", "red")
             return
+        self.push_undo()
         container.setdefault("links", []).append({
             "id": str(uuid.uuid4()),
             "name": name,
@@ -853,6 +982,7 @@ class LinkManagerApp:
         name = simpledialog.askstring("添加分类", "请输入分类名称：", parent=self.root)
         self.root.focus_force()
         if name:
+            self.push_undo()
             self.data.append({
                 "id": str(uuid.uuid4()),
                 "layout": self.current_layout,
@@ -872,6 +1002,7 @@ class LinkManagerApp:
         if not cat: return
         name = cat.get("category", "")
         if not messagebox.askyesno("确认", f"确定要删除分类「{name}」吗？"): return
+        self.push_undo()
         self.data.remove(cat)
         self.refresh_categories()
         if self.cat_listbox.size() > 0:
@@ -887,6 +1018,7 @@ class LinkManagerApp:
         group_name = simpledialog.askstring("添加分组", "请输入分组名称（如：自娱自乐🧑）：", parent=self.root)
         self.root.focus_force()
         if group_name:
+            self.push_undo()
             cat.setdefault("groups", []).append({
                 "id": str(uuid.uuid4()),
                 "group": group_name,
@@ -916,7 +1048,7 @@ class LinkManagerApp:
         self.root.focus_force()
         if not sub_name:
             return
-
+        self.push_undo()
         if "subgroups" not in group or group["subgroups"] is None:
             group["subgroups"] = []
         group["subgroups"].append({
@@ -924,7 +1056,6 @@ class LinkManagerApp:
             "name": sub_name,
             "links": []
         })
-
         self.on_select_category(None)
         self.auto_save()
 
@@ -958,6 +1089,7 @@ class LinkManagerApp:
             return
 
         if not messagebox.askyesno("确认", msg): return
+        self.push_undo()
 
         if tag.startswith("g_"):
             group_id = tag.split("_", 1)[1]
@@ -1005,6 +1137,7 @@ class LinkManagerApp:
         if not tags: return
         link_id = tags[0]
         if not messagebox.askyesno("确认", "确定要删除这个链接吗？"): return
+        self.push_undo()
 
         container = self.locate_link_container(link_id)
         if container:

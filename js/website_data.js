@@ -52,7 +52,7 @@ var website_data = [
             "id": "40aa17ad-6fc7-4fca-b6f2-ab93b3e5e9e7"
           },
           {
-            "name": "百度AI创作平台",
+            "name": "度加AI创作平台",
             "url": "https://miaobi.baidu.com/",
             "id": "55bc694d-7b6e-4e8d-8f8e-651bc2e4b0a4"
           },
@@ -767,6 +767,11 @@ var website_data = [
             "name": "西瓜视频",
             "url": "https://www.ixigua.com/",
             "id": "7210a670-3c1f-41a6-8e2d-2b254b21edbe"
+          },
+          {
+            "id": "e7afc129-52ac-4e2b-aae3-f8ac7b17dcfb",
+            "name": "芒果TV",
+            "url": "https://www.mgtv.com/index.html"
           }
         ],
         "id": "00cbadc7-2776-4dda-9496-4f579573684d"
@@ -1573,636 +1578,657 @@ var website_data = [
     "category": "GAME类🎮️",
     "groups": [
       {
-        "group": "自娱自乐🧑 - Wordle🎯",
-        "links": [
+        "id": "45aabeca-3f4d-4f97-ae41-592baa9e45a0",
+        "group": "自娱自乐🧑",
+        "links": [],
+        "subgroups": [
           {
-            "name": "Wordle每日版",
-            "url": "https://www.fanwa.com/",
-            "id": "78e0df28-f727-4ef3-8a2f-bbae9ef7a91d"
+            "id": "317f4b80-63f8-44e5-84f8-3c21c4fb6a98",
+            "name": "Wordle🎯",
+            "links": [
+              {
+                "name": "Wordle每日版",
+                "url": "https://www.fanwa.com/",
+                "id": "78e0df28-f727-4ef3-8a2f-bbae9ef7a91d"
+              },
+              {
+                "name": "Wordle无限版",
+                "url": "https://wordly.org/",
+                "id": "c3c92563-361b-4369-acb0-2c6cf646f603"
+              },
+              {
+                "name": "词影-中文版Wordle",
+                "url": "https://cy.surprising.studio/",
+                "id": "0810a44b-8d06-42f2-9dc8-f25c69b9bf4d"
+              },
+              {
+                "name": "汉兜",
+                "url": "https://handle.antfu.me/",
+                "id": "2c99f3c1-7b6a-4ecb-a526-6a9d412429a2"
+              },
+              {
+                "name": "Phrazle-每日版",
+                "url": "https://phrazle.gg/",
+                "id": "d82a22cc-dd06-43d3-b7d1-f067c3bf8578"
+              },
+              {
+                "name": "Phrazle-无限版",
+                "url": "https://phrazle.io/",
+                "id": "e42d8b6a-5202-4632-b495-425fc6b0daa4"
+              },
+              {
+                "name": "寻找词语关联",
+                "url": "https://connections.gg/",
+                "id": "87470033-0660-4585-bc17-8d050671e904"
+              },
+              {
+                "name": "古诗连词",
+                "url": "https://poetrystrands.com/",
+                "id": "a533c272-2b02-48e5-a507-fc2044bcc77d"
+              },
+              {
+                "name": "类Wordle合集",
+                "url": "https://likewordle.com/",
+                "id": "577971b2-e726-4303-a184-02793af89f61"
+              }
+            ]
           },
           {
-            "name": "Wordle无限版",
-            "url": "https://wordly.org/",
-            "id": "c3c92563-361b-4369-acb0-2c6cf646f603"
+            "id": "199fb969-b588-420a-98fa-050411f42cf9",
+            "name": "益智解谜🧩",
+            "links": [
+              {
+                "name": "在线数独",
+                "url": "https://www.sudoku-cn.com/",
+                "id": "1212d966-fe17-40b0-8cf3-c595f7d9f6f3"
+              },
+              {
+                "name": "扫雷-无限版",
+                "url": "https://www.1000mines.com/",
+                "id": "e7981140-018d-47d5-ad9e-33f8b580c00c"
+              },
+              {
+                "name": "皇后数独",
+                "url": "https://playqueensgame.org/zh/",
+                "id": "94047e56-3986-45d8-80b3-f68cc09a5a5d"
+              },
+              {
+                "name": "每日数独",
+                "url": "https://cn.samuraisudoku.com/",
+                "id": "47cf19ad-b30f-492e-8f52-202146aea67c"
+              },
+              {
+                "name": "在线拼图",
+                "url": "https://www.jigsawplanet.com/",
+                "id": "62ea8210-1439-4a4a-a6eb-b4a710a87f0b"
+              },
+              {
+                "name": "益智合集",
+                "url": "https://gallery.selfboot.cn/zh/games",
+                "id": "af651ef8-913b-4da3-93c2-1e4ac9df385b"
+              },
+              {
+                "name": "彩球猜颜色",
+                "url": "https://www.gamesforthebrain.com/chinese/guesscolors/",
+                "id": "d47d8bcd-d649-4292-a761-465df3696614"
+              },
+              {
+                "name": "看截图猜电影",
+                "url": "https://moviegame.top/",
+                "id": "18838e96-1fac-4333-9fbd-eb0e2dd1cbd9"
+              },
+              {
+                "name": "找色差挑战",
+                "url": "https://www.zhaosecha.com/",
+                "id": "cc80abe8-1f66-4d1e-8874-60e0df93f1d1"
+              },
+              {
+                "name": "SatPixel-卫星猜城市",
+                "url": "https://satpixel.com/zh/",
+                "id": "3bc2d258-9c3d-4974-9af4-7b8663b3a1b3"
+              },
+              {
+                "name": "猜图辨AI",
+                "url": "https://realornotquiz.com/",
+                "id": "17899cb0-8b31-467c-9fd5-631e62a5d88f"
+              },
+              {
+                "name": "Nonograms-格子解谜",
+                "url": "https://cn.puzzle-nonograms.com/",
+                "id": "22d05691-8624-45d6-b1d0-e14d312aec8f"
+              },
+              {
+                "name": "Simon Tatham-解谜合集",
+                "url": "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/",
+                "id": "35d8a551-c93f-4785-8869-4a2e00416ace"
+              },
+              {
+                "name": "围马",
+                "url": "https://enclose.horse/",
+                "id": "fb6cf7a0-bc20-472c-8bbc-d25837017dc7"
+              },
+              {
+                "name": "Figure-图形解谜",
+                "url": "https://figure.game/zh",
+                "id": "a41bbb1c-fcdb-4d9e-826e-27f62cb9c702"
+              },
+              {
+                "name": "动物英文接龙",
+                "url": "https://rose.systems/animalist/",
+                "id": "cdce56ec-9963-490d-b682-c331f0dc9573"
+              },
+              {
+                "name": "石头克星",
+                "url": "https://www.whatbeatsrock.com/",
+                "id": "e012da4f-4f7b-4cac-abae-b76a957af11b"
+              },
+              {
+                "name": "Wolfcha-AI狼人杀",
+                "url": "https://www.wolf-cha.com/zh",
+                "id": "cfcdc60f-c1b1-4dd0-a163-9836db8a61eb"
+              },
+              {
+                "name": "大学生登山失踪事件-网页解谜",
+                "url": "https://missing.shiroki-y.top/introduction.html",
+                "id": "810b1d55-712e-4ad4-acdb-a6734ff06160"
+              }
+            ]
           },
           {
-            "name": "词影-中文版Wordle",
-            "url": "https://cy.surprising.studio/",
-            "id": "0810a44b-8d06-42f2-9dc8-f25c69b9bf4d"
+            "id": "51fe3faa-8c45-4fdf-8f0c-e1dba366e515",
+            "name": "体验模拟🎮",
+            "links": [
+              {
+                "name": "人生重开模拟器",
+                "url": "https://liferestart.syaro.io/public/index.html",
+                "id": "546d26b6-09bc-4c37-ae74-fe148746fc1f"
+              },
+              {
+                "name": "哄哄模拟器",
+                "url": "https://hong.greatdk.com/",
+                "id": "c0180143-a74b-4d9f-8f1d-12c136765dbc"
+              },
+              {
+                "name": "Windows93模拟",
+                "url": "https://www.windows93.net/",
+                "id": "7bf3e1f4-3333-48e5-a02c-b5abca9caad9"
+              },
+              {
+                "name": "WinXP模拟",
+                "url": "https://win32.run/",
+                "id": "b352ebc1-8342-4ab5-8a63-8c06e0438e12"
+              },
+              {
+                "name": "Win12模拟",
+                "url": "https://tjy-gitnub.github.io/win12/desktop.html",
+                "id": "bd3818fc-da16-4f16-bc63-ed15fb40833a"
+              },
+              {
+                "name": "/Win11模拟/",
+                "url": "https://win11.blueedge.me/",
+                "id": "ca1db08b-0419-4616-afb7-7779490efe0f"
+              },
+              {
+                "name": "/Win7模拟/",
+                "url": "https://desk.glitchy.website/",
+                "id": "729eec62-5977-490c-b458-85e828b37afc"
+              },
+              {
+                "name": "赛博徒步-鳌太线",
+                "url": "https://cyberhiking.cn/",
+                "id": "d6af3a0a-8a00-428c-9401-210a3ebac8af"
+              },
+              {
+                "name": "美丽国模拟器",
+                "url": "https://us-killline.com/",
+                "id": "e660e850-0783-48db-ba41-9dcffacef25c"
+              },
+              {
+                "name": "GeoFS-飞行模拟",
+                "url": "https://www.geo-fs.com/",
+                "id": "e17a9d04-3446-453d-acd6-b6c4ca036dcf"
+              },
+              {
+                "name": "半挂车倒车模拟器",
+                "url": "https://semi-trailer-parking.tankxu.com/",
+                "id": "4aeeca6d-e5bb-42b9-a470-eebe1ff5ab28"
+              },
+              {
+                "name": "穿越机模拟",
+                "url": "https://missile-game.bwhmather.com/",
+                "id": "6de2d75c-79c0-4bb3-97fa-f8b9737bf5ac"
+              },
+              {
+                "name": "开箱模拟",
+                "url": "https://yrxs.net/kx/",
+                "id": "bb0e7bcd-47ff-4733-bc90-38840906eb54"
+              },
+              {
+                "name": "开箱模拟高级版",
+                "url": "https://convars.com/case/en",
+                "id": "82127cd7-a3ce-4540-9224-b7075cf349a0"
+              },
+              {
+                "name": "像素点电子宠物",
+                "url": "https://xn--o1qx19eeqi.cn/000000",
+                "id": "9f5d0cd3-09db-40ca-9d2d-a6c4004d7c7b"
+              },
+              {
+                "name": "Jazz vs Waffles-AI对战",
+                "url": "https://www.jazzvswaffles.com/game",
+                "id": "3cbd22af-ac1d-419d-8d3d-c2b018276b2a"
+              },
+              {
+                "name": "钢琴模拟",
+                "url": "https://www.xiwnn.com/piano/",
+                "id": "514155b4-d655-4d05-b302-68ba22a649eb"
+              },
+              {
+                "name": "3D地球模拟",
+                "url": "https://3d-app.yunser.com/earth",
+                "id": "a70d1f9c-1976-4ec7-91d6-aa99c320564e"
+              }
+            ]
           },
           {
-            "name": "汉兜",
-            "url": "https://handle.antfu.me/",
-            "id": "2c99f3c1-7b6a-4ecb-a526-6a9d412429a2"
+            "id": "6f53e5e1-d066-4464-a72b-cfef2e3ea8a0",
+            "name": "创造建造🏗️",
+            "links": [
+              {
+                "name": "Neal-无限词语创造",
+                "url": "https://neal.fun/infinite-craft/",
+                "id": "a2fff723-61d1-4492-9a09-f2f829b20238"
+              },
+              {
+                "name": "Little Alchemy2-炼金术",
+                "url": "https://littlealchemy2.com/",
+                "id": "18b85173-ec6e-4518-9350-41a3224369cb"
+              },
+              {
+                "name": "Townscaper-海上造镇",
+                "url": "https://oskarstalberg.com/Townscaper/",
+                "id": "58945fb9-c902-46a0-9223-dd239cfba767"
+              },
+              {
+                "name": "House-城市造镇",
+                "url": "https://oskarstalberg.com/game/house/index.html",
+                "id": "86d5b576-e9b7-43b4-9cb4-5dc14b59b9f5"
+              },
+              {
+                "name": "Sandspiel-粉末模拟",
+                "url": "https://sandspiel.club/",
+                "id": "0dc4a832-b2a1-4f30-baeb-be9ec5e756bf"
+              },
+              {
+                "name": "康威生命",
+                "url": "http://copy.sh/life/",
+                "id": "71ff56ad-8c5e-4439-b454-a29656d94ccb"
+              }
+            ]
           },
           {
-            "name": "Phrazle-每日版",
-            "url": "https://phrazle.gg/",
-            "id": "d82a22cc-dd06-43d3-b7d1-f067c3bf8578"
+            "id": "23b3e5bd-ffd0-4477-93cd-0df34c48c500",
+            "name": "冒险RPG⚔️",
+            "links": [
+              {
+                "name": "宝可梦自走棋",
+                "url": "https://pokemon-auto-chess.com/",
+                "id": "d1c8429d-269d-4dd3-8e2e-069c4919e972"
+              },
+              {
+                "name": "宝可梦点击",
+                "url": "https://yx.g8hh.com/pokeclicker/",
+                "id": "c550eb28-5f45-4816-bb81-205bec5cdc90"
+              },
+              {
+                "name": "卡牌冒险者",
+                "url": "http://cav.maougame.com/",
+                "id": "635ff23f-430b-4bf2-9419-2a995e28f438"
+              },
+              {
+                "name": "卡牌冒险者-续",
+                "url": "http://cav2.maougame.com/",
+                "id": "46739aeb-d455-4491-be1f-37b284abbe5e"
+              },
+              {
+                "name": "地下探险队",
+                "url": "http://ta.maougame.com/",
+                "id": "a2fe4f2f-10e3-434d-b9b1-f74174bae106"
+              },
+              {
+                "name": "文字密室逃脱",
+                "url": "https://nodes-escape.hzfe.org/",
+                "id": "378f4d58-1d2b-4839-99c5-be4787e22af2"
+              },
+              {
+                "name": "超苦逼冒险者",
+                "url": "http://kubitionadvanture.sinaapp.com/",
+                "id": "9d47904e-8854-4064-bd85-e0be4f499423"
+              }
+            ]
           },
           {
-            "name": "Phrazle-无限版",
-            "url": "https://phrazle.io/",
-            "id": "e42d8b6a-5202-4632-b495-425fc6b0daa4"
+            "id": "e254982c-5969-464d-b9ae-f9b8fd0abe2a",
+            "name": "经典怀旧🕹️",
+            "links": [
+              {
+                "name": "经典俄罗斯方块",
+                "url": "https://play.tetris.com/",
+                "id": "3c6542dd-1485-45ee-b850-e73456abff79"
+              },
+              {
+                "name": "Cool Math Games-",
+                "url": "https://www.coolmathgames.com/zh-hans",
+                "id": "b327abeb-6251-4d42-9e9e-058e0023981c"
+              },
+              {
+                "name": "Sandtris-沙俄方块",
+                "url": "https://sandtris.com/",
+                "id": "e9ba03c9-3a78-46e3-9bcd-26eddbb9fab5"
+              },
+              {
+                "name": "3D俄罗斯方块",
+                "url": "https://threejs-tetris-react.rylan.cn/",
+                "id": "ef9d1d96-6f01-4669-b84e-34c18c56f198"
+              },
+              {
+                "name": "俄罗斯方块变种合集",
+                "url": "http://farter.cn/tetr.js/",
+                "id": "47eb25b6-ed46-4900-a124-687b2687d01f"
+              },
+              {
+                "name": "JXGame-经典合集",
+                "url": "https://www.jxgame.net/",
+                "id": "6bc89d23-0bf3-46dc-91dd-142c58ed874a"
+              },
+              {
+                "name": "Neverball-滚球",
+                "url": "https://play.neverball.org/",
+                "id": "fdcb2d3e-eb9a-4d4c-b685-fe205f247dae"
+              },
+              {
+                "name": "Marble Run-滚珠赛道",
+                "url": "https://www.marblerun.at/",
+                "id": "5563694c-b77e-44c3-95f3-8897307ee633"
+              }
+            ]
           },
           {
-            "name": "寻找词语关联",
-            "url": "https://connections.gg/",
-            "id": "87470033-0660-4585-bc17-8d050671e904"
-          },
-          {
-            "name": "古诗连词",
-            "url": "https://poetrystrands.com/",
-            "id": "a533c272-2b02-48e5-a507-fc2044bcc77d"
-          },
-          {
-            "name": "类Wordle合集",
-            "url": "https://likewordle.com/",
-            "id": "577971b2-e726-4303-a184-02793af89f61"
+            "id": "666a13b8-64b6-425b-8de2-aac767047890",
+            "name": "休闲娱乐🎪",
+            "links": [
+              {
+                "name": "Neal.fun-创意合集",
+                "url": "https://neal.fun/",
+                "id": "32142a71-81fc-4178-9b3a-7ce0f2bd0aa7"
+              },
+              {
+                "name": "Cookie Clicker-点点饼干",
+                "url": "https://orteil.dashnet.org/cookieclicker/",
+                "id": "de07b3d7-31f8-4bef-9d46-271e841acd1e"
+              },
+              {
+                "name": "OlD SWF-Flash合集",
+                "url": "https://oldswf.com",
+                "id": "e8b259db-7aaf-479e-b098-c66e2b75c5bf"
+              },
+              {
+                "name": "Speed Star-速度之星",
+                "url": "https://poki.com/zh/g/speed-stars",
+                "id": "2b2a7562-5cb5-4814-9bd5-ce385f87f322"
+              },
+              {
+                "name": "信任的进化",
+                "url": "https://dccxi.com/trust/",
+                "id": "bb69f184-2100-452e-a602-57811ac8f604"
+              },
+              {
+                "name": "DrawAFish-AI画鱼养鱼游戏",
+                "url": "https://drawafish.live/",
+                "id": "f05ee246-b777-4f69-bf6a-99db36c7d18e"
+              },
+              {
+                "name": "Taming.io-驯服生存",
+                "url": "https://taming.io/",
+                "id": "85a6ab9f-02ad-4687-950c-fd630f8b6d07"
+              },
+              {
+                "name": "Yorg.io-基地防御",
+                "url": "https://yorg.io/",
+                "id": "94c6a1a4-e643-421e-8857-d9b9386336f9"
+              },
+              {
+                "name": "单机UNO",
+                "url": "https://uno-online.io/",
+                "id": "a0e53e7b-5f8f-45c5-ba3b-a940b7c0530b"
+              },
+              {
+                "name": "电子魔方",
+                "url": "https://cuber.heheda.top/",
+                "id": "56341879-e112-4262-bbe9-490a626a309f"
+              },
+              {
+                "name": "黄金挖掘者",
+                "url": "https://golddigger.frvr.com/",
+                "id": "dfc9ebf4-d829-44cb-8535-1c2131fb341f"
+              },
+              {
+                "name": "画布骑手",
+                "url": "https://www.freeriderhd.com/",
+                "id": "4e07190b-67d1-48c8-b261-5001038c3953"
+              },
+              {
+                "name": "CSS版Minecraft",
+                "url": "https://benjaminaster.com/css-minecraft/",
+                "id": "703ea40d-1056-48b0-b8c0-ac5d1dddb1ef"
+              },
+              {
+                "name": "3D练枪训练",
+                "url": "https://www.3daimtrainer.com/",
+                "id": "dc741310-d7c3-4800-b214-0920376cbaa8"
+              },
+              {
+                "name": "名字竞技场",
+                "url": "https://deepmess.com/namerena/",
+                "id": "bd1694ab-3b6c-43b3-8746-7019d1dc47e5"
+              },
+              {
+                "name": "激战哈气耄耋",
+                "url": "http://www.rhythmstill.top/games/Gmaodiefight/",
+                "id": "9fe5889b-bb33-4bbf-8709-461b83cd041f"
+              },
+              {
+                "name": "Messenger",
+                "url": "https://messenger.abeto.co/",
+                "id": "61f9e628-9f31-4d64-ae49-8b40970dece3"
+              }
+            ]
           }
-        ],
-        "id": "45aabeca-3f4d-4f97-ae41-592baa9e45a0"
+        ]
       },
       {
-        "group": "自娱自乐🧑 - 益智解谜🧩",
-        "links": [
+        "id": "258840a0-afa4-4405-81a3-2e2e72b77c24",
+        "group": "呼朋唤友🧑‍🤝‍🧑",
+        "links": [],
+        "subgroups": [
           {
-            "name": "在线数独",
-            "url": "https://www.sudoku-cn.com/",
-            "id": "1212d966-fe17-40b0-8cf3-c595f7d9f6f3"
+            "id": "31b72413-6f84-448f-95d9-e07faae2d279",
+            "name": "社交/创意🎨",
+            "links": [
+              {
+                "name": "skribbl.io-你画我猜国际版",
+                "url": "https://skribbl.io/",
+                "id": "e4a16efc-494e-4d9a-9bb1-8897dbdd69c2"
+              },
+              {
+                "name": "Gartic Phone-传话",
+                "url": "https://garticphone.com/zh-CN",
+                "id": "f5271d9a-d4ee-46e9-b17c-2824980849c7"
+              },
+              {
+                "name": "DrawBattle-你画我猜对抗版",
+                "url": "https://drawbattle.io/",
+                "id": "dd334285-6a6c-49b6-9fae-9188330cdfdf"
+              },
+              {
+                "name": "绘谜-你画我猜",
+                "url": "https://enazo.cn/",
+                "id": "91395431-3016-4a7d-a7b8-b1562bab47b1"
+              },
+              {
+                "name": "MakeItMeme-看图编表情",
+                "url": "https://makeitmeme.com/zh/",
+                "id": "67e71f21-90d2-4f6d-a850-7276c4575321"
+              }
+            ]
           },
           {
-            "name": "扫雷-无限版",
-            "url": "https://www.1000mines.com/",
-            "id": "e7981140-018d-47d5-ad9e-33f8b580c00c"
+            "id": "09d1222d-009a-40d8-aa47-1d1c5341638d",
+            "name": "桌游/策略🎲",
+            "links": [
+              {
+                "name": "PlayOK-在线棋牌",
+                "url": "https://www.playok.com/",
+                "id": "3adebcee-8c2a-475f-88b9-41b18f87ab9b"
+              },
+              {
+                "name": "Richup-在线大富翁",
+                "url": "https://richup.io/",
+                "id": "0e1f266c-36e6-4295-809c-ebb506470745"
+              },
+              {
+                "name": "Hullqin-桌游合集",
+                "url": "https://game.hullqin.cn/",
+                "id": "b7f5f47f-fe64-49ea-9e6e-5ccab37429c1"
+              }
+            ]
           },
           {
-            "name": "皇后数独",
-            "url": "https://playqueensgame.org/zh/",
-            "id": "94047e56-3986-45d8-80b3-f68cc09a5a5d"
-          },
-          {
-            "name": "每日数独",
-            "url": "https://cn.samuraisudoku.com/",
-            "id": "47cf19ad-b30f-492e-8f52-202146aea67c"
-          },
-          {
-            "name": "在线拼图",
-            "url": "https://www.jigsawplanet.com/",
-            "id": "62ea8210-1439-4a4a-a6eb-b4a710a87f0b"
-          },
-          {
-            "name": "益智合集",
-            "url": "https://gallery.selfboot.cn/zh/games",
-            "id": "af651ef8-913b-4da3-93c2-1e4ac9df385b"
-          },
-          {
-            "name": "彩球猜颜色",
-            "url": "https://www.gamesforthebrain.com/chinese/guesscolors/",
-            "id": "d47d8bcd-d649-4292-a761-465df3696614"
-          },
-          {
-            "name": "看截图猜电影",
-            "url": "https://moviegame.top/",
-            "id": "18838e96-1fac-4333-9fbd-eb0e2dd1cbd9"
-          },
-          {
-            "name": "找色差挑战",
-            "url": "https://www.zhaosecha.com/",
-            "id": "cc80abe8-1f66-4d1e-8874-60e0df93f1d1"
-          },
-          {
-            "name": "SatPixel-卫星猜城市",
-            "url": "https://satpixel.com/zh/",
-            "id": "3bc2d258-9c3d-4974-9af4-7b8663b3a1b3"
-          },
-          {
-            "name": "猜图辨AI",
-            "url": "https://realornotquiz.com/",
-            "id": "17899cb0-8b31-467c-9fd5-631e62a5d88f"
-          },
-          {
-            "name": "Nonograms-格子解谜",
-            "url": "https://cn.puzzle-nonograms.com/",
-            "id": "22d05691-8624-45d6-b1d0-e14d312aec8f"
-          },
-          {
-            "name": "Simon Tatham-解谜合集",
-            "url": "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/",
-            "id": "35d8a551-c93f-4785-8869-4a2e00416ace"
-          },
-          {
-            "name": "围马",
-            "url": "https://enclose.horse/",
-            "id": "fb6cf7a0-bc20-472c-8bbc-d25837017dc7"
-          },
-          {
-            "name": "Figure-图形解谜",
-            "url": "https://figure.game/zh",
-            "id": "a41bbb1c-fcdb-4d9e-826e-27f62cb9c702"
-          },
-          {
-            "name": "动物英文接龙",
-            "url": "https://rose.systems/animalist/",
-            "id": "cdce56ec-9963-490d-b682-c331f0dc9573"
-          },
-          {
-            "name": "石头克星",
-            "url": "https://www.whatbeatsrock.com/",
-            "id": "e012da4f-4f7b-4cac-abae-b76a957af11b"
-          },
-          {
-            "name": "Wolfcha-AI狼人杀",
-            "url": "https://www.wolf-cha.com/zh",
-            "id": "cfcdc60f-c1b1-4dd0-a163-9836db8a61eb"
-          },
-          {
-            "name": "大学生登山失踪事件-网页解谜",
-            "url": "https://missing.shiroki-y.top/introduction.html",
-            "id": "810b1d55-712e-4ad4-acdb-a6734ff06160"
+            "id": "6492595d-dfcf-4462-852a-52be97d90654",
+            "name": "对战/竞技⚔️",
+            "links": [
+              {
+                "name": "PlayCS-在线CS1.6",
+                "url": "https://play-cs.com/zh/",
+                "id": "ff7dab37-f62c-409a-903f-95051f25c51e"
+              },
+              {
+                "name": "DeadSwitch3-射击对战",
+                "url": "https://deadswitch3.com/play/",
+                "id": "9e581892-c7b6-431e-a7a6-7e56a49b614e"
+              },
+              {
+                "name": "Dinogen-生存射击",
+                "url": "https://dinogenonline.com/play/",
+                "id": "a157aceb-dea7-48c5-b323-612a97a91b75"
+              },
+              {
+                "name": "Kiomet.io-策略对战",
+                "url": "https://kiomet.com/",
+                "id": "a3d39489-25aa-4cf4-9b7d-12d56d6c4c08"
+              },
+              {
+                "name": "ACFUN大逃杀",
+                "url": "https://dts.momobako.com/index.php",
+                "id": "7b4b5c1e-5b23-4955-a761-705185caac3e"
+              }
+            ]
           }
-        ],
-        "id": "d8368618-4fa4-4687-8503-84c763e54c34"
+        ]
       },
       {
-        "group": "自娱自乐🧑 - 体验模拟🎮",
-        "links": [
+        "id": "68ee1519-ccff-4fcf-86d0-336ac6b743dd",
+        "group": "两者兼得👪",
+        "links": [],
+        "subgroups": [
           {
-            "name": "人生重开模拟器",
-            "url": "https://liferestart.syaro.io/public/index.html",
-            "id": "546d26b6-09bc-4c37-ae74-fe148746fc1f"
+            "id": "5636b7f1-db36-4167-b2f9-5ead06f9503a",
+            "name": "休闲/聚会🎮",
+            "links": [
+              {
+                "name": "Poki-大合集",
+                "url": "https://poki.com/zh",
+                "id": "527e1389-b45a-4940-81ed-3b8ed9ba02eb"
+              },
+              {
+                "name": "CrazyGames-大合集",
+                "url": "https://www.crazygames.com/",
+                "id": "9d213bc1-982a-46f8-8f03-774b8f5d2577"
+              },
+              {
+                "name": "Chess.com-国际象棋",
+                "url": "https://www.chess.com/",
+                "id": "6abfbfe1-1ae2-4455-9355-23d170a70c80"
+              },
+              {
+                "name": "图寻-地理猜位置",
+                "url": "https://tuxun.fun/",
+                "id": "15408583-af02-4271-a5d7-7be84c6788bd"
+              },
+              {
+                "name": "TooManyChefs-文字多人烹饪",
+                "url": "https://www.toomanychefs.party/",
+                "id": "79598328-719e-4d5c-8f55-b50dcdc8b5e3"
+              },
+              {
+                "name": "Battleship-在线海战棋",
+                "url": "http://zh.battleship-game.org/",
+                "id": "57717d6b-ecbe-492e-a784-19650ffe2f07"
+              },
+              {
+                "name": "Tanghenre-AI海龟汤",
+                "url": "https://tanghenre.com/",
+                "id": "f697b6b3-35c8-4141-bc0a-0fb4f9f1f9d6"
+              },
+              {
+                "name": "EMU666-古早模拟",
+                "url": "https://www.emu666.com/",
+                "id": "19ce978a-fd81-4a1e-af03-edf7f8610a6d"
+              }
+            ]
           },
           {
-            "name": "哄哄模拟器",
-            "url": "https://hong.greatdk.com/",
-            "id": "c0180143-a74b-4d9f-8f1d-12c136765dbc"
-          },
-          {
-            "name": "Windows93模拟",
-            "url": "https://www.windows93.net/",
-            "id": "7bf3e1f4-3333-48e5-a02c-b5abca9caad9"
-          },
-          {
-            "name": "WinXP模拟",
-            "url": "https://win32.run/",
-            "id": "b352ebc1-8342-4ab5-8a63-8c06e0438e12"
-          },
-          {
-            "name": "Win12模拟",
-            "url": "https://tjy-gitnub.github.io/win12/desktop.html",
-            "id": "bd3818fc-da16-4f16-bc63-ed15fb40833a"
-          },
-          {
-            "name": "/Win11模拟/",
-            "url": "https://win11.blueedge.me/",
-            "id": "ca1db08b-0419-4616-afb7-7779490efe0f"
-          },
-          {
-            "name": "/Win7模拟/",
-            "url": "https://desk.glitchy.website/",
-            "id": "729eec62-5977-490c-b458-85e828b37afc"
-          },
-          {
-            "name": "赛博徒步-鳌太线",
-            "url": "https://cyberhiking.cn/",
-            "id": "d6af3a0a-8a00-428c-9401-210a3ebac8af"
-          },
-          {
-            "name": "美丽国模拟器",
-            "url": "https://us-killline.com/",
-            "id": "e660e850-0783-48db-ba41-9dcffacef25c"
-          },
-          {
-            "name": "GeoFS-飞行模拟",
-            "url": "https://www.geo-fs.com/",
-            "id": "e17a9d04-3446-453d-acd6-b6c4ca036dcf"
-          },
-          {
-            "name": "半挂车倒车模拟器",
-            "url": "https://semi-trailer-parking.tankxu.com/",
-            "id": "4aeeca6d-e5bb-42b9-a470-eebe1ff5ab28"
-          },
-          {
-            "name": "穿越机模拟",
-            "url": "https://missile-game.bwhmather.com/",
-            "id": "6de2d75c-79c0-4bb3-97fa-f8b9737bf5ac"
-          },
-          {
-            "name": "开箱模拟",
-            "url": "https://yrxs.net/kx/",
-            "id": "bb0e7bcd-47ff-4733-bc90-38840906eb54"
-          },
-          {
-            "name": "开箱模拟高级版",
-            "url": "https://convars.com/case/en",
-            "id": "82127cd7-a3ce-4540-9224-b7075cf349a0"
-          },
-          {
-            "name": "像素点电子宠物",
-            "url": "https://xn--o1qx19eeqi.cn/000000",
-            "id": "9f5d0cd3-09db-40ca-9d2d-a6c4004d7c7b"
-          },
-          {
-            "name": "Jazz vs Waffles-AI对战",
-            "url": "https://www.jazzvswaffles.com/game",
-            "id": "3cbd22af-ac1d-419d-8d3d-c2b018276b2a"
-          },
-          {
-            "name": "钢琴模拟",
-            "url": "https://www.xiwnn.com/piano/",
-            "id": "514155b4-d655-4d05-b302-68ba22a649eb"
-          },
-          {
-            "name": "3D地球模拟",
-            "url": "https://3d-app.yunser.com/earth",
-            "id": "a70d1f9c-1976-4ec7-91d6-aa99c320564e"
+            "id": "662ef12e-a196-4716-8fa6-e42c8f765c26",
+            "name": "竞技/对战⚔️",
+            "links": [
+              {
+                "name": "Bloxd.io-网页版MC",
+                "url": "https://bloxd.io/",
+                "id": "dfceb1e4-558a-4d55-97a0-c8f9dabfdf8d"
+              },
+              {
+                "name": "BattleDudes.io-上帝视角射击",
+                "url": "https://battledudes.io/",
+                "id": "0c4acd9d-b120-430b-b71b-41bc2dd07aae"
+              },
+              {
+                "name": "MK48.io-在线海战",
+                "url": "https://mk48.io/",
+                "id": "66485278-f13d-496a-bb55-37a5929b459a"
+              },
+              {
+                "name": "Robostorm.io-机器人风暴",
+                "url": "https://robostorm.io/",
+                "id": "5fcc5ec4-fcff-4602-9a1a-2460870d0387"
+              },
+              {
+                "name": "Poxel.io-方块人射击",
+                "url": "https://poxel.io/",
+                "id": "a970f44e-b473-4aa3-9d8d-2f1d2bbe3b3a"
+              },
+              {
+                "name": "Bruh.io-伪2D射击",
+                "url": "https://bruh.io/",
+                "id": "9ca9213c-67aa-4e4f-86d4-aa9a80acffb0"
+              },
+              {
+                "name": "Narrow.one-中世纪射箭",
+                "url": "https://narrow.one/",
+                "id": "eacfd43d-fd20-420e-90a3-f1ee31077d93"
+              }
+            ]
           }
-        ],
-        "id": "90678d8e-6f20-4482-9b49-66825775e898"
-      },
-      {
-        "group": "自娱自乐🧑 - 创造建造🏗️",
-        "links": [
-          {
-            "name": "Neal-无限词语创造",
-            "url": "https://neal.fun/infinite-craft/",
-            "id": "a2fff723-61d1-4492-9a09-f2f829b20238"
-          },
-          {
-            "name": "Little Alchemy2-炼金术",
-            "url": "https://littlealchemy2.com/",
-            "id": "18b85173-ec6e-4518-9350-41a3224369cb"
-          },
-          {
-            "name": "Townscaper-海上造镇",
-            "url": "https://oskarstalberg.com/Townscaper/",
-            "id": "58945fb9-c902-46a0-9223-dd239cfba767"
-          },
-          {
-            "name": "House-城市造镇",
-            "url": "https://oskarstalberg.com/game/house/index.html",
-            "id": "86d5b576-e9b7-43b4-9cb4-5dc14b59b9f5"
-          },
-          {
-            "name": "Sandspiel-粉末模拟",
-            "url": "https://sandspiel.club/",
-            "id": "0dc4a832-b2a1-4f30-baeb-be9ec5e756bf"
-          },
-          {
-            "name": "康威生命",
-            "url": "http://copy.sh/life/",
-            "id": "71ff56ad-8c5e-4439-b454-a29656d94ccb"
-          }
-        ],
-        "id": "a859d971-6f07-4718-99e4-378114520ef1"
-      },
-      {
-        "group": "自娱自乐🧑 - 冒险RPG⚔️",
-        "links": [
-          {
-            "name": "宝可梦自走棋",
-            "url": "https://pokemon-auto-chess.com/",
-            "id": "d1c8429d-269d-4dd3-8e2e-069c4919e972"
-          },
-          {
-            "name": "宝可梦点击",
-            "url": "https://yx.g8hh.com/pokeclicker/",
-            "id": "c550eb28-5f45-4816-bb81-205bec5cdc90"
-          },
-          {
-            "name": "卡牌冒险者",
-            "url": "http://cav.maougame.com/",
-            "id": "635ff23f-430b-4bf2-9419-2a995e28f438"
-          },
-          {
-            "name": "卡牌冒险者-续",
-            "url": "http://cav2.maougame.com/",
-            "id": "46739aeb-d455-4491-be1f-37b284abbe5e"
-          },
-          {
-            "name": "地下探险队",
-            "url": "http://ta.maougame.com/",
-            "id": "a2fe4f2f-10e3-434d-b9b1-f74174bae106"
-          },
-          {
-            "name": "文字密室逃脱",
-            "url": "https://nodes-escape.hzfe.org/",
-            "id": "378f4d58-1d2b-4839-99c5-be4787e22af2"
-          },
-          {
-            "name": "超苦逼冒险者",
-            "url": "http://kubitionadvanture.sinaapp.com/",
-            "id": "9d47904e-8854-4064-bd85-e0be4f499423"
-          }
-        ],
-        "id": "e7c70a60-f8c4-454c-9620-19b47c0589b3"
-      },
-      {
-        "group": "自娱自乐🧑 - 经典怀旧🕹️",
-        "links": [
-          {
-            "name": "经典俄罗斯方块",
-            "url": "https://play.tetris.com/",
-            "id": "3c6542dd-1485-45ee-b850-e73456abff79"
-          },
-          {
-            "name": "Cool Math Games-",
-            "url": "https://www.coolmathgames.com/zh-hans",
-            "id": "b327abeb-6251-4d42-9e9e-058e0023981c"
-          },
-          {
-            "name": "Sandtris-沙俄方块",
-            "url": "https://sandtris.com/",
-            "id": "e9ba03c9-3a78-46e3-9bcd-26eddbb9fab5"
-          },
-          {
-            "name": "3D俄罗斯方块",
-            "url": "https://threejs-tetris-react.rylan.cn/",
-            "id": "ef9d1d96-6f01-4669-b84e-34c18c56f198"
-          },
-          {
-            "name": "俄罗斯方块变种合集",
-            "url": "http://farter.cn/tetr.js/",
-            "id": "47eb25b6-ed46-4900-a124-687b2687d01f"
-          },
-          {
-            "name": "JXGame-经典合集",
-            "url": "https://www.jxgame.net/",
-            "id": "6bc89d23-0bf3-46dc-91dd-142c58ed874a"
-          },
-          {
-            "name": "Neverball-滚球",
-            "url": "https://play.neverball.org/",
-            "id": "fdcb2d3e-eb9a-4d4c-b685-fe205f247dae"
-          },
-          {
-            "name": "Marble Run-滚珠赛道",
-            "url": "https://www.marblerun.at/",
-            "id": "5563694c-b77e-44c3-95f3-8897307ee633"
-          }
-        ],
-        "id": "1b5b0bae-ce27-4297-bd32-1472cb3fe247"
-      },
-      {
-        "group": "自娱自乐🧑 - 休闲娱乐🎪",
-        "links": [
-          {
-            "name": "Neal.fun-创意合集",
-            "url": "https://neal.fun/",
-            "id": "32142a71-81fc-4178-9b3a-7ce0f2bd0aa7"
-          },
-          {
-            "name": "Cookie Clicker-点点饼干",
-            "url": "https://orteil.dashnet.org/cookieclicker/",
-            "id": "de07b3d7-31f8-4bef-9d46-271e841acd1e"
-          },
-          {
-            "name": "OlD SWF-Flash合集",
-            "url": "https://oldswf.com",
-            "id": "e8b259db-7aaf-479e-b098-c66e2b75c5bf"
-          },
-          {
-            "name": "Speed Star-速度之星",
-            "url": "https://poki.com/zh/g/speed-stars",
-            "id": "2b2a7562-5cb5-4814-9bd5-ce385f87f322"
-          },
-          {
-            "name": "信任的进化",
-            "url": "https://dccxi.com/trust/",
-            "id": "bb69f184-2100-452e-a602-57811ac8f604"
-          },
-          {
-            "name": "DrawAFish-AI画鱼养鱼游戏",
-            "url": "https://drawafish.live/",
-            "id": "f05ee246-b777-4f69-bf6a-99db36c7d18e"
-          },
-          {
-            "name": "Taming.io-驯服生存",
-            "url": "https://taming.io/",
-            "id": "85a6ab9f-02ad-4687-950c-fd630f8b6d07"
-          },
-          {
-            "name": "Yorg.io-基地防御",
-            "url": "https://yorg.io/",
-            "id": "94c6a1a4-e643-421e-8857-d9b9386336f9"
-          },
-          {
-            "name": "单机UNO",
-            "url": "https://uno-online.io/",
-            "id": "a0e53e7b-5f8f-45c5-ba3b-a940b7c0530b"
-          },
-          {
-            "name": "电子魔方",
-            "url": "https://cuber.heheda.top/",
-            "id": "56341879-e112-4262-bbe9-490a626a309f"
-          },
-          {
-            "name": "黄金挖掘者",
-            "url": "https://golddigger.frvr.com/",
-            "id": "dfc9ebf4-d829-44cb-8535-1c2131fb341f"
-          },
-          {
-            "name": "画布骑手",
-            "url": "https://www.freeriderhd.com/",
-            "id": "4e07190b-67d1-48c8-b261-5001038c3953"
-          },
-          {
-            "name": "CSS版Minecraft",
-            "url": "https://benjaminaster.com/css-minecraft/",
-            "id": "703ea40d-1056-48b0-b8c0-ac5d1dddb1ef"
-          },
-          {
-            "name": "3D练枪训练",
-            "url": "https://www.3daimtrainer.com/",
-            "id": "dc741310-d7c3-4800-b214-0920376cbaa8"
-          },
-          {
-            "name": "名字竞技场",
-            "url": "https://deepmess.com/namerena/",
-            "id": "bd1694ab-3b6c-43b3-8746-7019d1dc47e5"
-          },
-          {
-            "name": "激战哈气耄耋",
-            "url": "http://www.rhythmstill.top/games/Gmaodiefight/",
-            "id": "9fe5889b-bb33-4bbf-8709-461b83cd041f"
-          },
-          {
-            "name": "Messenger",
-            "url": "https://messenger.abeto.co/",
-            "id": "61f9e628-9f31-4d64-ae49-8b40970dece3"
-          }
-        ],
-        "id": "0144fa45-c713-49cc-9084-a9606c4d78a9"
-      },
-      {
-        "group": "呼朋唤友🧑‍🤝‍🧑 - 社交/创意🎨",
-        "links": [
-          {
-            "name": "skribbl.io-你画我猜国际版",
-            "url": "https://skribbl.io/",
-            "id": "e4a16efc-494e-4d9a-9bb1-8897dbdd69c2"
-          },
-          {
-            "name": "Gartic Phone-传话",
-            "url": "https://garticphone.com/zh-CN",
-            "id": "f5271d9a-d4ee-46e9-b17c-2824980849c7"
-          },
-          {
-            "name": "DrawBattle-你画我猜对抗版",
-            "url": "https://drawbattle.io/",
-            "id": "dd334285-6a6c-49b6-9fae-9188330cdfdf"
-          },
-          {
-            "name": "绘谜-你画我猜",
-            "url": "https://enazo.cn/",
-            "id": "91395431-3016-4a7d-a7b8-b1562bab47b1"
-          },
-          {
-            "name": "MakeItMeme-看图编表情",
-            "url": "https://makeitmeme.com/zh/",
-            "id": "67e71f21-90d2-4f6d-a850-7276c4575321"
-          }
-        ],
-        "id": "258840a0-afa4-4405-81a3-2e2e72b77c24"
-      },
-      {
-        "group": "呼朋唤友🧑‍🤝‍🧑 - 桌游/策略🎲",
-        "links": [
-          {
-            "name": "PlayOK-在线棋牌",
-            "url": "https://www.playok.com/",
-            "id": "3adebcee-8c2a-475f-88b9-41b18f87ab9b"
-          },
-          {
-            "name": "Richup-在线大富翁",
-            "url": "https://richup.io/",
-            "id": "0e1f266c-36e6-4295-809c-ebb506470745"
-          },
-          {
-            "name": "Hullqin-桌游合集",
-            "url": "https://game.hullqin.cn/",
-            "id": "b7f5f47f-fe64-49ea-9e6e-5ccab37429c1"
-          }
-        ],
-        "id": "046bd621-d4f5-4bf2-bdaf-86a0677e94b3"
-      },
-      {
-        "group": "呼朋唤友🧑‍🤝‍🧑 - 对战/竞技⚔️",
-        "links": [
-          {
-            "name": "PlayCS-在线CS1.6",
-            "url": "https://play-cs.com/zh/",
-            "id": "ff7dab37-f62c-409a-903f-95051f25c51e"
-          },
-          {
-            "name": "DeadSwitch3-射击对战",
-            "url": "https://deadswitch3.com/play/",
-            "id": "9e581892-c7b6-431e-a7a6-7e56a49b614e"
-          },
-          {
-            "name": "Dinogen-生存射击",
-            "url": "https://dinogenonline.com/play/",
-            "id": "a157aceb-dea7-48c5-b323-612a97a91b75"
-          },
-          {
-            "name": "Kiomet.io-策略对战",
-            "url": "https://kiomet.com/",
-            "id": "a3d39489-25aa-4cf4-9b7d-12d56d6c4c08"
-          },
-          {
-            "name": "ACFUN大逃杀",
-            "url": "https://dts.momobako.com/index.php",
-            "id": "7b4b5c1e-5b23-4955-a761-705185caac3e"
-          }
-        ],
-        "id": "5195312e-4de1-4672-a544-26eb2de2bb46"
-      },
-      {
-        "group": "两者兼得👪 - 休闲/聚会🎮",
-        "links": [
-          {
-            "name": "Poki-大合集",
-            "url": "https://poki.com/zh",
-            "id": "527e1389-b45a-4940-81ed-3b8ed9ba02eb"
-          },
-          {
-            "name": "CrazyGames-大合集",
-            "url": "https://www.crazygames.com/",
-            "id": "9d213bc1-982a-46f8-8f03-774b8f5d2577"
-          },
-          {
-            "name": "Chess.com-国际象棋",
-            "url": "https://www.chess.com/",
-            "id": "6abfbfe1-1ae2-4455-9355-23d170a70c80"
-          },
-          {
-            "name": "图寻-地理猜位置",
-            "url": "https://tuxun.fun/",
-            "id": "15408583-af02-4271-a5d7-7be84c6788bd"
-          },
-          {
-            "name": "TooManyChefs-文字多人烹饪",
-            "url": "https://www.toomanychefs.party/",
-            "id": "79598328-719e-4d5c-8f55-b50dcdc8b5e3"
-          },
-          {
-            "name": "Battleship-在线海战棋",
-            "url": "http://zh.battleship-game.org/",
-            "id": "57717d6b-ecbe-492e-a784-19650ffe2f07"
-          },
-          {
-            "name": "Tanghenre-AI海龟汤",
-            "url": "https://tanghenre.com/",
-            "id": "f697b6b3-35c8-4141-bc0a-0fb4f9f1f9d6"
-          },
-          {
-            "name": "EMU666-古早模拟",
-            "url": "https://www.emu666.com/",
-            "id": "19ce978a-fd81-4a1e-af03-edf7f8610a6d"
-          }
-        ],
-        "id": "68ee1519-ccff-4fcf-86d0-336ac6b743dd"
-      },
-      {
-        "group": "两者兼得👪 - 竞技/对战⚔️",
-        "links": [
-          {
-            "name": "Bloxd.io-网页版MC",
-            "url": "https://bloxd.io/",
-            "id": "dfceb1e4-558a-4d55-97a0-c8f9dabfdf8d"
-          },
-          {
-            "name": "BattleDudes.io-上帝视角射击",
-            "url": "https://battledudes.io/",
-            "id": "0c4acd9d-b120-430b-b71b-41bc2dd07aae"
-          },
-          {
-            "name": "MK48.io-在线海战",
-            "url": "https://mk48.io/",
-            "id": "66485278-f13d-496a-bb55-37a5929b459a"
-          },
-          {
-            "name": "Robostorm.io-机器人风暴",
-            "url": "https://robostorm.io/",
-            "id": "5fcc5ec4-fcff-4602-9a1a-2460870d0387"
-          },
-          {
-            "name": "Poxel.io-方块人射击",
-            "url": "https://poxel.io/",
-            "id": "a970f44e-b473-4aa3-9d8d-2f1d2bbe3b3a"
-          },
-          {
-            "name": "Bruh.io-伪2D射击",
-            "url": "https://bruh.io/",
-            "id": "9ca9213c-67aa-4e4f-86d4-aa9a80acffb0"
-          },
-          {
-            "name": "Narrow.one-中世纪射箭",
-            "url": "https://narrow.one/",
-            "id": "eacfd43d-fd20-420e-90a3-f1ee31077d93"
-          }
-        ],
-        "id": "090a4e7b-04be-4733-b234-b2b339002eb2"
+        ]
       }
     ],
     "id": "db18a1ad-527a-4677-9e51-b61d99aa0271"

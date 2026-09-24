@@ -5,11 +5,9 @@ new Vue({
 		website_data: typeof website_data !== 'undefined' ? website_data : []
 	},
 	computed: {
-		// 过滤上半部分
 		topData() {
 			return this.website_data.filter(item => item.layout === 'top');
 		},
-		// 过滤下半部分
 		bottomData() {
 			return this.website_data.filter(item => item.layout === 'bottom');
 		}

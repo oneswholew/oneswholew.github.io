@@ -903,6 +903,10 @@ table.domain .errcon {
 	.background-toggle { display: none !important; }
 }
 
+.subgroup-block {
+    margin-top: 8px;
+}
+
 /* ========== 22. 模板注释 ========== */
 /* xx类 */
 /* <div class="category">
