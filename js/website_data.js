@@ -11,6 +11,11 @@ var website_data = [
         "group": "通用对话💬",
         "links": [
           {
+            "id": "14b609a3-2239-4b0b-a79e-0f8f5894f00e",
+            "name": "DeepSeek",
+            "url": "https://www.deepseek.com/"
+          },
+          {
             "name": "豆包",
             "url": "https://www.doubao.com/chat/",
             "id": "9cf17dba-1a14-4013-a73a-b05a6e4a569e"
